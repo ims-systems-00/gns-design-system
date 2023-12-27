@@ -1,0 +1,15 @@
+.dropdown-menu {
+  min-width: 177px !important;
+  .dropdown-item {
+    white-space: nowrap;
+    overflow: hidden;
+    color: $type-medium;
+  }
+  .dropdown-item:hover {
+    background-color: $primary-light;
+  }
+  .dropdown-item:focus {
+    background-color: $primary-dark;
+    color: $white;
+  }
+}
