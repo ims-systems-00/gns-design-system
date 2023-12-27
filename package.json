@@ -116,8 +116,15 @@
   "description": "Here we have listed all our design system files where. This deisgn system is exported for various products of iMS Systems. Change in this deisgn system would reflect change accross all products of iMS Systems. The design system\r is a customised version of bootstrap so bootstrap customisation docs and guidelines are followed for building the\r components for the system.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ims-systems-00/gns-design-system.git"
+    "url": "git+https://github.com/ims-systems-00/gns-design-system.git"
   },
   "author": "ims-systems-00",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ims-systems-00/gns-design-system/issues"
+  },
+  "homepage": "https://github.com/ims-systems-00/gns-design-system#readme",
+  "keywords": [
+    "gns-design0system"
+  ]
 }
