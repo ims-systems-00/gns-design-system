@@ -5,9 +5,9 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
-  ImsInputCheck,
+  Input,
   UncontrolledDropdown,
-} from "../../../index";
+} from "reactstrap";
 import Badge from "../../Badges/BadgeBase";
 import ImsExpandedTable from "../AdvancedExpandedTable/Index";
 import filters from "../filters";
@@ -31,7 +31,7 @@ Default.args = {
     {
       checkbox: (
         <>
-          <ImsInputCheck />
+          <Input type="checkbox"  />
         </>
       ),
       id: "asd8917239asdh",
@@ -55,7 +55,7 @@ Default.args = {
     {
       checkbox: (
         <>
-          <ImsInputCheck />
+        <Input type="checkbox" />
         </>
       ),
       id: "asd8917239asdh",
@@ -84,7 +84,7 @@ Default.args = {
     {
       checkbox: (
         <>
-          <ImsInputCheck />
+          <Input type="checkbox"  />
         </>
       ),
       id: "asd8917239asdh",
@@ -108,7 +108,7 @@ Default.args = {
     {
       checkbox: (
         <>
-          <ImsInputCheck />
+          <Input type="checkbox"  />
         </>
       ),
       id: "asd8917239asdh",
@@ -134,7 +134,7 @@ Default.args = {
     {
       Header: (
         <>
-          <ImsInputCheck />
+          <Input type="checkbox"  />
         </>
       ),
       accessor: "checkbox",

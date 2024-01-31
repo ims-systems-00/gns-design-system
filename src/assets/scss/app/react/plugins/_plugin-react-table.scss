@@ -308,7 +308,7 @@
   display: inline-block;
   position: relative;
   margin: 0;
-  color: transparent;
+  color: $white;
   margin: 0 10px;
 }
 .ReactTable .rt-expander:after {
@@ -365,7 +365,7 @@
 }
 .ReactTable.-highlight .rt-tbody .rt-tr:not(.-padRow):hover {
   background: rgba($primary, $table-hover-bg-factor);
-  color: $primary;
+  color: $white;
 }
 .ReactTable .-pagination {
   z-index: 1;
@@ -430,7 +430,7 @@
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: end;
 }
 .ReactTable .-pagination .-right {
   -webkit-box-flex: 1.5;
@@ -451,7 +451,7 @@
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: right;
+  justify-content: end;
 }
 .ReactTable .-pagination .-pageInfo {
   display: inline-block;

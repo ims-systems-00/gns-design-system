@@ -67,7 +67,7 @@
 
 .btn-secondary,
 .btn-light {
-  @include btn-bg($secondary-extra-light, $stroke-light);
+  @include btn-bg(transparent, $stroke-light);
   @include btn-color($type-medium);
   @include btn-border($stroke-regular);
   &.disabled {
