@@ -1,6 +1,6 @@
 {
   "name": "gns-design-system",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "source": "src/index.js",
   "files": [
     "dist",
