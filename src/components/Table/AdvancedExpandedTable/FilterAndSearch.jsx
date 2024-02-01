@@ -36,37 +36,39 @@ const FilterAndSearch = ({
   return (
     <React.Fragment>
       <Row className="filter-search d-lg-flex justify-around align-items-center px-lg-4 my-4">
-        <Col md="12" sm="12">
-          <Row>
-            <Col md="4" sm="12" className=" mb-3">
-              {title && <h4>{title}</h4>}
-            </Col>
-            <Col md="8" sm="12" className=" mb-3">
-              <div className="d-flex justify-content-lg-end justify-content-md-end action-container">
-                {tableToolbar && (
-                  <div className="me-md-3 mr-md-3 create-filer">
-                    {tableToolbar}
-                  </div>
-                )}
-                {hasBulkActions && (
-                  <>
-                    <UncontrolledDropdown>
-                      <DropdownToggle className=" p-0 table-actions border-primary text-primary">
-                        <i class="fa-solid fa-ellipsis-vertical" />
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem>hello</DropdownItem>
-                        <DropdownItem>world</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </>
-                )}
-              </div>
-            </Col>
-          </Row>
+        <Col md="4" sm="12" className=" mb-3">
+          {title && <h4>{title}</h4>}
         </Col>
-        <Col md="12" sm="12">
+        <Col md="8" sm="12" className=" mb-3">
+          <div className="d-flex justify-content-lg-end justify-content-md-end action-container">
+            {tableToolbar && (
+              <div className="me-md-3 mr-md-3 create-filer">{tableToolbar}</div>
+            )}
+            {hasBulkActions && (
+              <>
+                <UncontrolledDropdown>
+                  <DropdownToggle className=" p-0 table-actions border-primary text-primary">
+                    <i class="fa-solid fa-ellipsis-vertical" />
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem>hello</DropdownItem>
+                    <DropdownItem>world</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </>
+            )}
+          </div>
+        </Col>
+        <Col md="8" sm="12">
           <div className="d-flex justify-content-lg-start justify-content-md-start action-container">
+           
+            <div className="d-flex create-filter-wrapper">
+              {isFilterable && filterToolbar && (
+                <div className="me-md-3 mr-md-3 create-filer">
+                  {filterToolbar}
+                </div>
+              )}
+            </div>
             {isSearchable && (
               <div className="me-md-3 mr-md-3  table-search-container shadow-sm--hover">
                 <i className="fa-solid fa-search my-auto ms-3 ml-3 p-0" />
@@ -81,13 +83,6 @@ const FilterAndSearch = ({
                 ></Input>
               </div>
             )}
-            <div className="d-flex create-filter-wrapper">
-              {isFilterable && filterToolbar && (
-                <div className="me-md-3 mr-md-3 create-filer">
-                  {filterToolbar}
-                </div>
-              )}
-            </div>
             <div className="d-flex create-filter-wrapper">
               {isSortable && (
                 <div className="me-md-3 mr-md-3 create-filer">
