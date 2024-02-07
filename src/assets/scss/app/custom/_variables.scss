@@ -1,9 +1,9 @@
 
-$gray-100: #f6f9fc !default;
-$gray-200: #e9ecef !default;
-$gray-300: #e3e3e3 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #e2e2e2 !default;
+$gray-300: #cccccc !default;
+$gray-400: #808080 !default;
+$gray-500: #2c2e21 !default;
 $gray-600: #6c757d !default; // Line footer color
 $gray-700: #525f7f !default; // Line p color
 $gray-800: #32325d !default; // Line heading color
@@ -303,7 +303,7 @@ $table-active-color: $white !default;
 
 $table-hover-color: $primary !default;
 $table-hover-bg-factor: 0.075 !default;
-$table-hover-bg: rgba($primary, $table-hover-bg-factor) !default;
+$table-hover-bg: rgba($gray-100, $table-hover-bg-factor) !default;
 
 $input-border-radius: $border-radius !default;
 $input-border-radius-sm: $border-radius-sm !default;

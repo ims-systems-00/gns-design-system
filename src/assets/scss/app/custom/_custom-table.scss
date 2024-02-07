@@ -24,8 +24,9 @@
     padding-right: 1.3rem;
   }
   .ReactTable.-highlight .rt-tbody .rt-tr:not(.-padRow):hover {
-    background: rgba($primary, $table-hover-bg-factor) !important;
-    color: $primary;
+    background: rgba($gray-400, $table-hover-bg-factor) !important;
+    color: $gray-600;
+
   }
   .ReactTable.-striped .rt-tr.-odd {
     background: transparent !important;
