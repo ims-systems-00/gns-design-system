@@ -39,7 +39,7 @@ const FilterAndSearch = ({
         <Col md="4" sm="12" className=" mb-3">
           {title && <h4>{title}</h4>}
         </Col>
-        <Col md="8" sm="12" className=" mb-3">
+        <Col md="8" sm="12" className="mb-3">
           <div className="d-flex justify-content-lg-end justify-content-md-end action-container">
             {tableToolbar && (
               <div className="me-md-3 mr-md-3 create-filer">{tableToolbar}</div>
@@ -59,9 +59,8 @@ const FilterAndSearch = ({
             )}
           </div>
         </Col>
-        <Col md="8" sm="12">
+        <Col md="12" sm="12">
           <div className="d-flex justify-content-lg-start justify-content-md-start action-container">
-           
             <div className="d-flex create-filter-wrapper">
               {isFilterable && filterToolbar && (
                 <div className="me-md-3 mr-md-3 create-filer">

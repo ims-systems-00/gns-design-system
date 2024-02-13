@@ -143,10 +143,8 @@
       height: 20px;
     }
     .rdtDay {
-      color: $secondary-dark;
       &.rdtOld,
       &.rdtNew {
-        color: $secondary-dark;
         font-weight: 300;
       }
     }
@@ -325,7 +323,6 @@ td.rdtYear:hover {
 .rdtCounters {
   .rdtCounter:last-child {
     .rdtCount {
-      
       color: $primary;
       border-radius: 50%;
       border: 1px solid $primary;
