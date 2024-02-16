@@ -16,7 +16,7 @@
     cursor: pointer;
     .nav-link {
       white-space: nowrap;
-      color: $secondary;
+      color: $gray-300;
     }
     .nav-link:hover {
       border: 1px solid transparent;
@@ -56,7 +56,7 @@
 }
 .nav.nav-tabs.nav-tabs-primary,
 .nav.nav-tabs.nav-tabs-secondary {
-  background-color: $secondary-extra-light;
+  background-color: $gray-300;
   padding: 4px;
   // height: 53px;
   width: fit-content;
