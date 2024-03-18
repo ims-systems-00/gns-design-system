@@ -119,6 +119,7 @@ const useForm = (initdataModel, schema) => {
     isFormValid,
     resetForm,
     hasUnsavedData,
+    handleFileChange
   };
 };
 export default useForm;
