@@ -55,7 +55,7 @@ const DrawerRight = ({
         }}
         direction="right"
         size={_getSize(size)}
-        zIndex={1040}
+        zIndex={1051}
       >
         <div
           ref={containerRef}
