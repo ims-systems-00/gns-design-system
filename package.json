@@ -1,6 +1,6 @@
 {
-  "name": "gns-deisgn-system",
-  "version": "1.0.17",
+  "name": "gns-ui",
+  "version": "1.0.24",
   "source": "src/index.js",
   "files": [
     "dist",
@@ -81,7 +81,7 @@
     "typescript": "4.9.4"
   },
   "scripts": {
-    "build": "microbundle --generateTypes false --jsx React.createElement --compress false && node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/app.scss dist/css/app.min.css --output-style compressed",
+    "build": "microbundle --generateTypes false --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --compress false && node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/app.scss dist/css/app.min.css --output-style compressed",
     "test": "env-cmd -f ./.env.local react-scripts test",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook",
