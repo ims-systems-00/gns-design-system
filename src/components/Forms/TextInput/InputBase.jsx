@@ -17,6 +17,4 @@ InputBase.propTypes = {
   ...(Input.propTypes && Input.propTypes),
 };
 
-export default function F(p) {
-  return <input {...p} />;
-}
+export default InputBase;
