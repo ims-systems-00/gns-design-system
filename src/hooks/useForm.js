@@ -75,7 +75,6 @@ const useForm = (initdataModel, schema) => {
   const handleFileChange = (files, name) => {
     const data = { ...dataModel };
     data[name] = files;
-    console.log("useForm", data);
     setDataModel(data);
     validateProperty(name, files);
   };

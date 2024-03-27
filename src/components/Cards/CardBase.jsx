@@ -46,4 +46,4 @@ CardBase.propTypes = {
   ...(Card.propTypes && Card.propTypes),
 };
 
-export default CardBase;
+export default Card;

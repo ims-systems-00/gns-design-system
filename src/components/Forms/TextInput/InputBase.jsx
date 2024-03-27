@@ -18,4 +18,4 @@ InputBase.propTypes = {
   ...(Input.propTypes && Input.propTypes),
 };
 
-export default InputBase;
+export default Input;
