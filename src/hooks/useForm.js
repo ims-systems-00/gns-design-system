@@ -75,7 +75,6 @@ const useForm = (initdataModel, schema) => {
   const handleFileChange = (files, name) => {
     const data = { ...dataModel };
     data[name] = files;
-    console.log("useForm", data);
     setDataModel(data);
     validateProperty(name, files);
   };
@@ -119,6 +118,7 @@ const useForm = (initdataModel, schema) => {
     isFormValid,
     resetForm,
     hasUnsavedData,
+    handleFileChange
   };
 };
 export default useForm;

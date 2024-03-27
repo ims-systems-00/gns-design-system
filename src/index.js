@@ -126,9 +126,6 @@ export { DrawerRight } from "./components/Drawer/index";
 export { DrawerOpener } from "./components/Drawer/index";
 export { DrawerContextProvider } from "./components/Drawer/index";
 export { useDrawer } from "./components/Drawer/index";
-/**
- * utility hooks for ims systems UI stack
- */
 export { default as useAPIError } from "./hooks/error/index";
 export { default as useQuery } from "./hooks/useQuery/index";
 export { default as useForm } from "./hooks/useForm";

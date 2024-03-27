@@ -206,7 +206,7 @@ Default.args = {
           alert("Create A New Ticket");
         }}
       >
-        <i class="fa-solid fa-edit me-2 p-0" />
+        <i class="gns-icons icon-icon-notepencil-24 me-2 p-0" />
         Create
       </Button>
     </React.Fragment>
