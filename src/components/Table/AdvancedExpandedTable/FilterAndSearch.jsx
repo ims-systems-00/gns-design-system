@@ -1,13 +1,11 @@
 import React from "react";
-import {
-  Col,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Input,
-  Row,
-} from "../../../index";
+import Row from '../../Grid/RowBase';
+import Col from '../../Grid/ColBase';
+import Dropdown from '../../Dropdowns/DropdownBase';
+import DropdownItem from '../../Dropdowns/DropdownItemBase';
+import DropdownMenu from '../../Dropdowns/DropdownMenuBase';
+import DropdownToggle from '../../Dropdowns/DropdownToggleBase';
+import Input from '../../Forms/Inputs/InputBase';
 import useDebounce from "./useDebounce";
 import { UncontrolledDropdown } from "reactstrap";
 

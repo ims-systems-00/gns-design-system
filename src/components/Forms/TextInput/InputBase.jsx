@@ -1,7 +1,6 @@
 import React from "react";
 import { Input } from "reactstrap";
 
-
 let InputBaseProps = Object.assign({}, Input.prototype.props);
 
 /**

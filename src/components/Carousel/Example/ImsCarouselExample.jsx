@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, CardBody } from "../../../index";
+import Card from '../../Cards/CardBase';
+import CardBody from '../../Cards/CardBodyBase';
 import ImsCarousel from "../ImsCarousel";
 
 const DashboardCarouselExample = ({}) => {

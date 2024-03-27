@@ -1,4 +1,4 @@
-import { Button } from "../../../../index";
+import Button from '../../../Buttons/ButtonBase';
 import ImsInputSelectBase from "../ImsInputSelect";
 import React from "react";
 

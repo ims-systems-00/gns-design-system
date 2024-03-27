@@ -1,2 +1,4296 @@
-import{Container as e,Col as t,Row as r,Navbar as n,NavbarBrand as o,NavbarText as s,NavbarToggler as a,Nav as l,NavItem as p,NavLink as i,Breadcrumb as c,BreadcrumbItem as d,Button as u,ButtonDropdown as y,ButtonGroup as g,ButtonToggle as m,ButtonToolbar as b,CloseButton as f,Dropdown as T,DropdownItem as v,DropdownMenu as N,DropdownToggle as O,UncontrolledButtonDropdown as C,UncontrolledDropdown as w,Fade as x,Accordion as S,AccordionBody as k,AccordionHeader as j,AccordionItem as P,UncontrolledAccordion as E,Badge as F,Card as I,CardBody as z,CardColumns as D,CardDeck as L,CardGroup as A,CardFooter as M,CardHeader as R,CardImgOverlay as B,CardTitle as G,CardSubtitle as H,CardImg as U,CardLink as K,CardText as q,Carousel as _,UncontrolledCarousel as $,CarouselControl as J,CarouselCaption as V,CarouselItem as Y,CarouselIndicators as W,Popover as Z,PopperContent as Q,PopperTargetHelper as X,PopoverHeader as ee,PopoverBody as te,UncontrolledPopover as re,Modal as ne,ModalBody as oe,ModalFooter as se,ModalHeader as ae,UncontrolledTooltip as le,Table as pe,InputGroup as ie,Input as ce,List as de,ListGroup as he,ListGroupItem as ue,ListGroupItemHeading as ye,ListGroupItemText as ge,ListInlineItem as me,Form as be,FormFeedback as fe,FormText as Te,FormGroup as ve,InputGroupText as Ne,Label as Oe,Media as Ce,Offcanvas as we,OffcanvasBody as xe,OffcanvasHeader as Se,Pagination as ke,PaginationItem as je,PaginationLink as Pe,TabContent as Ee,TabPane as Fe,Alert as Ie,UncontrolledAlert as ze,Toast as De,ToastBody as Le,ToastHeader as Ae,Collapse as Me,UncontrolledCollapse as Re,Progress as Be,Spinner as Ge,Placeholder as He,PlaceholderButton as Ue}from"reactstrap";import Ke,{useState as qe,useEffect as _e,useMemo as $e,useCallback as Je,useContext as Ve,useRef as Ye}from"react";import We from"classnames";import Ze from"prop-types";import{useTable as Qe,useSortBy as Xe,useExpanded as et,usePagination as tt,useResizeColumns as rt,useFlexLayout as nt}from"react-table";import ot from"react-select";import st from"react-select/creatable";import at from"react-select/async";import{useDropzone as lt}from"react-dropzone";import pt from"react-datetime";import"react-datetime/css/react-datetime.css";import{Modifier as it,EditorState as ct,CompositeDecorator as dt,convertToRaw as ht,ContentState as ut,convertFromRaw as yt,RichUtils as gt,SelectionState as mt,AtomicBlockUtils as bt,Editor as ft}from"draft-js";import{Mousewheel as Tt,Navigation as vt}from"swiper";import"swiper/css";import"swiper/css/pagination";import{Swiper as Nt,SwiperSlide as Ot}from"swiper/react";import{CircularProgressbar as Ct,buildStyles as wt}from"react-circular-progressbar";import"react-circular-progressbar/dist/styles.css";import xt from"react-modern-drawer";import"react-modern-drawer/dist/index.css";import{AxiosError as St}from"axios";import{toast as kt}from"react-toastify";import*as jt from"yup";function Pt(){return Pt=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},Pt.apply(this,arguments)}function Et(e){if(null==e)throw new TypeError("Cannot destructure "+e)}function Ft(e,t){if(null==e)return{};var r,n,o={},s=Object.keys(e);for(n=0;n<s.length;n++)t.indexOf(r=s[n])>=0||(o[r]=e[r]);return o}Object.assign({},e.prototype.props);const It=t=>h(e,t,t.children);It.propTypes=Pt({},e.propTypes&&e.propTypes),Object.assign({},t.prototype.props);const zt=e=>h(t,e,e.children);zt.propTypes=Pt({},t.propTypes&&t.propTypes),Object.assign({},r.prototype.props);const Dt=e=>h(r,e,e.children);Dt.propTypes=Pt({},r.propTypes&&r.propTypes);const Lt=["children"];Object.assign({},n.prototype.props);const At=e=>{let{children:t}=e,r=Ft(e,Lt);return h(n,r,t)};At.propTypes=Pt({},n.propTypes&&n.propTypes);const Mt=["children"];Object.assign({},o.prototype.props);const Rt=e=>{let{children:t}=e,r=Ft(e,Mt);return h(o,r,t)};Rt.propTypes=Pt({},o.propTypes&&o.propTypes);const Bt=["children"];Object.assign({},s.prototype.props);const Gt=e=>{let{children:t}=e,r=Ft(e,Bt);return h(s,r,t)};Gt.propTypes=Pt({},s.propTypes&&s.propTypes);const Ht=["children"];Object.assign({},a.prototype.props);const Ut=e=>{let{children:t}=e,r=Ft(e,Ht);return h(a,r,t)};Ut.propTypes=Pt({},a.propTypes&&a.propTypes);const Kt=["children","variant"],qt=e=>{let{children:t,variant:r="primary"}=e,n=Ft(e,Kt);return Object.assign({variant:Ze.oneOf(["primary","secondary","outline"])},l.prototype.props),h(l,Pt({className:We(`${n.className||""}`,{"nav-tabs-primary":"primary"===r,"nav-tabs-secondary":"secondary"===r,"nav-tabs-outline":"outline"===r})},n),t)};qt.propTypes=Pt({variant:Ze.oneOf(["primary","secondary","outline"])},l.propTypes&&l.propTypes);const _t=["children"];Object.assign({},p.prototype.props);const $t=e=>{let{children:t}=e,r=Ft(e,_t);return h(p,r,t)};$t.propTypes=Pt({},p.propTypes&&p.propTypes);const Jt=["children"];Object.assign({},i.prototype.props);const Vt=e=>{let{children:t}=e,r=Ft(e,Jt);return h("span",Pt({className:We(`nav-link ${r.className}`,{active:r.active})},r),t)};Vt.propTypes=Pt({},i.propTypes&&i.propTypes);const Yt=["children"];var Wt;Object.assign({},null==(Wt=c.prototype)?void 0:Wt.props);const Zt=e=>{let{children:t}=e,r=Ft(e,Yt);return h(c,r,t)};Zt.propTypes=Pt({},c.propTypes&&c.propTypes);const Qt=["children"];var Xt;Object.assign({},null==(Xt=d.prototype)?void 0:Xt.props);const er=e=>{let{children:t}=e,r=Ft(e,Qt);return h(d,r,t)};er.propTypes=Pt({},d.propTypes&&d.propTypes),Object.assign({leftIcon:"",rightIcon:""},u.prototype.props);const tr=e=>h(u,e,e.leftIcon?h("i",{className:We(e.leftIcon,"me-2")}):null,e.children,e.rightIcon?h("i",{className:We(e.rightIcon,"ms-2")}):null);tr.propTypes=Pt({leftIcon:Ze.string,rightIcon:Ze.string},u.propTypes&&u.propTypes);const rr=["children"];var nr;Object.assign({},null==(nr=y.prototype)?void 0:nr.props);const or=e=>{let{children:t}=e,r=Ft(e,rr);return h(y,r,t)};or.propTypes=Pt({},y.propTypes&&y.propTypes);const sr=["children"];var ar;Object.assign({},null==(ar=g.prototype)?void 0:ar.props);const lr=e=>{let{children:t}=e,r=Ft(e,sr);return h(g,r,t)};lr.propTypes=Pt({},g.propTypes&&g.propTypes);const pr=["children"];var ir;Object.assign({},null==(ir=m.prototype)?void 0:ir.props);const cr=e=>{let{children:t}=e,r=Ft(e,pr);return h(m,r,t)};cr.propTypes=Pt({},m.propTypes&&m.propTypes);const dr=["children"];var hr;Object.assign({},null==(hr=b.prototype)?void 0:hr.props);const ur=e=>{let{children:t}=e,r=Ft(e,dr);return h(b,r,t)};ur.propTypes=Pt({},b.propTypes&&b.propTypes);const yr=["children"];var gr;Object.assign({},null==(gr=f.prototype)?void 0:gr.props);const mr=e=>{let{children:t}=e;return Ft(e,yr),h(f,null,t)};mr.propTypes=Pt({},f.propTypes&&f.propTypes),Object.assign({},T.prototype.props);const br=e=>{let t=Pt({},(Et(e),e));return h(T,t,t.children)};br.propTypes=Pt({},T.propTypes&&T.propTypes),Object.assign({},v.prototype.props);const fr=e=>{let t=Pt({},(Et(e),e));return h(v,t,t.children)};fr.propTypes=Pt({},v.propTypes&&v.propTypes),Object.assign({},N.prototype.props);const Tr=e=>{let t=Pt({},(Et(e),e));return h(N,t,t.children)};Tr.propTypes=Pt({},N.propTypes&&N.propTypes),Object.assign({},O.prototype.props);const vr=e=>{let t=Pt({},(Et(e),e));return h(Fragment,null,h(O,t,t.startIcon&&h("i",{className:We(t.startIcon,"me-2")}),t.children))};vr.propTypes=Pt({},O.propTypes&&O.propTypes);const Nr=["children"];var Or;Object.assign({},null==(Or=C.prototype)?void 0:Or.props);const Cr=e=>{let{children:t}=e,r=Ft(e,Nr);return h(C,r,t)};Cr.propTypes=Pt({},C.propTypes&&C.propTypes);const wr=["children"];Object.assign({},w.prototype.props);const xr=e=>{let{children:t}=e,r=Ft(e,wr);return h(w,r,t)};xr.propTypes=Pt({},w.propTypes&&w.propTypes);const Sr=["children"];var kr;Object.assign({},null==(kr=x.prototype)?void 0:kr.props);const jr=e=>{let{children:t}=e,r=Ft(e,Sr);return h(x,r,t)};jr.propTypes=Pt({},jr.propTypes&&jr.propTypes);const Pr=["children"];var Er;Object.assign({},null==(Er=S.prototype)?void 0:Er.props);const Fr=e=>{let{children:t}=e,r=Ft(e,Pr);return h(S,r,t)};Fr.propTypes=Pt({},S.propTypes&&S.propTypes);const Ir=["children"];var zr;Object.assign({},null==(zr=k.prototype)?void 0:zr.props);const Dr=e=>{let{children:t}=e,r=Ft(e,Ir);return h(k,r,t)};Dr.propTypes=Pt({},k.propTypes&&k.propTypes);const Lr=["children"];var Ar;Object.assign({},null==(Ar=j.prototype)?void 0:Ar.props);const Mr=e=>{let{children:t}=e,r=Ft(e,Lr);return h(j,r,t)};Mr.propTypes=Pt({},j.propTypes&&j.propTypes);const Rr=["children"];var Br;Object.assign({},null==(Br=P.prototype)?void 0:Br.props);const Gr=e=>{let{children:t}=e,r=Ft(e,Rr);return h(P,r,t)};Gr.propTypes=Pt({},P.propTypes&&P.propTypes);const Hr=["children"];var Ur;Object.assign({},null==(Ur=E.prototype)?void 0:Ur.props);const Kr=e=>{let{children:t}=e,r=Ft(e,Hr);return h(E,r,t)};Kr.propTypes=Pt({},E.propTypes&&E.propTypes);const qr=["children","color","outline","fade"];Object.assign({color:"",outline:"",fade:"",icon:""},F.prototype.props);const _r=e=>{let{children:t,color:r,outline:n,fade:o}=e,s=Ft(e,qr);return h(F,Pt({color:r,className:We(s.className,{"bg-secondary bg-pending":"pending"===r,"badge-outline-primary":"primary"===n,"badge-outline-info":"info"===n,"badge-outline-secondary":"secondary"===n,"badge-outline-success":"success"===n,"badge-outline-danger":"danger"===n,"badge-outline-warning":"warning"===n,"badge-outline-light":"light"===n,"badge-outline-dark":"dark"===n,"badge-outline-pending":"pending"===n,"badge-fade-primary":"primary"===o,"badge-fade-info":"info"===o,"badge-fade-secondary":"secondary"===o,"badge-fade-success":"success"===o,"badge-fade-danger":"danger"===o,"badge-fade-warning":"warning"===o,"badge-fade-light":"light"===o,"badge-fade-dark":"dark"===o,"badge-fade-pending":"pending"===o})},s),t)};_r.propTypes=Pt({color:Ze.string},F.propTypes&&F.propTypes),Object.assign({},I.prototype.props);const $r=e=>h(I,Pt({className:We(e.className,{"card-variant-list ":"list"===e.variant,"card-variant-active":"active"===e.variant,"card-variant-active card-hover-none":"active"===e.variant&&!1===e.hover,"card-variant-outline":"outline"===e.variant,"card-variant-outline card-hover-none":"outline"===e.variant&&!1===e.hover,"card-variant-primary":"primary"===e.variant,"card-variant-primary card-hover-none":"primary"===e.variant&&!1===e.hover,"card-variant-secondary":"secondary"===e.variant,"card-variant-secondary card-hover-none":"secondary"===e.variant&&!1===e.hover,"card-variant-light":"light"===e.variant,"card-variant-light card-hover-none":"light"===e.variant&&!1===e.hover,"card-gradient card-gradient-success":"gradient"===e.variant&&"success"===e.color,"card-gradient card-gradient-primary":"gradient"===e.variant&&"primary"===e.color,"card-gradient card-gradient-danger":"gradient"===e.variant&&"danger"===e.color})},e),e.children);$r.propTypes=Pt({},I.propTypes&&I.propTypes),Object.assign({},z.prototype.props);const Jr=e=>h(z,e,e.children);Jr.propTypes=Pt({},z.propTypes&&z.propTypes),Object.assign({},D.prototype.props);const Vr=e=>h(D,e,e.children);Vr.propTypes=Pt({},D.propTypes&&D.propTypes),Object.assign({},L.prototype.props);const Yr=e=>h(L,e,e.children);Yr.propTypes=Pt({},L.propTypes&&L.propTypes),Object.assign({},A.prototype.props);const Wr=e=>h(A,e,e.children);Wr.propTypes=Pt({},A.propTypes&&A.propTypes),Object.assign({},M.prototype.props);const Zr=e=>h(M,e,e.children);Zr.propTypes=Pt({},M.propTypes&&M.propTypes),Object.assign({},R.prototype.props);const Qr=e=>h(R,e,e.children);Qr.propTypes=Pt({},R.propTypes&&R.propTypes),Object.assign({},B.prototype.props);const Xr=e=>h(B,e,e.children);Xr.propTypes=Pt({},B.propTypes&&B.propTypes),Object.assign({},G.prototype.props);const en=e=>h(G,e,e.children);en.propTypes=Pt({},G.propTypes&&G.propTypes),Object.assign({},H.prototype.props);const tn=e=>h(H,e,e.children);tn.propTypes=Pt({},H.propTypes&&H.propTypes),Object.assign({},U.prototype.props);const rn=e=>h(U,e,e.children);rn.propTypes=Pt({},U.propTypes&&U.propTypes),Object.assign({},K.prototype.props);const nn=e=>h(K,e,e.children);nn.propTypes=Pt({},K.propTypes&&K.propTypes),Object.assign({},q.prototype.props);const on=e=>h(q,e,e.children);on.propTypes=Pt({},q.propTypes&&q.propTypes),Object.assign({},_.prototype.props);const sn=e=>h(_,e,e.children);sn.propTypes=Pt({},_.propTypes&&_.propTypes),Object.assign({},$.prototype.props);const an=e=>h($,e,e.children);an.propTypes=Pt({},$.propTypes&&$.propTypes),Object.assign({},J.prototype.props);const ln=e=>h(J,e,e.children);ln.propTypes=Pt({},J.propTypes&&J.propTypes),Object.assign({},V.prototype.props);const pn=e=>h(V,e,e.children);pn.propTypes=Pt({},V.propTypes&&V.propTypes),Object.assign({},Y.prototype.props);const cn=e=>h(Y,e,e.children);cn.propTypes=Pt({},Y.propTypes&&Y.propTypes),Object.assign({},W.prototype.props);const dn=e=>h(W,e,e.children);dn.propTypes=Pt({},W.propTypes&&W.propTypes),Object.assign({},Z.prototype.props);const hn=e=>h(Z,e,e.children);hn.propTypes=Pt({},Z.propTypes&&Z.propTypes),Object.assign({},Q.prototype.props);const un=e=>h(Q,e,e.children);un.propTypes=Pt({},Q.propTypes&&Q.propTypes),Object.assign({},X.prototype.props);const yn=e=>h(X,e,e.children);yn.propTypes=Pt({},X.propTypes&&X.propTypes),Object.assign({},ee.prototype.props);const gn=e=>h(ee,e,e.children);gn.propTypes=Pt({},ee.propTypes&&ee.propTypes),Object.assign({},te.prototype.props);const mn=e=>h(te,e,e.children);mn.propTypes=Pt({},te.propTypes&&te.propTypes),Object.assign({},re.prototype.props);const bn=e=>h(re,e,e.children);bn.propTypes=Pt({},re.propTypes&&re.propTypes);const fn=["children"];Object.assign({},ne.prototype.props);const Tn=e=>{let{children:t}=e,r=Ft(e,fn);return h(ne,r,t)};Tn.propTypes=Pt({},ne.propTypes&&ne.propTypes);const vn=["children"];Object.assign({},oe.prototype.props);const Nn=e=>{let{children:t}=e,r=Ft(e,vn);return h(oe,r,t)};Nn.propTypes=Pt({},oe.propTypes&&oe.propTypes);const On=["children"];Object.assign({},se.prototype.props);const Cn=e=>{let{children:t}=e,r=Ft(e,On);return h(se,r,t)};Cn.propTypes=Pt({},se.propTypes&&se.propTypes);const wn=["children"];Object.assign({},ae.prototype.props);const xn=e=>{let{children:t}=e,r=Ft(e,wn);return h(ae,r,t)};xn.propTypes=Pt({},ae.propTypes&&ae.propTypes);const Sn=["children"];Object.assign({},le.prototype.props);const kn=e=>{let{children:t}=e,r=Ft(e,Sn);return h(le,r,t)};kn.propTypes=Pt({},le.propTypes&&le.propTypes),Object.assign({},pe.prototype.props);const jn=e=>h(pe,e,e.children);jn.propTypes=Pt({},pe.propTypes&&pe.propTypes);const Pn=["onRowClick","active","linear"],En=["onRowClick"],Fn=e=>{let{onRowClick:t=(()=>{}),active:r,linear:n}=e,o=Ft(e,Pn);const[s,a]=Ke.useState(null);return h(pe,Pt({hover:!0},o,{className:We(o.className,{"table-linear":n})}),h("thead",null,h("tr",null,o.thead.map((e,t)=>h("th",{className:We("",{"text-right":o.thead.length-1===t}),key:t},e.text)))),h("tbody",null,o.tbody.map((e,t)=>{let{onRowClick:n=function(){}}=e,o=Ft(e,En);return h("tr",{onClick:e=>{(e=>{a(e.currentTarget.rowIndex-1)})(e),n(e)},className:We({"table-active":r&&s===t}),key:t},o.data.map((e,t)=>h("td",{className:We({[e.className]:void 0!==e.className}),key:t},e.item)),o.actions&&h("td",{className:"text-right"},o.actions))})))};Fn.propTypes={thead:Ze.arrayOf(Ze.shape({className:Ze.string,text:Ze.string.isRequired})).isRequired,tbody:Ze.arrayOf(Ze.shape({className:Ze.string,data:Ze.arrayOf(Ze.shape({className:Ze.string,item:Ze.oneOfType([Ze.string,Ze.number,Ze.node]).isRequired})).isRequired,actions:Ze.node})).isRequired,active:Ze.bool};const In=({onFilter:e=(()=>{}),onSearch:n=(()=>{}),filters:o=[]})=>{let[s,a]=Ke.useState("");const l=function(e,t){const[r,n]=qe(e);return _e(()=>{const t=setTimeout(()=>{n(e)},500);return()=>{clearTimeout(t)}},[e,500]),r}(s);return Ke.useEffect(()=>{n({value:{clientSearch:l}})},[l]),h(r,null,h(t,{md:"3"},h(ot,{className:"react-select default m-0 w-100",classNamePrefix:"react-select",name:"singleSelect",onChange:t=>{e(t)},defaultValue:o.find(e=>e.default),options:o,placeholder:"Select filter"})),h(t,{md:"6"},h(ie,null,h(ce,{onChange:e=>a(e.currentTarget.value.toString()),placeholder:"Search item"}))))},zn="...",Dn=(e,t)=>Array.from({length:t-e+1},(t,r)=>r+e),Ln=e=>{const{onPageChange:t=(()=>{}),totalCount:r=0,siblingCount:n=1,currentPage:o=1,pageSize:s=10}=e,a=(({totalCount:e,pageSize:t,siblingCount:r=1,currentPage:n})=>$e(()=>{const o=Math.ceil(e/t);if(r+5>=o)return Dn(1,o);const s=Math.max(n-r,1),a=Math.min(n+r,o),l=s>2,p=a<o-2,i=o;if(!l&&p)return[...Dn(1,3+2*r),zn,o];if(l&&!p){let e=Dn(o-(3+2*r)+1,o);return[1,zn,...e]}if(l&&p){let e=Dn(s,a);return[1,zn,...e,zn,i]}},[e,t,r,n]))({currentPage:o,totalCount:r,siblingCount:n,pageSize:s});if(0===o||a.length<2)return null;let l=a[a.length-1];return h(Fragment,null,h("nav",{"aria-label":"Page navigation"},h("ul",{className:"pagination"},h("li",{key:"first-button",className:"page-item"},h("button",{onClick:()=>{t&&t(o-1)},className:"page-link","aria-label":"Next"},h("span",{"aria-hidden":"true"},"«"),h("span",{className:"sr-only"},"Previous"))),a.map((e,r)=>e===zn?h("li",{key:zn+r,className:"pagination-item dots"},"…"):h("li",{key:e,className:`page-item ${o===e&&" active"}`},h("button",{className:"page-link",onClick:()=>t(e)},e))),h("li",{key:"next-button",className:"page-item"},h("button",{disabled:o===l,className:"page-link",onClick:()=>{t&&t(o+1)},"aria-label":"Next"},h("span",{"aria-hidden":"true"},"»"),h("span",{className:"sr-only"},"Next"))))))};function An({columns:e,data:t,renderRowSubComponent:r,rowProps:n=(()=>({})),className:o="-highlight -striped ",handleSearch:s=(()=>{}),handleFilter:a=(()=>{}),handlePagination:l=(()=>{}),filters:p=[],pagination:i={currentPage:1,hasNextPage:!0,hasPrevPage:!1,nextPage:2,prevPage:null,size:10,totalPages:2,totalResults:17}}){const{getTableProps:c,getTableBodyProps:d,headerGroups:u,page:y,prepareRow:g,state:{},visibleColumns:m}=Qe({columns:e,data:t,initialState:{pageSize:10,pageIndex:0}},Xe,et,tt,rt,nt);return h(Fragment,null,h("div",{className:"ReactTable "+o},h("div",{className:"pagination-top"},h(In,{filters:p,onFilter:e=>a(e),onSearch:e=>s(e)})),h("table",Pt({},c(),{className:"rt-table"}),h("thead",{className:"rt-thead -header"},u.map(e=>h("tr",Pt({},e.getHeaderGroupProps(),{className:"rt-tr"}),e.headers.map((t,r)=>h("th",Pt({},t.getHeaderProps(t.getSortByToggleProps()),{className:We("rt-th rt-resizable-header",{"-cursor-pointer":e.headers.length-1!==r,"-sort-asc":t.isSorted&&!t.isSortedDesc,"-sort-desc":t.isSorted&&t.isSortedDesc})}),h("div",{className:"rt-resizable-header-content"},t.render("Header"),h("div",Pt({},t.getResizerProps(),{className:We("col-resizer",{" active":t.isResizing})}))),h("div",null,e.headers.length-1===r?null:t.canFilter?t.render("Filter"):null)))))),h("tbody",Pt({},d(),{className:"rt-tbody"}),y.map((e,t)=>{var o;g(e);const s=We("rt-tr",{" -odd":t%2==0},{" -even":t%2==1});return h(Ke.Fragment,{key:null==(o=e.getRowProps())?void 0:o.key},h("tr",Pt({className:s},e.getRowProps(n(Pt({},e,{className:s})))),e.cells.map(e=>h("td",Pt({},e.getCellProps(),{className:"rt-td"}),e.render("Cell")))),e.isExpanded?h("tr",null,h("td",{colSpan:m.length},r&&r({row:e}))):null)}))),h("div",{className:"pagination-bottom"},h("div",{className:"-pagination"},h("div",{className:"-center flex-nowrap"},h(Ln,{className:"pagination-bar",pagination:i,currentPage:i.currentPage,totalCount:i.totalResults,pageSize:i.size,onPageChange:e=>{l({page:e})}}))))))}const Mn=({onFilter:e=(()=>{}),onSearch:t=(()=>{}),onSort:r=(()=>{}),isSearchable:n,isFilterable:o,hasBulkActions:s,isSortable:a,sorts:l=[],tableToolbar:p,filterToolbar:i,title:c=""})=>{Ke.useState("");let[d,u]=Ke.useState(""),[y,g]=Ke.useState("");const m=function(e,t){const[r,n]=qe(e);return _e(()=>{const t=setTimeout(()=>{n(e)},500);return()=>{clearTimeout(t)}},[e,500]),r}(y),[b,f]=Ke.useState(!1);return Ke.useEffect(()=>{t({value:{clientSearch:m}})},[m]),h(Ke.Fragment,null,h(Dt,{className:"filter-search d-lg-flex justify-around align-items-center px-lg-4 my-4"},h(zt,{md:"4",sm:"12",className:" mb-3"},c&&h("h4",null,c)),h(zt,{md:"8",sm:"12",className:"mb-3"},h("div",{className:"d-flex justify-content-lg-end justify-content-md-end action-container"},p&&h("div",{className:"me-md-3 mr-md-3 create-filer"},p),s&&h(Fragment,null,h(w,null,h(vr,{className:" p-0 table-actions border-primary text-primary"},h("i",{class:"fa-solid fa-ellipsis-vertical"})),h(Tr,null,h(fr,null,"hello"),h(fr,null,"world")))))),h(zt,{md:"12",sm:"12"},h("div",{className:"d-flex justify-content-lg-start justify-content-md-start action-container"},h("div",{className:"d-flex create-filter-wrapper"},o&&i&&h("div",{className:"me-md-3 mr-md-3 create-filer"},i)),n&&h("div",{className:"me-md-3 mr-md-3  table-search-container shadow-sm--hover"},h("i",{className:"fa-solid fa-search my-auto ms-3 ml-3 p-0"}),h(po,{size:"sm",onChange:e=>g(e.currentTarget.value.toString()),placeholder:"Search",className:"border-0 table-search-input",type:"text"})),h("div",{className:"d-flex create-filter-wrapper"},a&&h("div",{className:"me-md-3 mr-md-3 create-filer"},h(br,{isOpen:b,toggle:()=>f(!b)},h(vr,{className:"filter",color:"secondary",outline:!0,size:"md"},h("i",{class:"fa-solid fa-sort me-2 mr-2 p-0 shadow-sm--hover"}),d||"Sort"),h(Tr,{className:"mt-3"},l&&l.length>0&&l.map(e=>h(fr,{style:{fontWeight:"500",fontSize:"14px",color:"#152536"},onClick:()=>{u(e.label),r(e)},className:"d-flex align-items-center fw-bold my-2"},e.label))))))))))},Rn=["columns","data","renderRowSubComponent","rowProps","className","handleCreate","handleSearch","handleFilter","handlePagination","filters","pagination"];function Bn(e){let{columns:t,data:r,renderRowSubComponent:n,rowProps:o=(()=>({})),className:s="-highlight -striped ",handleCreate:a=(()=>{}),handleSearch:l=(()=>{}),handleFilter:p=(()=>{}),handlePagination:i=(()=>{}),filters:c=[],pagination:d={currentPage:1,hasNextPage:!0,hasPrevPage:!1,nextPage:2,prevPage:null,size:10,totalPages:2,totalResults:17}}=e,u=Ft(e,Rn);const{getTableProps:y,getTableBodyProps:g,headerGroups:m,page:b,prepareRow:f,state:{},visibleColumns:T}=Qe({columns:t,data:r,initialState:{pageSize:10,pageIndex:0}},Xe,et,tt,rt,nt);return h(Fragment,null,h("div",{className:"visual-table"},h("div",{className:"ReactTable "+s},h("div",{className:"pagination-top"},h(Mn,Pt({filters:c,onFilter:e=>p(e),onSearch:e=>l(e),onClick:()=>a()},u))),h("table",Pt({},y(),{className:"rt-table "}),h("thead",{className:"rt-thead -header"},m.map(e=>h("tr",Pt({},e.getHeaderGroupProps(),{className:"rt-tr"}),e.headers.map((t,r)=>h("th",Pt({},t.getHeaderProps(t.getSortByToggleProps()),{className:We("rt-th rt-resizable-header",{"-cursor-pointer":t.canSort,"-sort-asc":t.isSorted&&!t.isSortedDesc,"-sort-desc":t.isSorted&&t.isSortedDesc})}),h("div",{className:"rt-resizable-header-content"},t.render("Header"),h("div",Pt({},t.getResizerProps(),{className:We("col-resizer",{" active":t.isResizing})}))),h("div",null,e.headers.length-1===r?null:t.canFilter?t.render("Filter"):null)))))),h("tbody",Pt({},g(),{className:"rt-tbody"}),b.map((e,t)=>{var r;f(e);const s=We("rt-tr",{" -odd":t%2==0},{" -even":t%2==1});return h(Ke.Fragment,{key:null==(r=e.getRowProps())?void 0:r.key},h("tr",Pt({className:s},e.getRowProps(o(Pt({},e,{className:s})))),e.cells.map(e=>h("td",Pt({},e.getCellProps(),{className:"rt-td"}),e.render("Cell")))),e.isExpanded?h("tr",null,h("td",{colSpan:T.length},n&&n({row:e}))):null)}))),h("div",{className:"pagination-bottom"},h("div",{className:"-pagination"},h("div",{className:"-center flex-nowrap"},h(Ln,{className:"pagination-bar",pagination:d,currentPage:d.currentPage,totalCount:d.totalResults,pageSize:d.size,onPageChange:e=>{i({page:e})}})))))))}const Gn=["children"];var Hn;Object.assign({},null==(Hn=de.prototype)?void 0:Hn.props);const Un=e=>{let{children:t}=e,r=Ft(e,Gn);return h(de,r,t)};Un.propTypes=Pt({},de.propTypes&&de.propTypes);const Kn=["children"];var qn;Object.assign({},null==(qn=he.prototype)?void 0:qn.props);const _n=e=>{let{children:t}=e,r=Ft(e,Kn);return h(he,r,t)};_n.propTypes=Pt({},he.propTypes&&he.propTypes);const $n=["children"];var Jn;Object.assign({},null==(Jn=ue.prototype)?void 0:Jn.props);const Vn=e=>{let{children:t}=e,r=Ft(e,$n);return h(ue,r,t)};Vn.propTypes=Pt({},ue.propTypes&&ue.propTypes);const Yn=["children"];var Wn;Object.assign({},null==(Wn=ye.prototype)?void 0:Wn.props);const Zn=e=>{let{children:t}=e,r=Ft(e,Yn);return h(ye,r,t)};Zn.propTypes=Pt({},ye.propTypes&&ye.propTypes);const Qn=["children"];var Xn;Object.assign({},null==(Xn=ge.prototype)?void 0:Xn.props);const eo=e=>{let{children:t}=e,r=Ft(e,Qn);return h(ge,r,t)};eo.propTypes=Pt({},ge.propTypes&&ge.propTypes);const to=["children"];var ro;Object.assign({},null==(ro=me.prototype)?void 0:ro.props);const no=e=>{let{children:t}=e,r=Ft(e,to);return h(me,r,t)};no.propTypes=Pt({},me.propTypes&&me.propTypes),Object.assign({},be.prototype.props);const oo=e=>h(be,e,e.children);oo.propTypes=Pt({},be.propTypes&&be.propTypes),Object.assign({},fe.prototype.props);const so=e=>h(fe,e,e.children);so.propTypes=Pt({},fe.propTypes&&fe.propTypes),Object.assign({},Te.prototype.props);const ao=e=>h(Te,e,e.children);ao.propTypes=Pt({},Te.propTypes&&Te.propTypes),Object.assign({},ve.prototype.props);const lo=e=>h(ve,e,e.children);lo.propTypes=Pt({},ve.propTypes&&ve.propTypes),Object.assign({},ce.prototype.props);const po=e=>h(ce,e,e.children);po.propTypes=Pt({},ce.propTypes&&ce.propTypes);const io=["leftPhrase"],co=e=>{let{leftPhrase:t="Add"}=e,r=Ft(e,io);return h(Fragment,null,h(st,Pt({className:"react-select",classNamePrefix:"react-select",formatCreateLabel:e=>((e,t)=>`${e} "${t}"`)(t,e)},r)))};st.propTypes={isClearable:Ze.bool,isSearchable:Ze.bool,isDisabled:Ze.bool,isMulti:Ze.bool,isRtl:Ze.bool,isOptionDisabled:Ze.func,isOptionSelected:Ze.func,isOptionFocused:Ze.func,isFocused:Ze.bool,isLoading:Ze.bool,isInvalid:Ze.bool,isRequired:Ze.bool,isCreatable:Ze.bool,isMenuOpen:Ze.bool,isMenuFixed:Ze.bool,isMenuPortal:Ze.bool,isMenuPositioned:Ze.bool,isMenuPositionFixed:Ze.bool,isMenuAutoFocused:Ze.bool,isControlled:Ze.bool,isFocusedOption:Ze.bool,isHidden:Ze.bool,size:Ze.oneOf(["sm","lg"]),word:Ze.string};const ho=["loadOptions"],uo=e=>{let{loadOptions:t}=e,r=Ft(e,ho);const[n,o]=Ke.useState(!1);return h(Fragment,null,h(at,Pt({className:"react-select",classNamePrefix:"react-select",loadOptions:t,onInputChange:e=>{o(e.length>0)},menuIsOpen:n},r)))};uo.propTypes={isClearable:Ze.bool,isSearchable:Ze.bool,isDisabled:Ze.bool,isMulti:Ze.bool,isRtl:Ze.bool,isOptionSelected:Ze.func,isOptionFocused:Ze.func,isFocused:Ze.bool,isLoading:Ze.bool,isInvalid:Ze.bool,isRequired:Ze.bool,isCreatable:Ze.bool,isMenuOpen:Ze.bool,isMenuFixed:Ze.bool,isMenuPortal:Ze.bool,isMenuPositioned:Ze.bool,isMenuPositionFixed:Ze.bool,isMenuAutoFocused:Ze.bool,isControlled:Ze.bool,isFocusedOption:Ze.bool,isHidden:Ze.bool,size:Ze.oneOf(["sm","lg"]),word:Ze.string};const yo=e=>{let t=Pt({},(Et(e),e));return h(ot,Pt({classNamePrefix:"react-select",className:"react-select"},t))};ot.propTypes={isClearable:Ze.bool,isSearchable:Ze.bool,isDisabled:Ze.bool,isMulti:Ze.bool,isRtl:Ze.bool,isOptionDisabled:Ze.func,isOptionSelected:Ze.func,isOptionFocused:Ze.func,isFocused:Ze.bool,isLoading:Ze.bool,isInvalid:Ze.bool,isRequired:Ze.bool,isCreatable:Ze.bool,isMenuOpen:Ze.bool,isMenuFixed:Ze.bool,isMenuPortal:Ze.bool,isMenuPositioned:Ze.bool,isMenuPositionFixed:Ze.bool,isMenuAutoFocused:Ze.bool,isControlled:Ze.bool,isFocusedOption:Ze.bool,isHidden:Ze.bool,size:Ze.oneOf(["sm","lg"]),word:Ze.string},Object.assign({},ie.prototype.props);const go=e=>h(ie,e,e.children);go.propTypes=Pt({},ie.propTypes&&ie.propTypes),Object.assign({},Ne.prototype.props);const mo=e=>h(Ne,e,e.children);mo.propTypes=Pt({},Ne.propTypes&&Ne.propTypes),Object.assign({},Oe.prototype.props);const bo=e=>h(Oe,e,e.children);bo.propTypes=Pt({},Oe.propTypes&&Oe.propTypes),Object.assign({},Ce.prototype.props);const fo=e=>h(Ce,e,e.children);fo.propTypes=Pt({},Ce.propTypes&&Ce.propTypes),Object.assign({},we.prototype.props);const To=e=>h(we,e,e.children);To.propTypes=Pt({},we.propTypes&&we.propTypes),Object.assign({},xe.prototype.props);const vo=e=>h(xe,e,e.children);vo.propTypes=Pt({},xe.propTypes&&xe.propTypes),Object.assign({},Se.prototype.props);const No=e=>h(Se,e,e.children);No.propTypes=Pt({},Se.propTypes&&Se.propTypes);const Oo=["children"];Object.assign({separated:Ze.bool},ke.prototype.props);const Co=e=>{let{children:t}=e,r=Ft(e,Oo);return h(ke,Pt({className:We(`pagination-separated ${r.className}`,{})},r),t)};Co.propTypes=Pt({separated:Ze.bool},ke.propTypes&&ke.propTypes);const wo=["children"];Object.assign({},je.prototype.props);const xo=e=>{let{children:t}=e,r=Ft(e,wo);return h(je,r,t)};xo.propTypes=Pt({},je.propTypes&&je.propTypes);const So=["children"];Object.assign({},Pe.prototype.props);const ko=e=>{let{children:t}=e,r=Ft(e,So);return h(tr,Pt({className:We(`page-link ${r.className}`,{})},r),t)};ko.propTypes=Pt({},Pe.propTypes&&Pe.propTypes);const jo=["children"];var Po;Object.assign({},null==(Po=Ee.prototype)?void 0:Po.props);const Eo=e=>{let{children:t}=e,r=Ft(e,jo);return h(Ee,r,t)};Eo.propTypes=Pt({},Ee.propTypes&&Ee.propTypes);const Fo=["children"];var Io;Object.assign({},null==(Io=Fe.prototype)?void 0:Io.props);const zo=e=>{let{children:t}=e,r=Ft(e,Fo);return h(Fe,r,t)};zo.propTypes=Pt({},Fe.propTypes&&Fe.propTypes);const Do=["children"];var Lo;Object.assign({},null==(Lo=Ie.prototype)?void 0:Lo.props);const Ao=e=>{let{children:t}=e;return Ft(e,Do),h(Ie,null,t)};Ao.propTypes=Pt({},Ie.propTypes&&Ie.propTypes);const Mo=["children"];var Ro;Object.assign({},null==(Ro=ze.prototype)?void 0:Ro.props);const Bo=e=>{let{children:t}=e,r=Ft(e,Mo);return h(ze,r,t)};Bo.propTypes=Pt({},ze.propTypes&&ze.propTypes);const Go=["children"];var Ho;Object.assign({},null==(Ho=De.prototype)?void 0:Ho.props);const Uo=e=>{let{children:t}=e,r=Ft(e,Go);return h(De,r,t)};Uo.propTypes=Pt({},De.propTypes&&De.propTypes);const Ko=["children"];var qo;Object.assign({},null==(qo=Le.prototype)?void 0:qo.props);const _o=e=>{let{children:t}=e,r=Ft(e,Ko);return h(Le,r,t)};_o.propTypes=Pt({},Le.propTypes&&Le.propTypes);const $o=["children"];var Jo;Object.assign({},null==(Jo=Ae.prototype)?void 0:Jo.props);const Vo=e=>{let t=Ft(e,$o);return h(Ae,t,"ToastHeaderBase")};Vo.propTypes=Pt({},Ae.propTypes&&Ae.propTypes);const Yo=["children"];var Wo;Object.assign({},null==(Wo=Me.prototype)?void 0:Wo.props);const Zo=e=>{let{children:t}=e,r=Ft(e,Yo);return h(Me,r,t)};Zo.propTypes=Pt({},Me.propTypes&&Me.propTypes);const Qo=["children"];var Xo;Object.assign({},null==(Xo=Re.prototype)?void 0:Xo.props);const es=e=>{let{children:t}=e,r=Ft(e,Qo);return h(Re,r,t)};es.propTypes=Pt({},Re.propTypes&&Re.propTypes),Object.assign({},Be.prototype.props);const ts=e=>h(Be,e);ts.propTypes=Pt({},Be.propTypes&&Be.propTypes);const rs=["children"];Object.assign({},Ge.prototype.props);const ns=e=>{let{children:t}=e,r=Ft(e,rs);return h(Ge,r,t)};ns.propTypes=Pt({},Ge.propTypes&&Ge.propTypes),Object.assign({},He.prototype.props);const os=e=>h(He,e,e.children);os.propTypes=Pt({},He.propTypes&&He.propTypes),Object.assign({},Ue.prototype.props);const ss=e=>h(Ue,e,e.children);ss.propTypes=Pt({},Ue.propTypes&&Ue.propTypes);const as=["file","name","onDelete"],ls=["onSelected","hint"];function ps(e){let{file:r,onDelete:n}=e;Ft(e,as);let[o,s]=qe({action:null,id:null}),[a,l]=qe({status:!1,progress:0});return h(t,{md:"4"},h(I,{className:""},h(z,null,h("h5",{className:"mb-1"},h("i",{className:"tim-icons icon-paper"})," ",r.path," "),h("h5",{className:"m-0"},o.action?h(Ge,{color:"text-damger",size:"sm"}):h("i",{onClick:e=>n(r),className:"tim-icons icon-simple-remove"})," ",h("small",null,function(e){const t=["Bytes","KB","MB","GB","TB"];if(0===e)return"n/a";const r=parseInt(Math.floor(Math.log(e)/Math.log(1024)),10);return 0===r?`${e} ${t[r]})`:`${(e/1024**r).toFixed(1)} ${t[r]}`}(r.size))),a.status&&a.progress<100&&h(Be,{value:a.progress}))))}function is(e){let{onSelected:t=(()=>{}),hint:n="Drag 'n' drop, or click to select files"}=e,o=Ft(e,ls);const[s,a]=qe([]),l=Ke.useCallback((e,t)=>{let r=s.map(e=>e.path)||[];e=e.filter(e=>!r.includes(e.path)),a(t=>[...t,...e])},[s]);Ke.useEffect(()=>{t(s)},[s]);const{getRootProps:p,getInputProps:i}=lt(Pt({onDrop:l},o.acceptedFileTypes&&{accept:o.acceptedFileTypes},{multiple:!o.noMultiple,disabled:o.disabled})),c=e=>a(t=>t.filter(t=>t.path!==e.path));return h("section",null,h("input",{type:"file",name:"",id:""}),h("div",p({className:"dropzone"}),h("input",i()),h("p",null,n)),h("aside",null,h(r,null,s.map(e=>h(ps,{key:e.path,file:e,name:o.name,onDelete:c})))))}is.propTypes={hint:Ze.string,onSelected:Ze.func,noMultiple:Ze.bool,disabled:Ze.bool};const cs=["label","mandatory","onChange","unselected","error","helperText"];let ds=Object.assign({},ce.prototype.props);const hs=e=>{let{label:r,mandatory:n=!1,unselected:o=!1,error:s,helperText:a}=e,l=Ft(e,cs);return h(Fragment,null,h(ve,{check:!0,className:We("",{"unselected-checkbox":o})},h(t,{md:"12"},h(ce,Pt({type:"checkbox"},l))," ",h(Oe,{style:{fontSize:"16px"},className:"text-dark",check:!0},r," ",n?h("span",{className:"text-danger"},"*"):"")),h(t,{sm:"12"},s&&h("label",{className:"text-danger"},h("small",null,s)),a&&h("label",null," ",h("small",null,a)))))};hs.propTypes=Pt({},ds||{},{label:Ze.string,mandatory:Ze.bool,unselected:Ze.bool},ce.propTypes);const us=e=>{let t=Pt({},(Et(e),e));return h(pt,t)},ys=({label:e,name:r,value:n,onChange:o,error:s,mandatory:a=!1,disabled:l,helperText:p})=>h(ve,{row:!0},h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},e," ",a?h("span",{className:"text-danger"},"*"):"")),h(t,{sm:"12"},h(us,{inputProps:{disabled:l,placeholder:"Select date",className:"form-control",value:n,name:r,onChange:o,autoComplete:"off"},onChange:e=>{if("object"==typeof e){let t={name:r,value:e.format("D/M/YYYY")};o({currentTarget:t})}},timeFormat:!1,dateFormat:"D/M/YYYY",closeOnSelect:!0}),s&&h("label",{className:"text-danger"},h("small",null,s)),p&&h("label",{className:""},h("small",null,p)))),gs=["label","error","clearAll","onLoad","name","onChange","noMultiple"],ms=e=>{let{label:r,clearAll:n=!1,onLoad:o,name:s,noMultiple:a}=e,l=Ft(e,gs);return h(ve,{row:!0},h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},r)),h(t,{sm:"12"},h(is,Pt({},l,{name:s,clearAll:n,noMultiple:a,onLoad:e=>o(e)}))))},bs=["label","mandatory","unselected"];let fs=Object.assign({},ce.prototype.props);const Ts=e=>{let{label:t,mandatory:r=!1,unselected:n=!1}=e,o=Ft(e,bs);return h(Fragment,null,h(ve,{check:!0,className:We("",{"unselected-radio":n})},h(ce,Pt({type:"radio"},o))," ",h(Oe,{style:{fontSize:"16px"},className:"text-dark",check:!0},t," ",r?h("span",{className:"text-danger"},"*"):"")))};Ts.propTypes=Pt({},fs||{},{label:Ze.string,mandatory:Ze.bool,unselected:Ze.bool},ce.propTypes);const vs=["label","onChange","values","unselected","defaultChecked","verticalAlign","error","helperText"],Ns=e=>{let{label:r,onChange:n,values:o,unselected:s,defaultChecked:a,verticalAlign:l=!1,error:p,helperText:i}=e,c=Ft(e,vs);return h(Ke.Fragment,null,h(ve,{check:!0,row:!0},h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark",sm:"12"},r)),h(t,{sm:"12"},h("div",{className:We("",{"d-flex flex-wrap":!l})},o&&(null==o?void 0:o.map((e,t)=>h("span",{key:t,className:We("",{"mr-3 me-3":!l})},h(Ts,Pt({label:e,onChange:n,unselected:s,defaultChecked:!(!a||a!==e)},c))))))),h(t,{sm:"12"},p&&h("label",{className:"text-danger"},h("small",null,p)),i&&h("label",null," ",h("small",null,i)))))},Os=["label","error","name","onChange","mandatory","helperText","sideBtn"],Cs=e=>{let{label:r,error:n,name:o,onChange:s=(()=>{}),mandatory:a=!1,helperText:l,sideBtn:p}=e,i=Ft(e,Os);return h(Fragment,null,h(ve,{row:!0},h(t,{sm:"12",className:"d-flex"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},r," ",a?h("span",{className:"text-danger"},"*"):""," ",p&&p)),h(t,{sm:"12"},h(yo,Pt({},i,{onChange:e=>{e?(Array.isArray(e),s({currentTarget:{name:o,value:e}})):s({currentTarget:{name:o,value:[]}})}})),n&&h("label",{className:"text-danger"},h("small",null,n)),l&&h("label",null," ",h("small",null,l)))))},ws=["children"];Object.assign({},ie.prototype.props);const xs=e=>{let{children:t}=e,r=Ft(e,ws);return h(ie,r,t)};xs.propTypes=Pt({},ie.propTypes&&ie.propTypes);const Ss=["children","onClick"];Object.assign({},Ne.prototype.props);const ks=e=>{let{children:t,onClick:r}=e,n=Ft(e,Ss);return h(Ne,Pt({onClick:e=>{r?r(e):(e=>{var t,r,n;null==(t=e.target.parentElement.parentElement.children[1])||t.focus(),e.target.parentElement.parentElement.children[0]&&(null==(r=e.target.parentElement.parentElement.children[0])||r.focus()),e.target.parentElement.parentElement.children[2]&&(null==(n=e.target.parentElement.parentElement.children[2])||n.focus())})(e)}},n),t)};ks.propTypes=Pt({},Ne.propTypes&&Ne.propTypes);const js=["label","error","icon","name","onChange","mandatory","helperText"],Ps=e=>{let{label:r,error:n,icon:o,name:s,onChange:a=(()=>{}),mandatory:l=!1,helperText:p}=e,i=Ft(e,js);return h(Fragment,null,h(ve,{row:!0},h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},r," ",l?h("span",{className:"text-danger"},"*"):"")),h(t,{sm:"12"},h(xs,null,h(ks,null,h("i",{className:`${o}`})),h(yo,Pt({},i,{onChange:e=>{e?(Array.isArray(e),a({currentTarget:{name:s,value:e}})):a({currentTarget:{name:s,value:[]}})}}))),n&&h("label",{className:"text-danger"},h("small",null,n)),p&&h("label",null,h("small",null,p)))))};Object.assign({},ce.prototype.props);const Es=e=>{let t=Pt({},(Et(e),e));return h(ce,t)};Es.propTypes=Pt({},ce.propTypes&&ce.propTypes);const Fs=["label","mandatory","error","feedbackText","helperText"];let Is=Object.assign({},Es.prototype.props);const zs=e=>{let{label:r,mandatory:n=!1,error:o="",feedbackText:s="",helperText:a=""}=e,l=Ft(e,Fs);return h(Fragment,null,h(ve,{row:!0},r&&h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},r," ",n?h("span",{className:"text-danger"},"*"):"")),h(t,{sm:"12"},h(Es,Pt({invalid:o},l)),o&&h("label",{className:"text-danger"},h("small",null,o)),a&&h("label",null," ",h("small",null,a)))))};zs.propTypes=Pt({},Is&&Is,{leftIcon:Ze.string,rightIcon:Ze.string,leftIconStyle:Ze.string,rightIconStyle:Ze.string,label:Ze.string,type:Ze.string,mandatory:Ze.bool,error:Ze.string,helperText:Ze.string,valid:Ze.bool,onChange:Ze.func,labelCol:Ze.string,inputCol:Ze.string,value:Ze.string,placeholder:Ze.string},Es.propTypes);const Ds=["label","onChange","icon","type","mandatory","error","defaultOpt","helperText"],Ls=e=>{let{label:r,icon:n,type:o="text",mandatory:s=!1,error:a,helperText:l}=e;return Ft(e,Ds),h(Fragment,null,h(ve,{row:!0},r&&h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},r," ",s?h("span",{className:"text-danger"},"*"):"")),h(t,{sm:"12"},h(xs,null,h(ks,null,h("i",{className:`${n}`}))),a&&h("label",{className:"text-danger"},h("small",null,a)),l&&h("label",{className:""},h("small",null,l)))))},As=({label:e,name:r,value:n,onChange:o,error:s,disabled:a,helperText:l})=>h(Fragment,null,h(ve,{row:!0},h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},e)),h(t,{sm:"12"},h(pt,{dateFormat:!1,timeIntervals:30,timeFormat:"HH:mm",inputProps:{disabled:a,className:"form-control",placeholder:"Select a time",value:n,name:r,onChange:o,autoComplete:"off"},onChange:e=>{if("object"==typeof e){let t={name:r,value:e.format("HH:mm")};o({currentTarget:t})}},className:"text-dark"}),s&&h("label",{className:"text-danger"},h("small",null,s)),l&&h("label",null,h("small",null,l))))),Ms="inline-default",Rs="block-default",Bs="atomic-entity",Gs={IMAGE:"image",DIVIDER:"divider",LINK:"link",MENTION:"mention",CHECKLIST:"checklist",ALIGN_LEFT:"start",ALIGN_CENTER:"center",ALIGN_RIGHT:"end"};function Hs({name:e,profileImageSrc:t,_id:r,onSelect:n=(()=>{})}){let o=Je(o=>{o.preventDefault(),n({name:e,profileImageSrc:t,_id:r})});return h("div",{className:"d-flex align-items-center"},h("div",{className:"avatar mb-1"},h("img",{src:t||"https://assets.imssystems.tech/images/system/avatar-placeholder.jpg",alt:e})),h("div",{onClick:o,className:"btn btn-link p-2 mb-1"},e))}const Us=["suggestions"];function Ks(e){let{suggestions:t}=e,r=Ft(e,Us),{computedPosForMentionSuggestions:n}=Ve(Ys);return h(Fragment,null,t.length?h("div",{className:"mention-suggestions position-absolute mt-4 p-2 shadow-md",style:Pt({},n)},t.map((e,t)=>h(Hs,Pt({key:e.name+t},e,r)))):null)}function qs(e,t,r){const n=t.getText();let o,s;for(;null!==(o=e.exec(n));)s=o.index,r(s,s+o[0].length)}const _s=/\B@\w+/g,$s=/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,Js=new dt([{strategy:function(e,t,r){qs(_s,e,t)},component:function(e){let t=Ye(null),{editorRef:r,mentionSuggestions:n,updateComputedPosForMentionSuggestions:o,handleMentionSelect:s}=Ve(Ys);const a=Je(()=>{var e;return{left:(null==(e=r.current)||null==(e=e.editor)?void 0:e.getBoundingClientRect()).width-t.current.offsetLeft<240?t.current.offsetLeft-230:t.current.offsetLeft,top:t.current.offsetTop,display:"block"}},[]),l=Je(()=>({display:"none"}),[]);function p(){if(!e.entityKey)return null;const t=e.contentState.getEntity(e.entityKey);return Pt({},null==t?void 0:t.getData())}return _e(()=>{t.current&&o(a())},[]),h(Fragment,null,p()?h("a",{href:"/admin/users/"+p()._id,className:"text-primary"},p().name):h("span",{ref:t,className:""},e.children),h(Ks,{suggestions:n.filter(t=>{var r;return t.name.toLowerCase().includes(e.decoratedText.slice(1,null==e||null==(r=e.decoratedText)?void 0:r.length).toLowerCase())}),onSelect:({name:t,profileImageSrc:r,_id:n})=>{let a="@"+t.split(" ").join("_");s(e.contentState,e.blockKey,{start:e.start,end:e.end},{mention:a+" ",profileImageSrc:r,_id:n,name:t}),o(l())}}))}},{strategy:function(e,t,r){qs($s,e,t)},component:function(e){return h("a",{href:e.decoratedText,title:e.decoratedText,target:"_blank",rel:"noreferrer"},e.children)}},{strategy:(e,t,r)=>{e.findEntityRanges(e=>{const t=e.getEntity();return null!==t&&r.getEntity(t).getType()===Gs.LINK},t)},component:function(e){let t=e.contentState.getEntity(e.entityKey).getData();return t.href?h("a",{href:t.href,title:t.linkText,target:"_blank",rel:"noreferrer"},t.linkText||t.href):null}}]),Vs=["children"],Ys=Ke.createContext(),Ws=e=>{let{children:t}=e,r=Ft(e,Vs),n=function(e){const t=Ye(null),[r,n]=qe(ct.createEmpty(Js)),[o,s]=qe(!1),[a,l]=qe({display:"none"});function p(){let t;try{"string"==typeof e.value&&(t=JSON.parse(e.value)),"object"==typeof e.value&&(t=e.value)}catch(t){if(console.log(t),"string"==typeof e.value)return d(ct.createWithContent(ut.createFromText(e.value)))}return d(e.value||t?ct.push(r,yt(t),"change-block-data"):ct.createEmpty(Js))}_e(()=>{p()},[]),_e(()=>{if(e.readOnly)return p();e.value||d(ct.createEmpty(Js))},[e.value]);const i=Ye(null),c=(e,t)=>{const n=r.getCurrentContent().createEntity(e,"IMMUTABLE",Pt({},t)),o=n.getLastCreatedEntityKey(),s=ct.set(r,{currentContent:n},"create-entity");d(bt.insertAtomicBlock(s,o," "))},d=t=>{const r=t.getCurrentContent();n(t),console.log(JSON.stringify(ht(r))),e.onDataStructureChange(JSON.stringify(ht(r)))},h=async t=>{if(!e.handleUpload)return console.log("Uploader function not specified");if(!t.every(e=>"image"===e.type.split("/")[0]))return console.log("All files has to be images");try{let r=await Promise.all(t.map(t=>e.handleUpload(t)));console.log(r),r.every(e=>e)||console.log("one or mutiple files don't have storage info"),r.map(e=>c(Gs.IMAGE,{storageInfo:e}))}catch(e){return console.log(e)}},u=e=>{e.preventDefault(),h(Array.from(e.target.files))},y={[Gs.IMAGE]:()=>i.current.click(),[Gs.LINK]:()=>d((e=>{let t=window.prompt("Paste the link bellow:");if(t){let r=window.prompt("Paste the link-text below:");if(r){const n=e.getCurrentContent();n.createEntity(Gs.LINK,"MUTABLE",{href:t,linkText:r});let o=n.getLastCreatedEntityKey();const s=e.getSelection(),a=it.replaceText(n,s,r,null,o),l=s.set("anchorOffset",s.getAnchorOffset()+r.length),p=ct.set(e,{currentContent:a},"create-entity");return ct.forceSelection(p,l)}}})(r)),[Gs.DIVIDER]:()=>c(Gs.DIVIDER,{}),[Gs.MENTION]:()=>{},[Gs.CHECKLIST]:()=>{c(Gs.CHECKLIST,{})}},g={[Ms]:e=>d(gt.toggleInlineStyle(r,e)),[Rs]:e=>d(gt.toggleBlockType(r,e)),[Bs]:e=>{y[e]()}};return{editorRef:t,editorState:r,computedPosForMentionSuggestions:a,focusedForEditing:o,getFileInputProps:()=>({ref:i,onChange:u}),generateLink:async t=>e.linkGeneratorFn&&"function"==typeof e.linkGeneratorFn?e.linkGeneratorFn(t):null,handleDroppedFiles:(e,t)=>h(t),handlePastedFiles:e=>h(e),handleEditorStateChange:d,handleKeyCommand:(e,t)=>{let r=gt.handleKeyCommand(t,e);return r?(d(r),"handled"):"not-handled"},handleToolClick:(e,t)=>(t.preventDefault(),r.getSelection().getHasFocus()&&null!=e&&e.element?void g[e.element](e.style):null),forceFocusEditorEnd:e=>{var n;(null==e?void 0:e.preventDefault)&&e.preventDefault(),null==(n=t.current.editor)||n.focus(),d(ct.moveFocusToEnd(r))},updateComputedPosForMentionSuggestions:e=>l(e),handleMentionSelect:(e,t,n,o)=>{let s=mt.createEmpty(t),a=e.createEntity(Gs.MENTION,"IMMUTABLE",Pt({},o)),l=a.getLastCreatedEntityKey();a=it.replaceText(e,s.merge({anchorOffset:n.start,focusOffset:n.end}),o.mention,r.getCurrentInlineStyle(),l),d(ct.forceSelection(ct.moveFocusToEnd(ct.set(r,{currentContent:a})),a.getSelectionAfter()))},activateEditor:()=>s(!0),deactivateEditor:()=>s(!1),isToolActive:e=>r.getCurrentInlineStyle().has(null==e?void 0:e.style)||(null==r?void 0:r.getCurrentContent().getBlockForKey(null==r?void 0:r.getSelection().getStartKey()).getType())===(null==e?void 0:e.style)}}({handleUpload:r.handleUpload||async function(){},linkGeneratorFn:r.linkGeneratorFn,onDataStructureChange:r.onDataStructureChange||function(){},value:r.value||null,readOnly:r.readOnly}),o=Pt({},(Et(n),n));return h(Ys.Provider,{value:Pt({},o,{mentionSuggestions:r.mentionSuggestions||[]})},t)};function Zs(e){var t;return e.src||e.link?h("img",{src:e.src||e.link,alt:e.alt||(null==(t=e.storageInfo)?void 0:t.Key)||"...",className:"unselectable"}):null}function Qs(){return h("hr",null)}function Xs({}){return h(Ke.Fragment,null)}const ea=["editorRef","onResizeEnd","reference","currentSize"],ta=[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100];function ra(e){var t;let{editorRef:r,onResizeEnd:n,reference:o="left",currentSize:s=10}=e,a=Ft(e,ea),[l,p]=Ke.useState(!1),[i,c]=Ke.useState(s);const d=null==(t=r.current)||null==(t=t.editor)?void 0:t.getBoundingClientRect();let u=Ke.useCallback(e=>{e.preventDefault();const t=e=>{let t=[...ta];p(!0);let r="center"===o?d.width/2:d.width,s=parseInt(Math.abs(e.clientX-("center"===o?d.left+d.width/2:"end"===o?d.left+d.width:d.left))),l=parseInt(s/r*100);t.sort((e,t)=>Math.abs(l-e)-Math.abs(l-t));let i=t[0];c(i),n&&n({partition:i});let h=a.block.getEntityAt(0);a.contentState.mergeEntityData(h,{size:i})},r=()=>{p(!1),document.removeEventListener("mousemove",t,!1),document.removeEventListener("mouseup",r,!1)};document.addEventListener("mousemove",t,!1),document.addEventListener("mouseup",r,!1)},[n]);return h(Fragment,null,h("div",{className:"d-inline-block p-2 unselectable",style:{cursor:"col-resize"},onMouseDown:u},h("div",{className:"bg-primary rounded resize-bar"})),l&&h("div",{className:"resize-guides-container position-absolute "},ta.map(e=>(parseInt(window.getComputedStyle(document.querySelector(".draft-editor-container"),null).getPropertyValue("padding-left")),{percentage:e,pixels:Math.ceil(d.width*e/100)})).map(e=>h("div",{key:e.pixels,className:We("resize-guide position-absolute rounded",{"bg-info":"start"===o&&e.percentage===i||"end"===o&&100-e.percentage===i}),style:{left:e.pixels}}))))}const na=["editorRef","onAlignmentChange"],oa=[{label:"Align left",style:Gs.ALIGN_LEFT,icon:"fa-solid fa-align-left"},{label:"Align center",style:Gs.ALIGN_CENTER,icon:"fa-solid fa-align-justify"},{label:"Align right",style:Gs.ALIGN_RIGHT,icon:"fa-solid fa-align-right"}];function sa(e){let{onAlignmentChange:t}=e,r=Ft(e,na),n=Je(({alignment:e})=>{t&&t({alignment:e});let n=r.block.getEntityAt(0);r.contentState.mergeEntityData(n,{alignment:e})},[t]);return h("div",{className:"d-inline-block shadow-md rounded mb-1"},oa.map(e=>h(u,{title:null==e?void 0:e.label,type:"button",className:We("btn btn-icon m-0 text-muted",{}),key:null==e?void 0:e.style,onClick:t=>n({alignment:null==e?void 0:e.style})},e.icon?h("i",{className:e.icon}):null==e?void 0:e.label)))}const aa=["children"];function la(e){let{children:t}=e,r=Ft(e,aa),[n,o]=Ke.useState(!1),[s,a]=Ke.useState(r.size||30),[l,p]=Ke.useState(r.alignment||Gs.ALIGN_LEFT),i=()=>({"justify-content-start":"start"===l,"justify-content-center":"center"===l,"justify-content-end":"end"===l});return h(Fragment,null,n&&l&&h("div",{className:We("d-flex",i())},h(sa,Pt({onAlignmentChange:e=>p(e.alignment)},r))),h("div",{className:We("d-flex align-items-center position-relative",i())},n&&"start"!==l&&h(ra,Pt({},r,{reference:l,onResizeEnd:e=>a(e.partition)})),h("div",{className:We("d-inline-block rounded resize-container unselectable",{"resize-focused":n,"w-10":10===s,"w-15":15===s,"w-20":20===s,"w-25":25===s,"w-30":30===s,"w-35":35===s,"w-40":40===s,"w-45":45===s,"w-50":50===s,"w-55":55===s,"w-60":60===s,"w-65":65===s,"w-70":70===s,"w-75":75===s,"w-80":80===s,"w-85":85===s,"w-90":90===s,"w-95":95===s,"w-100":100===s}),onClick:()=>o(e=>!e)},t),n&&"end"!==l&&h(ra,Pt({},r,{reference:l,currentSize:s,onResizeEnd:e=>a(e.partition)}))))}const pa=["type","data","editorControllers"];function ia(e){let{type:t,data:r,editorControllers:n}=e,o=null,s=Pt({},r,n,Ft(e,pa));return t===Gs.IMAGE&&(o=h(la,s,h(Zs,r))),t===Gs.DIVIDER&&(o=h(Qs,r)),t===Gs.CHECKLIST&&(o=h(Xs,r)),o}const ca=["generateLink"],da=e=>"atomic"===e.getType()?{component:ha,editable:!1}:null,ha=e=>{const t=e.block.getEntityAt(0),r=t&&e.contentState.getEntity(t),n=null==r?void 0:r.getType(),o=Ve(Ys),{generateLink:s}=o,a=Ft(o,ca);let l=function(e){let[t,r]=Ke.useState(e.src);return Ke.useEffect(()=>(async function(){if(!e.src)try{if(!e.generateLink||"function"!=typeof e.generateLink)throw Error("link gnerator function must be supplied");let t=await e.generateLink(e.storageInfo);if(!t)throw new Error("link generator function must return a valid link or else provide a valid  image source");r(t)}catch(e){r("https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"),console.log(e)}}(),()=>{}),[e.generateLink]),{link:t}}(Pt({generateLink:s},null==r?void 0:r.getData()));return h(ia,Pt({type:n,data:Pt({},null==r?void 0:r.getData(),l),editorControllers:Pt({},a)},e))},ua=["readOnly"];function ya(e){let{readOnly:t=!1}=e,r=Ft(e,ua);const{editorRef:n,editorState:o,handleEditorStateChange:s,handleDroppedFiles:a,handlePastedFiles:l,handleKeyCommand:p,activateEditor:i,deactivateEditor:c}=Ke.useContext(Ys);return h(Fragment,null,h(ft,{ref:n,blockRendererFn:da,placeholder:r.placeholder,onChange:s,editorState:o,spellCheck:!0,handleKeyCommand:p,handleDroppedFiles:a,handlePastedFiles:l,readOnly:t,onFocus:i,onBlur:c}))}const ga={INLINE_TYPES:[{label:"Underline",style:"UNDERLINE",icon:"gns-icons-16 icon-icon-textunderline-24",element:Ms},{label:"Bold",style:"BOLD",icon:"gns-icons-16 icon-icon-textbolder-24",element:Ms},{label:"Italic",style:"ITALIC",icon:"gns-icons-16 icon-icon-textitalic-24",element:Ms},{label:"Strike through",style:"STRIKETHROUGH",icon:"gns-icons-16 icon-icon-textstrikethrough-24",element:Ms}],BLOCK_TYPES:[{label:"Header",style:"header-three",icon:"gns-icons-16 icon-icon-header-24",element:Rs},{label:"UL",style:"unordered-list-item",icon:"gns-icons-16 icon-icon-listdashes-24",element:Rs},{label:"OL",style:"ordered-list-item",icon:"gns-icons-16 icon-icon-listnumbers-24",element:Rs},{label:"Blockquote",style:"blockquote",icon:"gns-icons-16 icon-icon-quotes-24",element:Rs},{label:"Code block",style:"code-block",icon:"gns-icons-16 icon-icon-codesimple-24",element:Rs}],ENTITY_TYPES:[{label:"Image",style:Gs.IMAGE,icon:"gns-icons-16 icon-icon-imagesquare-24",element:Bs},{label:"Divider",style:Gs.DIVIDER,icon:"gns-icons-16 icon-icon-minus-24",element:Bs}]};function ma(e){return h("span",{className:"draft-toolbar-button-separator"},"|")}const ba=Ke.forwardRef((e,t)=>h("input",Pt({},e,{ref:t,className:"d-none",type:"file",accept:e.accept||"image/*"})));function fa(e){const{getFileInputProps:t,isToolActive:r,handleToolClick:n,focusedForEditing:o}=Ke.useContext(Ys);return h(Fragment,null,h(ba,t()),Object.keys(ga).map((e,t)=>{var s;return h(Ke.Fragment,{key:e},null==(s=ga[e])?void 0:s.map(e=>h(u,{title:null==e?void 0:e.label,type:"button",color:"link",className:We("text-toolbar-btn",{"text-muted":!o,"text-secondary":o,"text-primary":r(e)&&o}),key:null==e?void 0:e.style,onMouseDown:t=>n(e,t)},e.icon?h("i",{className:We(e.icon,{"text-primary":r(e)})}):null==e?void 0:e.label)),t<Object.keys(ga).length-1&&h(ma,null))}))}function Ta(e){const{forceFocusEditorEnd:t,focusedForEditing:r}=Ke.useContext(Ys);return h("div",{className:We("draft-editor-container d-flex flex-column",{"editor-disabled":e.readOnly,"editor-active":r})},!e.readOnly&&h("div",{className:"bg-light toolbar"},h(fa,e)),h("div",{className:We("",{"d-flex flex-column input-area bg-light m-3":!e.readOnly})},h("div",{className:We("",{"px-3 pt-3":!e.readOnly})},h(ya,e)),!e.readOnly&&h("div",{className:"flex-grow-1",onMouseDown:t})))}function va(e){return h(Ws,e,h(Ta,e))}va.propTypes={value:Ze.string,linkGeneratorFn:Ze.func,handleUpload:Ze.func};const Na=["label","error","name","linkGenerator","handleUpload","onChange","helperText"],Oa=e=>{let{label:r,error:n,name:o,linkGenerator:s,handleUpload:a,onChange:l=(()=>{}),helperText:p}=e,i=Ft(e,Na);return h(ve,{row:!0},r&&h(t,{sm:"12"},h(Oe,{style:{fontSize:"16px"},className:"text-dark"},r)),h(t,{sm:"12"},h(va,Pt({onDataStructureChange:e=>l({currentTarget:{name:o,value:e}}),linkGeneratorFn:s,handleUpload:a},i)),n&&h("label",{className:"text-danger"},h("small",null,n)),p&&h("label",{className:""}," ",h("small",null,p))))},Ca=["avatar","name","subHeading","activity","footer"],wa=e=>{let{avatar:t,name:r,subHeading:n,activity:o,footer:s}=e;return Ft(e,Ca),h($r,{className:"bg-transparent border-0 shadow-none activity ms-5 ml-5 mb-0"},h(Qr,{className:"bg-transparent border-0 shadow-none "},h("div",{className:"d-flex"},h("div",{className:"avatar-container"},h("img",{src:t,alt:"avatar",className:"avatar mt-1 ms-3 ml-3"})),h("div",null,h("p",{className:"m-0 font-size-body-2 text-type-dark"},r),n&&h("h6",{className:"mb-1  font-size-caption text-type-medium"},n)))),h(Jr,{className:"bg-transparent border-0 shadow-none p-0 "},o),h(Zr,{className:"bg-transparent border-0 shadow-none pt-2"},s))};Object.assign({cardProps:{type:Object,default:()=>{}},cardHeaderProps:{type:Object,default:()=>{}},cardFooterProps:{type:Object,default:()=>{}},cardBodyProps:{type:Object,default:()=>{}}},$r.prototype.props);const xa=({children:e,cardProps:t,cardHeaderProps:r,cardFooterProps:n,cardBodyProps:o})=>h($r,t,(null==r?void 0:r.children)&&h(Qr,r,null==r?void 0:r.children),h(Jr,o,e),(null==n?void 0:n.children)&&h(Zr,n,null==n?void 0:n.children));xa.propTypes=Pt({},$r.propTypes&&$r.propTypes,{cardProps:Ze.object,cardHeaderProps:Ze.object,cardFooterProps:Ze.object,cardBodyProps:Ze.object});const Sa=({children:e,tabId:t})=>h(Ke.Fragment,null,h(Fe,{tabId:t},e)),ka=["children","onClick","active","index","label"],ja=e=>{let{children:t,onClick:r,active:n,index:o}=e,s=Ft(e,ka);return h(Ke.Fragment,null,h($t,s,h(Vt,Pt({"data-toggle":"tab",href:"#",className:We("nav-link",{" active":n}),onClick:r,id:`ims-tab-${o}`,"aria-controls":`ims-tabpanel-${o}`},s),t)))},Pa=["children","activeTab","variant"],Ea=e=>{let{children:t,activeTab:r=0,variant:n}=e,o=Ft(e,Pa);const[s,a]=Ke.useState(r);return h(Ke.Fragment,null,h("div",{className:"panel-tabs"},h(qt,{tabs:!0,variant:n&&n},h("div",{className:"d-flex flex-fill gx-0 gy-3"},Ke.Children.map(t,(e,t)=>{if(e.type===ja)return Ke.cloneElement(e,Pt({onClick:e=>((e,t)=>{a(t)})(0,t),active:t===s,index:t},o))}))),h(Eo,Pt({activeTab:s,className:"panel-windows"},o),Ke.Children.map(t,(e,t)=>{if(e.type===Sa)return Ke.cloneElement(e,Pt({},o))}))))};function Fa({children:e,slidesPerView:t=3,spaceBetween:r=30,navigation:n=!1}){const o=Ye(null);return Ke.useEffect(()=>{const e=()=>{o.current&&o.current.swiper&&(o.current.swiper.params.slidesPerView=window.innerWidth<768?1:window.innerWidth<992?2:3,o.current.swiper.update())};return window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[]),h(Ke.Fragment,null,n&&h("div",{className:"my-2 d-flex justify-content-end align-items-center"},h(u,{outline:!0,className:"border-0",onClick:()=>{o.current&&o.current.swiper&&o.current.swiper.slidePrev()}},h("i",{class:"fa-solid fa-angle-left p-0"})),h(u,{outline:!0,className:"border-0",onClick:()=>{o.current&&o.current.swiper&&o.current.swiper.slideNext()}},h("i",{class:"fa-solid fa-angle-right p-0"}))),h(Nt,{ref:o,slidesPerView:window.innerWidth<768?1:window.innerWidth<992?2:t,spaceBetween:r,grabCursor:!0,mousewheel:!0,navigation:!0,modules:[Tt,vt],className:"ims-swiper-carousel"},Ke.Children.map(e,e=>e?h(Ot,null,e):null)))}const Ia=["percentage","customPercentage"];function za(e){let{percentage:t=0,customPercentage:r=.75}=e,n=Ft(e,Ia),o=n.text||`${t}%`,s=Pt({pathColor:"blue",rotation:.63,strokeLinecap:"butt",textSize:"16px"},n.options);return h("div",{className:"radial-progress-bar"},h(Ct,{value:t*r,text:o,styles:wt(s)}))}za.propTypes=Pt({},ts.propTypes&&ts.propTypes);const Da=["children"],La=Ke.createContext(),Aa=e=>{let{children:t}=e;Ft(e,Da);let r=function(e){const[t,r]=qe([]);return{isOpen:function(e){return t.includes(e)},toggle:function(e){r(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},openDrawer:function(e){r(t=>t.includes(e)?t:[...t,e])},closeDrawer:function(e){r(t=>t.includes(e)?t.filter(t=>t!==e):t)},closeAllDrawers:function(){r([])}}}(),n=Pt({},(Et(r),r));return h(La.Provider,{value:Pt({},n)},t)};function Ma(){const e=Ve(La),t=Pt({},(Et(e),e));return Pt({},t)}const Ra=["drawerId","children","onClick"],Ba=e=>{let{drawerId:t="",children:r,onClick:n=(()=>{})}=e,o=Ft(e,Ra);const{openDrawer:s}=Ma();return h("span",Pt({onClick:e=>{s(t),n(e)}},o),r)},Ga=({drawerId:e="",children:t,size:r=40,toolbar:n=null,containerRef:o,onDrawerClose:s=(()=>{}),onScroll:a=(()=>{})})=>{const{isOpen:l,_getSize:p,closeDrawer:i}=function(){const{isOpen:e,toggle:t,closeDrawer:r,openDrawer:n,closeAllDrawers:o}=Ma(),[s,a]=qe(window.innerWidth);return _e(()=>{const e=()=>{a(window.innerWidth)};return window.addEventListener("resize",e),()=>{window.removeEventListener("resize",e)}},[]),{isOpen:e,toggle:t,_getSize:function(e){return s>1300?`${e}vw`:s>1200?"50vw":s>992?"60vw":"100vw"},closeDrawer:r,openDrawer:n,closeAllDrawers:o}}();return h(Ke.Fragment,null,h(xt,{lockBackgroundScroll:!0,open:l(e),onClose:()=>{i(e),s()},direction:"right",size:p(r),zIndex:1051},h("div",{ref:o,onScroll:a,className:"p-4 h-100 overflow-y-scroll scrollbar-primary"},h(Dt,null,h(zt,{md:"12"},h("div",{className:"d-flex flex-row-reverse align-items-center"},h(tr,{className:"border-0 pull-right",onClick:()=>{i(e),s()},color:"danger",outline:!0,size:"sm"},h("i",{className:"ims-icons icon-icon-cross-24"})),n))),t)))};function Ha(){const{isAPIError:e,hanldeAPIError:t}={isAPIError:function(e){return e instanceof St},hanldeAPIError:function(e){if(e instanceof St){var t,r,n;let o=null==(t=e.response)?void 0:t.status,s=(null==(r=e.response)||null==(r=r.data.details)?void 0:r.description)||(null==(n=e.response)?void 0:n.data.message)||e.message;if(o>=400&&o<=499)return kt.error(s);if(o>=500&&o<=599)return"development"===process.env.NODE_ENV?kt.error(s):kt.error("Unexpected server error occured. Please contact support for help at support@imssystems.tech")}if("development"===process.env.NODE_ENV)return kt.error("Unknown error detected in API Error handler: ",e.message)}};return{handleError:function(r){if(e(r))return t(r)}}}function Ua(e){const t={required:l(e).required,filter:l(e).filter,search:l(e).search,pagination:l(e).pagination},r={filter:e&&e.filter||{},required:e&&e.required||{},search:"",pagination:e&&e.pagination||{page:1,size:10}};let[n,o]=qe(t),[s,a]=qe(t);function l(e){return{required:e&&e.required?i(e.required.value):"",filter:e&&e.filter?i(e.filter.value):"",search:e&&e.search?i(e.search.value):"",pagination:e&&e.pagination?i(e.pagination.value):"page=1"}}function p(e){return null!==e&&"object"==typeof e}function i(e){if(!e)return"";const t=[];return function e(r,n=""){if(!p(r))return t.push(n+`=${encodeURIComponent(r)}`);const o=Object.keys(r);for(let t of o)if(p(r)){let o=n?Array.isArray(r)?"[]":`[${t}]`:`${t}`;e(r[t],n+o)}return r}(e),t.join("&")}function c(e){a(t=>Pt({},JSON.parse(JSON.stringify(t)),{pagination:e}))}return{query:n,toolState:s,fullReset:function(){o(t),a(r)},getQuery:function(){let e="",t=Object.keys(n);for(let o of t)e=e?e+((r=n[o])?"&"+r:r):n[o];var r;return e},handleFilter:function(e){var t;o(t=>Pt({},JSON.parse(JSON.stringify(t)),{filter:i(e.value),pagination:"page=1"})),t=e,a(e=>Pt({},JSON.parse(JSON.stringify(e)),{filter:t})),c({page:1,size:10})},handlePagination:function(e=1,t=10){o(r=>Pt({},JSON.parse(JSON.stringify(r)),{pagination:i({page:e,size:t})})),c({page:e,size:t})},handleSearch:function(e){o(t=>Pt({},JSON.parse(JSON.stringify(t)),{search:i(e.value),pagination:"page=1"})),c({page:1,size:10})},handleRequired:function(e){var t;o(t=>Pt({},JSON.parse(JSON.stringify(t)),{required:i(e.value),pagination:"page=1"})),t=e,a(e=>Pt({},JSON.parse(JSON.stringify(e)),{required:t})),c({page:1,size:10})}}}Object.byString=function(e,t){let r=(t=(t=t.replace(/\[(\w+)\]/g,".$1")).replace(/^\./,"")).split(".");for(let t=0,n=r.length;t<n;++t){let n=r[t];if(!(n in e))return;e=e[n]}return e};const Ka=(e,t)=>{const[r,n]=qe(e),[o,s]=qe({}),[a,l]=qe(!1),p=async(e,r)=>{const n=Pt({},o);try{const o=jt.reach(t,e);await o.validate(r),delete n[e]}catch(t){n[e]=t.message}finally{s(n)}},i=()=>{n(e),s({})},c=(e,t)=>{const r=Object.keys(e),n=Object.keys(t);if(r.length!==n.length)return!1;for(const n of r){const r=e[n],s=t[n],a=null!==(o=r)&&"object"==typeof o;if(!a&&r!==s)return!1;if(a&&!c(r,s))return!1}var o;return!0};return _e(()=>{console.log("datamodel",r),console.log("validation error:",o)},[r,o]),_e(()=>{},[]),{dataModel:r,validationErrors:o,isBusy:a,handleChange:({field:e,value:t})=>{const o=Pt({},r);o[e]=t,n(o),p(e,t)},handleSubmit:async(e,n,o=!0,a={})=>{e.preventDefault();const p=await(async()=>{const e={abortEarly:!1},n={};try{return await t.validate(r,e),null}catch(e){return e.inner.forEach(e=>{n[e.path]=e.message}),n}})();if(p)return s(p);try{l(!0),await new Promise(async(t,s)=>{try{return await n(r,e),o&&i(),t()}catch(e){return s(e)}})}catch(e){console.log(e)}l(!1)},isFormValid:()=>0===Object.keys(o).length,resetForm:i,hasUnsavedData:()=>!c(e,r),handleFileChange:(e,t)=>{const o=Pt({},r);o[t]=e,n(o),p(t,e)}}},qa=()=>{const[e,t]=Ke.useState(!1);return{isOpen:e,toggle:()=>{t(e=>!e)}}},_a={currentPage:1,hasNextPage:!1,hasPrevPage:!1,nextPage:null,prevPage:null,size:10,totalPages:0,totalResults:0},$a=()=>{const[e,t]=qe(_a);return{pagination:e,updatePaginaion:function(e=_a){t(e)}}},Ja=e=>{let t={};e.forEach(e=>{t[e.action]={status:e.status,id:null}});let[r,n]=qe(t);return{processing:r,dispatch:e=>{n(t=>{let r=Object.keys(e)[0],n=Object.values(e)[0],o=Pt({},t);return o[r]=n,o})}}},Va=()=>{const[e,t]=qe(!1),r=Ye(null);return{contentElementReference:r,copySuccess:e,copyFormatedToClipboard:async function(){if(r.current&&navigator.clipboard){try{await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([r.current.innerHTML],{type:"text/html"})})]),t(!0),console.log("Contentns copied.")}catch(e){console.log("Error copying to clipboard."),console.log(e)}setTimeout(()=>t(!1),2500)}},copyPlainTextToClipBoard:async function(e,r=(()=>{})){navigator.clipboard&&(t(!0),await navigator.clipboard.writeText(e),setTimeout(()=>t(!1),2500))}}};export{Fr as Accordion,Dr as AccordionBody,Mr as AccordionHeader,Gr as AccordionItem,wa as Activity,Bn as AdvancedExpandedTable,An as AdvancedTable,Ao as Alert,_r as Badge,Zt as Breadcrumb,er as BreadcrumbItem,tr as Button,or as ButtonDropdown,lr as ButtonGroup,cr as ButtonToggle,ur as ButtonToolbar,$r as Card,Jr as CardBody,Vr as CardColumns,Yr as CardDeck,Zr as CardFooter,Wr as CardGroup,Qr as CardHeader,rn as CardImg,Xr as CardImgOverlay,nn as CardLink,tn as CardSubtitle,on as CardText,en as CardTitle,sn as Carousel,pn as CarouselCaption,ln as CarouselControl,dn as CarouselIndicators,cn as CarouselItem,mr as CloseButton,zt as Col,Zo as Collapse,It as Container,co as CreatableSelect,Aa as DrawerContextProvider,Ba as DrawerOpener,Ga as DrawerRight,br as Dropdown,fr as DropdownItem,Tr as DropdownMenu,vr as DropdownToggle,jr as Fade,is as FileDropzone,oo as Form,so as FormFeedback,lo as FormGroup,ao as FormText,xa as ImsCard,Fa as ImsCarousel,hs as ImsInputCheck,ys as ImsInputDate,ms as ImsInputDropZone,Ns as ImsInputRadio,Cs as ImsInputSelect,Ps as ImsInputSelectWithIcon,zs as ImsInputText,Ls as ImsInputTextWithIcon,As as ImsInputTime,Oa as ImsTextEditor,po as Input,go as InputGroup,mo as InputGroupText,bo as Label,Un as List,_n as ListGroup,Vn as ListGroupItem,Zn as ListGroupItemHeading,eo as ListGroupItemText,no as ListInlineItem,fo as Media,Tn as Modal,Nn as ModalBody,Cn as ModalFooter,xn as ModalHeader,qt as Nav,$t as NavItem,Vt as NavLink,At as Navbar,Rt as NavbarBrand,Gt as NavbarText,Ut as NavbarToggler,To as Offcanvas,vo as OffcanvasBody,No as OffcanvasHeader,Co as Pagination,xo as PaginationItem,ko as PaginationLink,ja as PanelTab,Ea as PanelTabs,Sa as PanelWindow,os as Placeholder,ss as PlaceholderButton,hn as Popover,mn as PopoverBody,gn as PopoverHeader,un as PopperContent,yn as PopperTargetHelper,ts as Progress,za as RadialProgressBar,Ts as RadioCheckbox,Dt as Row,uo as SearchSelect,yo as Select,Fn as SimpleTable,ns as Spinner,Eo as TabContent,zo as TabPane,jn as Table,va as TextEditor,Es as TextInput,Uo as Toast,_o as ToastBody,Vo as ToastHeader,kn as Tooltip,Kr as UncontrolledAccordion,Bo as UncontrolledAlert,Cr as UncontrolledButtonDropdown,an as UncontrolledCarousel,es as UncontrolledCollapse,xr as UncontrolledDropdown,bn as UncontrolledPopover,Ha as useAPIError,Va as useClipboard,Ma as useDrawer,qa as useDualStateController,Ka as useForm,$a as usePaginationState,Ja as useProcessing,Ua as useQuery};
+import { Container, Col, Row, Navbar, NavbarBrand, NavbarText, NavbarToggler, Nav, NavItem, NavLink, Breadcrumb, BreadcrumbItem, Button, ButtonDropdown, ButtonGroup, ButtonToggle, ButtonToolbar, CloseButton, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, UncontrolledDropdown, Fade, Accordion, AccordionBody, AccordionHeader, AccordionItem, UncontrolledAccordion, Badge, Card, CardBody, CardColumns, CardDeck, CardGroup, CardFooter, CardHeader, CardImgOverlay, CardTitle, CardSubtitle, CardImg, CardLink, CardText, Carousel, UncontrolledCarousel, CarouselControl, CarouselCaption, CarouselItem, CarouselIndicators, Popover, PopperContent, PopperTargetHelper, PopoverHeader, PopoverBody, UncontrolledPopover, Modal, ModalBody, ModalFooter, ModalHeader, UncontrolledTooltip, Table as Table$2, InputGroup, Input, List, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, ListInlineItem, Form, FormFeedback, FormText, FormGroup, InputGroupText, Label, Media, Offcanvas, OffcanvasBody, OffcanvasHeader, Spinner, Progress, Pagination as Pagination$1, PaginationItem, PaginationLink, TabContent, TabPane, Alert, UncontrolledAlert, Toast, ToastBody, ToastHeader, Collapse, UncontrolledCollapse, Placeholder, PlaceholderButton } from 'reactstrap';
+import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
+import React, { useState, useEffect, useMemo, useRef, useContext } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { useTable, useSortBy, useExpanded, usePagination as usePagination$1, useResizeColumns, useFlexLayout } from 'react-table';
+import ReactSelect from 'react-select';
+import CreatableSelect from 'react-select/creatable';
+import AsyncSelect from 'react-select/async';
+import { useDropzone } from 'react-dropzone';
+import Datetime from 'react-datetime';
+import 'react-datetime/css/react-datetime.css';
+import { Mousewheel, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import Drawer from 'react-modern-drawer';
+import 'react-modern-drawer/dist/index.css';
+import { AxiosError } from 'axios';
+import { toast } from 'react-toastify';
+import * as yup from 'yup';
+
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function _objectDestructuringEmpty(obj) {
+  if (obj == null) throw new TypeError("Cannot destructure " + obj);
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+
+Object.assign({}, Container.prototype.props);
+
+/**
+ *
+ * @param {ContainerBaseProps} props
+ * @returns
+ */
+const ContainerBase = props => {
+  return /*#__PURE__*/jsx(Container, _extends({}, props, {
+    children: props.children
+  }));
+};
+ContainerBase.propTypes = _extends({}, Container.propTypes && Container.propTypes);
+
+Object.assign({}, Col.prototype.props);
+
+/**
+ *
+ * @param {ColProps} props
+ * @returns
+ */
+const ColBase = props => {
+  return /*#__PURE__*/jsx(Col, _extends({}, props, {
+    children: props.children
+  }));
+};
+ColBase.propTypes = _extends({}, Col.propTypes && Col.propTypes);
+
+Object.assign({}, Row.prototype.props);
+
+/**
+ *
+ * @param {RowProps} props
+ * @returns
+ */
+const RowBase = props => {
+  return /*#__PURE__*/jsx(Row, _extends({}, props, {
+    children: props.children
+  }));
+};
+RowBase.propTypes = _extends({}, Row.propTypes && Row.propTypes);
+
+const _excluded$13 = ["children"];
+Object.assign({}, Navbar.prototype.props);
+
+/**
+ *
+ * @param {NavbarBaseProps} props
+ * @returns
+ */
+
+const NavBarBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$13);
+  return /*#__PURE__*/jsx(Navbar, _extends({}, rest, {
+    children: children
+  }));
+};
+NavBarBase.propTypes = _extends({}, Navbar.propTypes && Navbar.propTypes);
+
+const _excluded$12 = ["children"];
+Object.assign({}, NavbarBrand.prototype.props);
+
+/**
+ *
+ * @param {NavbarBrandBaseProps} props
+ * @returns
+ */
+
+const NavbarBrandBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$12);
+  return /*#__PURE__*/jsx(NavbarBrand, _extends({}, rest, {
+    children: children
+  }));
+};
+NavbarBrandBase.propTypes = _extends({}, NavbarBrand.propTypes && NavbarBrand.propTypes);
+
+const _excluded$11 = ["children"];
+Object.assign({}, NavbarText.prototype.props);
+
+/**
+ *
+ * @param {NavbarTextBaseProps} props
+ * @returns
+ */
+
+const NavbarTextBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$11);
+  return /*#__PURE__*/jsx(NavbarText, _extends({}, rest, {
+    children: children
+  }));
+};
+NavbarTextBase.propTypes = _extends({}, NavbarText.propTypes && NavbarText.propTypes);
+
+const _excluded$10 = ["children"];
+Object.assign({}, NavbarToggler.prototype.props);
+
+/**
+ *
+ * @param {NavbarTogglerBaseProps} props
+ * @returns
+ */
+
+const NavbarTogglerBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$10);
+  return /*#__PURE__*/jsx(NavbarToggler, _extends({}, rest, {
+    children: children
+  }));
+};
+NavbarTogglerBase.propTypes = _extends({}, NavbarToggler.propTypes && NavbarToggler.propTypes);
+
+const _excluded$$ = ["children", "variant"];
+const NavBase = _ref => {
+  let {
+      children,
+      variant = "primary"
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$$);
+  Object.assign({
+    variant: PropTypes.oneOf(["primary", "secondary", "outline"])
+  }, Nav.prototype.props);
+
+  /**
+   *
+   * @param {NavBaseProps} props
+   * @returns
+   */
+  //variant="primary"
+  //variant="secondary"
+  //variant="outline"
+  return /*#__PURE__*/jsx(Nav, _extends({
+    className: classNames(`${rest.className || ""}`, {
+      "nav-tabs-primary": variant === "primary",
+      "nav-tabs-secondary": variant === "secondary",
+      "nav-tabs-outline": variant === "outline"
+    })
+  }, rest, {
+    children: children
+  }));
+};
+NavBase.propTypes = _extends({
+  variant: PropTypes.oneOf(["primary", "secondary", "outline"])
+}, Nav.propTypes && Nav.propTypes);
+
+const _excluded$_ = ["children"];
+Object.assign({}, NavItem.prototype.props);
+
+/**
+ *
+ * @param {NavItemProps} props
+ * @returns
+ */
+
+const NavItemBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$_);
+  return /*#__PURE__*/jsx(NavItem, _extends({}, rest, {
+    children: children
+  }));
+};
+NavItemBase.propTypes = _extends({}, NavItem.propTypes && NavItem.propTypes);
+
+const _excluded$Z = ["children"];
+Object.assign({}, NavLink.prototype.props);
+
+/**
+ *
+ * @param {NavLinkProps} props
+ * @returns
+ */
+
+const NavLinkBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Z);
+  return /*#__PURE__*/jsx("span", _extends({
+    className: classNames(`nav-link ${rest.className}`, {
+      active: rest.active
+    })
+  }, rest, {
+    children: children
+  }));
+};
+NavLinkBase.propTypes = _extends({}, NavLink.propTypes && NavLink.propTypes);
+
+const _excluded$Y = ["children"];
+var _Breadcrumb$prototype;
+Object.assign({}, (_Breadcrumb$prototype = Breadcrumb.prototype) == null ? void 0 : _Breadcrumb$prototype.props);
+
+/**
+ * @param {BreadcrumbBaseProps} props
+ * @returns
+ * */
+
+const BreadcrumbBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Y);
+  return /*#__PURE__*/jsx(Breadcrumb, _extends({}, rest, {
+    children: children
+  }));
+};
+BreadcrumbBase.propTypes = _extends({}, Breadcrumb.propTypes && Breadcrumb.propTypes);
+
+const _excluded$X = ["children"];
+var _BreadcrumbItem$proto;
+Object.assign({}, (_BreadcrumbItem$proto = BreadcrumbItem.prototype) == null ? void 0 : _BreadcrumbItem$proto.props);
+
+/**
+ * @param {BreadcrumbItemBaseProps} props
+ * @returns
+ * */
+
+const BreadcrumbItemBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$X);
+  return /*#__PURE__*/jsx(BreadcrumbItem, _extends({}, rest, {
+    children: children
+  }));
+};
+BreadcrumbItemBase.propTypes = _extends({}, BreadcrumbItem.propTypes && BreadcrumbItem.propTypes);
+
+Object.assign({
+  leftIcon: "",
+  rightIcon: ""
+}, Button.prototype.props);
+
+/**
+ *
+ * @param {ButtonBaseProps} props
+ * @returns
+ */
+const ButtonBase = props => {
+  return /*#__PURE__*/jsxs(Button, _extends({}, props, {
+    children: [props.leftIcon ? /*#__PURE__*/jsx("i", {
+      className: classNames(props.leftIcon, "me-2")
+    }) : null, props.children, props.rightIcon ? /*#__PURE__*/jsx("i", {
+      className: classNames(props.rightIcon, "ms-2")
+    }) : null]
+  }));
+};
+ButtonBase.propTypes = _extends({
+  leftIcon: PropTypes.string,
+  rightIcon: PropTypes.string
+}, Button.propTypes && Button.propTypes);
+
+const _excluded$W = ["children"];
+var _ButtonDropdown$proto;
+Object.assign({}, (_ButtonDropdown$proto = ButtonDropdown.prototype) == null ? void 0 : _ButtonDropdown$proto.props);
+
+/**
+ *
+ * @param {ButtonDropdownBaseProps} props
+ * @returns
+ */
+
+const ButtonDropdownBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$W);
+  return /*#__PURE__*/jsx(ButtonDropdown, _extends({}, rest, {
+    children: children
+  }));
+};
+ButtonDropdownBase.propTypes = _extends({}, ButtonDropdown.propTypes && ButtonDropdown.propTypes);
+
+const _excluded$V = ["children"];
+var _ButtonGroup$prototyp;
+Object.assign({}, (_ButtonGroup$prototyp = ButtonGroup.prototype) == null ? void 0 : _ButtonGroup$prototyp.props);
+
+/**
+ *
+ * @param {ButtonGroupBaseProps} props
+ * @returns
+ */
+
+const ButtonGroupBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$V);
+  return /*#__PURE__*/jsx(ButtonGroup, _extends({}, rest, {
+    children: children
+  }));
+};
+ButtonGroupBase.propTypes = _extends({}, ButtonGroup.propTypes && ButtonGroup.propTypes);
+
+const _excluded$U = ["children"];
+var _ButtonToggle$prototy;
+Object.assign({}, (_ButtonToggle$prototy = ButtonToggle.prototype) == null ? void 0 : _ButtonToggle$prototy.props);
+
+/**
+ *
+ * @param {ButtonToggleBaseProps} props
+ * @returns
+ */
+
+const ButtonToggleBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$U);
+  return /*#__PURE__*/jsx(ButtonToggle, _extends({}, rest, {
+    children: children
+  }));
+};
+ButtonToggleBase.propTypes = _extends({}, ButtonToggle.propTypes && ButtonToggle.propTypes);
+
+const _excluded$T = ["children"];
+var _ButtonToolbar$protot;
+Object.assign({}, (_ButtonToolbar$protot = ButtonToolbar.prototype) == null ? void 0 : _ButtonToolbar$protot.props);
+
+/**
+ *
+ * @param {ButtonToolbarBaseProps} props
+ * @returns
+ */
+const ButtonToolbarBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$T);
+  return /*#__PURE__*/jsx(ButtonToolbar, _extends({}, rest, {
+    children: children
+  }));
+};
+ButtonToolbarBase.propTypes = _extends({}, ButtonToolbar.propTypes && ButtonToolbar.propTypes);
+
+const _excluded$S = ["children"];
+var _CloseButton$prototyp;
+Object.assign({}, (_CloseButton$prototyp = CloseButton.prototype) == null ? void 0 : _CloseButton$prototyp.props);
+
+/**
+ *
+ * @param {CloseButtonBaseProps} props
+ * @returns
+ */
+
+const CloseButtonBase = _ref => {
+  let {
+      children
+    } = _ref;
+    _objectWithoutPropertiesLoose(_ref, _excluded$S);
+  return /*#__PURE__*/jsx(CloseButton, {
+    children: children
+  });
+};
+CloseButtonBase.propTypes = _extends({}, CloseButton.propTypes && CloseButton.propTypes);
+
+Object.assign({}, Dropdown.prototype.props);
+
+/**
+ *
+ * @param {DropdownBaseProps} props
+ * @returns
+ */
+const DropdownBase = _ref => {
+  let props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(Dropdown, _extends({}, props, {
+    children: props.children
+  }));
+};
+DropdownBase.propTypes = _extends({}, Dropdown.propTypes && Dropdown.propTypes);
+
+Object.assign({}, DropdownItem.prototype.props);
+
+/**
+ *
+ * @param {DropdownItemBaseProps} props
+ * @returns
+ */
+const DropdownItemBase = _ref => {
+  let props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(DropdownItem, _extends({}, props, {
+    children: props.children
+  }));
+};
+DropdownItemBase.propTypes = _extends({}, DropdownItem.propTypes && DropdownItem.propTypes);
+
+Object.assign({}, DropdownMenu.prototype.props);
+
+/**
+ *
+ * @param {DropdownMenuBaseProps} props
+ * @returns
+ */
+const DropdownMenuBase = _ref => {
+  let props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(DropdownMenu, _extends({}, props, {
+    children: props.children
+  }));
+};
+DropdownMenuBase.propTypes = _extends({}, DropdownMenu.propTypes && DropdownMenu.propTypes);
+
+Object.assign({}, DropdownToggle.prototype.props);
+
+/**
+ *
+ * @param {DropdownToogleBaseProps} props
+ * @returns
+ */
+
+const DropdownToogleBase = _ref => {
+  let props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(DropdownToggle, _extends({}, props, {
+      children: [props.startIcon && /*#__PURE__*/jsx("i", {
+        className: classNames(props.startIcon, "me-2")
+      }), props.children]
+    }))
+  });
+};
+DropdownToogleBase.propTypes = _extends({}, DropdownToggle.propTypes && DropdownToggle.propTypes);
+
+const _excluded$R = ["children"];
+var _UncontrolledButtonDr;
+Object.assign({}, (_UncontrolledButtonDr = UncontrolledButtonDropdown.prototype) == null ? void 0 : _UncontrolledButtonDr.props);
+
+/**
+ *
+ * @param {UncontrolledButtonDropdownBaseProps} props
+ * @returns
+ *
+ */
+const UncontrolledButtonDropdownBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$R);
+  return /*#__PURE__*/jsx(UncontrolledButtonDropdown, _extends({}, rest, {
+    children: children
+  }));
+};
+UncontrolledButtonDropdownBase.propTypes = _extends({}, UncontrolledButtonDropdown.propTypes && UncontrolledButtonDropdown.propTypes);
+
+const _excluded$Q = ["children"];
+Object.assign({}, UncontrolledDropdown.prototype.props);
+
+/**
+ *
+ * @param {UncontrolledDropdownBaseProps} props
+ * @returns
+ *
+ *    */
+
+const UncontrolledDropdownBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Q);
+  return /*#__PURE__*/jsx(UncontrolledDropdown, _extends({}, rest, {
+    children: children
+  }));
+};
+UncontrolledDropdownBase.propTypes = _extends({}, UncontrolledDropdown.propTypes && UncontrolledDropdown.propTypes);
+
+const _excluded$P = ["children"];
+var _Fade$prototype;
+Object.assign({}, (_Fade$prototype = Fade.prototype) == null ? void 0 : _Fade$prototype.props);
+const FadeBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$P);
+  return /*#__PURE__*/jsx(Fade, _extends({}, rest, {
+    children: children
+  }));
+};
+FadeBase.propTypes = _extends({}, FadeBase.propTypes && FadeBase.propTypes);
+
+const _excluded$O = ["children"];
+var _Accordion$prototype;
+Object.assign({}, (_Accordion$prototype = Accordion.prototype) == null ? void 0 : _Accordion$prototype.props);
+
+/**
+ * @param {AccordionBaseProps} props
+ * @returns
+ * */
+
+const AccordionBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$O);
+  return /*#__PURE__*/jsx(Accordion, _extends({}, rest, {
+    children: children
+  }));
+};
+AccordionBase.propTypes = _extends({}, Accordion.propTypes && Accordion.propTypes);
+
+const _excluded$N = ["children"];
+var _AccordionBody$protot;
+Object.assign({}, (_AccordionBody$protot = AccordionBody.prototype) == null ? void 0 : _AccordionBody$protot.props);
+/**
+ * @param {AccordionBodyBaseProps} props
+ * @returns
+ * */
+
+const AccordionBodyBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$N);
+  return /*#__PURE__*/jsx(AccordionBody, _extends({}, rest, {
+    children: children
+  }));
+};
+AccordionBodyBase.propTypes = _extends({}, AccordionBody.propTypes && AccordionBody.propTypes);
+
+const _excluded$M = ["children"];
+var _AccordionHeader$prot;
+Object.assign({}, (_AccordionHeader$prot = AccordionHeader.prototype) == null ? void 0 : _AccordionHeader$prot.props);
+
+/**
+ * @param {AccordionHeaderBaseProps} props
+ * @returns
+ * */
+
+const AccordionHeaderBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$M);
+  return /*#__PURE__*/jsx(AccordionHeader, _extends({}, rest, {
+    children: children
+  }));
+};
+AccordionHeaderBase.propTypes = _extends({}, AccordionHeader.propTypes && AccordionHeader.propTypes);
+
+const _excluded$L = ["children"];
+var _AccordionItem$protot;
+Object.assign({}, (_AccordionItem$protot = AccordionItem.prototype) == null ? void 0 : _AccordionItem$protot.props);
+
+/**
+ * @param {AccordionItemBaseProps} props
+ * @returns
+ * */
+
+const AccordionItemBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$L);
+  return /*#__PURE__*/jsx(AccordionItem, _extends({}, rest, {
+    children: children
+  }));
+};
+AccordionItemBase.propTypes = _extends({}, AccordionItem.propTypes && AccordionItem.propTypes);
+
+const _excluded$K = ["children"];
+var _UncontrolledAccordio;
+Object.assign({}, (_UncontrolledAccordio = UncontrolledAccordion.prototype) == null ? void 0 : _UncontrolledAccordio.props);
+
+/**
+ * @param {AccordionUncontrolledBaseProps} props
+ * @returns
+ * */
+
+const UncontrolledAccordionBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$K);
+  return /*#__PURE__*/jsx(UncontrolledAccordion, _extends({}, rest, {
+    children: children
+  }));
+};
+UncontrolledAccordionBase.propTypes = _extends({}, UncontrolledAccordion.propTypes && UncontrolledAccordion.propTypes);
+
+const _excluded$J = ["children", "color", "outline", "fade"];
+Object.assign({
+  color: "",
+  outline: "",
+  fade: "",
+  icon: ""
+}, Badge.prototype.props);
+
+/**
+ *
+ * @param {BadgeBaseProps} props
+ * @returns
+ */
+
+const BadgeBase = _ref => {
+  let {
+      children,
+      color,
+      outline,
+      fade
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$J);
+  return /*#__PURE__*/jsx(Badge, _extends({
+    color: color,
+    className: classNames(rest.className, {
+      "bg-secondary bg-pending": color === "pending",
+      "badge-outline-primary": outline === "primary",
+      "badge-outline-info": outline === "info",
+      "badge-outline-secondary": outline === "secondary",
+      "badge-outline-success": outline === "success",
+      "badge-outline-danger": outline === "danger",
+      "badge-outline-warning": outline === "warning",
+      "badge-outline-light": outline === "light",
+      "badge-outline-dark": outline === "dark",
+      "badge-outline-pending": outline === "pending",
+      "badge-fade-primary": fade === "primary",
+      "badge-fade-info": fade === "info",
+      "badge-fade-secondary": fade === "secondary",
+      "badge-fade-success": fade === "success",
+      "badge-fade-danger": fade === "danger",
+      "badge-fade-warning": fade === "warning",
+      "badge-fade-light": fade === "light",
+      "badge-fade-dark": fade === "dark",
+      "badge-fade-pending": fade === "pending"
+    })
+  }, rest, {
+    children: children
+  }));
+};
+BadgeBase.propTypes = _extends({
+  color: PropTypes.string
+}, Badge.propTypes && Badge.propTypes);
+
+Object.assign({}, Card.prototype.props);
+
+/**
+ *
+ * @param {CardBaseProps} props
+ * @returns
+ */
+const CardBase = props => {
+  return /*#__PURE__*/jsx(Card, _extends({
+    className: classNames(props.className, {
+      "card-variant-list ": props.variant === "list",
+      "card-variant-active": props.variant === "active",
+      "card-variant-active card-hover-none": props.variant === "active" && props.hover === false,
+      "card-variant-outline": props.variant === "outline",
+      "card-variant-outline card-hover-none": props.variant === "outline" && props.hover === false,
+      "card-variant-primary": props.variant === "primary",
+      "card-variant-primary card-hover-none": props.variant === "primary" && props.hover === false,
+      "card-variant-secondary": props.variant === "secondary",
+      "card-variant-secondary card-hover-none": props.variant === "secondary" && props.hover === false,
+      "card-variant-light": props.variant === "light",
+      "card-variant-light card-hover-none": props.variant === "light" && props.hover === false,
+      "card-gradient card-gradient-success": props.variant === "gradient" && props.color === "success",
+      "card-gradient card-gradient-primary": props.variant === "gradient" && props.color === "primary",
+      "card-gradient card-gradient-danger": props.variant === "gradient" && props.color === "danger"
+    })
+  }, props, {
+    children: props.children
+  }));
+};
+CardBase.propTypes = _extends({}, Card.propTypes && Card.propTypes);
+
+Object.assign({}, CardBody.prototype.props);
+
+/**
+ *
+ * @param {CardBodyBaseProps} props
+ * @returns
+ */
+const CardBodyBase = props => {
+  return /*#__PURE__*/jsx(CardBody, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardBodyBase.propTypes = _extends({}, CardBody.propTypes && CardBody.propTypes);
+
+Object.assign({}, CardColumns.prototype.props);
+
+/**
+ *
+ * @param {CardColumnsBaseProps} props
+ * @returns
+ */
+const CardColumnsBase = props => {
+  return /*#__PURE__*/jsx(CardColumns, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardColumnsBase.propTypes = _extends({}, CardColumns.propTypes && CardColumns.propTypes);
+
+Object.assign({}, CardDeck.prototype.props);
+
+/**
+ *
+ * @param {CardDeckBaseProps} props
+ * @returns
+ */
+const CardDeckBase = props => {
+  return /*#__PURE__*/jsx(CardDeck, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardDeckBase.propTypes = _extends({}, CardDeck.propTypes && CardDeck.propTypes);
+
+Object.assign({}, CardGroup.prototype.props);
+
+/**
+ *
+ * @param {CardGroupBaseProps} props
+ * @returns
+ */
+const CardGroupBase = props => {
+  return /*#__PURE__*/jsx(CardGroup, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardGroupBase.propTypes = _extends({}, CardGroup.propTypes && CardGroup.propTypes);
+
+Object.assign({}, CardFooter.prototype.props);
+
+/**
+ *
+ * @param {CardFooterBaseProps} props
+ * @returns
+ */
+const CardFooterBase = props => {
+  return /*#__PURE__*/jsx(CardFooter, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardFooterBase.propTypes = _extends({}, CardFooter.propTypes && CardFooter.propTypes);
+
+Object.assign({}, CardHeader.prototype.props);
+
+/**
+ *
+ * @param {CardHeaderBaseProps} props
+ * @returns
+ */
+const CardHeaderBase = props => {
+  return /*#__PURE__*/jsx(CardHeader, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardHeaderBase.propTypes = _extends({}, CardHeader.propTypes && CardHeader.propTypes);
+
+Object.assign({}, CardImgOverlay.prototype.props);
+
+/**
+ *
+ * @param {CardImgOverlayBaseProps} props
+ * @returns
+ */
+const CardImgOverlayBase = props => {
+  return /*#__PURE__*/jsx(CardImgOverlay, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardImgOverlayBase.propTypes = _extends({}, CardImgOverlay.propTypes && CardImgOverlay.propTypes);
+
+Object.assign({}, CardTitle.prototype.props);
+
+/**
+ *
+ * @param {CardTitleBaseProps} props
+ * @returns
+ */
+const CardTitleBase = props => {
+  return /*#__PURE__*/jsx(CardTitle, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardTitleBase.propTypes = _extends({}, CardTitle.propTypes && CardTitle.propTypes);
+
+Object.assign({}, CardSubtitle.prototype.props);
+
+/**
+ *
+ * @param {CardSubtitleBaseProps} props
+ * @returns
+ */
+const CardSubtitleBase = props => {
+  return /*#__PURE__*/jsx(CardSubtitle, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardSubtitleBase.propTypes = _extends({}, CardSubtitle.propTypes && CardSubtitle.propTypes);
+
+Object.assign({}, CardImg.prototype.props);
+
+/**
+ *
+ * @param {CardImgBaseProps} props
+ * @returns
+ */
+const CardImgBase = props => {
+  return /*#__PURE__*/jsx(CardImg, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardImgBase.propTypes = _extends({}, CardImg.propTypes && CardImg.propTypes);
+
+Object.assign({}, CardLink.prototype.props);
+
+/**
+ *
+ * @param {CardLinkBaseProps} props
+ * @returns
+ */
+const CardLinkBase = props => {
+  return /*#__PURE__*/jsx(CardLink, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardLinkBase.propTypes = _extends({}, CardLink.propTypes && CardLink.propTypes);
+
+Object.assign({}, CardText.prototype.props);
+
+/**
+ *
+ * @param {CardTextBaseProps} props
+ * @returns
+ */
+const CardTextBase = props => {
+  return /*#__PURE__*/jsx(CardText, _extends({}, props, {
+    children: props.children
+  }));
+};
+CardTextBase.propTypes = _extends({}, CardText.propTypes && CardText.propTypes);
+
+Object.assign({}, Carousel.prototype.props);
+
+/**
+ *
+ * @param {CarouselBaseProps} props
+ * @returns {JSX.Element}
+ */
+const CarouselBase = props => {
+  return /*#__PURE__*/jsx(Carousel, _extends({}, props, {
+    children: props.children
+  }));
+};
+CarouselBase.propTypes = _extends({}, Carousel.propTypes && Carousel.propTypes);
+
+Object.assign({}, UncontrolledCarousel.prototype.props);
+
+/**
+ *
+ * @param {UncontrolledCarouselBaseProps} props
+ * @returns
+ */
+const UncontrolledCarouselBase = props => {
+  return /*#__PURE__*/jsx(UncontrolledCarousel, _extends({}, props, {
+    children: props.children
+  }));
+};
+UncontrolledCarouselBase.propTypes = _extends({}, UncontrolledCarousel.propTypes && UncontrolledCarousel.propTypes);
+
+Object.assign({}, CarouselControl.prototype.props);
+
+/**
+ *
+ * @param {CarouselControlBaseProps} props
+ * @returns
+ */
+const CarouselControlBase = props => {
+  return /*#__PURE__*/jsx(CarouselControl, _extends({}, props, {
+    children: props.children
+  }));
+};
+CarouselControlBase.propTypes = _extends({}, CarouselControl.propTypes && CarouselControl.propTypes);
+
+Object.assign({}, CarouselCaption.prototype.props);
+
+/**
+ *
+ * @param {CarouselCaptionBaseProps} props
+ * @returns
+ */
+const CarouselCaptionBase = props => {
+  return /*#__PURE__*/jsx(CarouselCaption, _extends({}, props, {
+    children: props.children
+  }));
+};
+CarouselCaptionBase.propTypes = _extends({}, CarouselCaption.propTypes && CarouselCaption.propTypes);
+
+Object.assign({}, CarouselItem.prototype.props);
+
+/**
+ *
+ * @param {CarouselItemBaseProps} props
+ * @returns
+ */
+const CarouselItemBase = props => {
+  return /*#__PURE__*/jsx(CarouselItem, _extends({}, props, {
+    children: props.children
+  }));
+};
+CarouselItemBase.propTypes = _extends({}, CarouselItem.propTypes && CarouselItem.propTypes);
+
+Object.assign({}, CarouselIndicators.prototype.props);
+
+/**
+ *
+ * @param {CarouselIndicatorsBaseProps} props
+ * @returns
+ */
+const CarouselIndicatorsBase = props => {
+  return /*#__PURE__*/jsx(CarouselIndicators, _extends({}, props, {
+    children: props.children
+  }));
+};
+CarouselIndicatorsBase.propTypes = _extends({}, CarouselIndicators.propTypes && CarouselIndicators.propTypes);
+
+Object.assign({}, Popover.prototype.props);
+
+/**
+ *
+ * @param {PopoverBaseProps} props
+ * @returns
+ */
+const PopoverBase = props => {
+  return /*#__PURE__*/jsx(Popover, _extends({}, props, {
+    children: props.children
+  }));
+};
+PopoverBase.propTypes = _extends({}, Popover.propTypes && Popover.propTypes);
+
+Object.assign({}, PopperContent.prototype.props);
+
+/**
+ *
+ * @param {PopperContentBaseProps} props
+ * @returns
+ */
+const PopperContentBase = props => {
+  return /*#__PURE__*/jsx(PopperContent, _extends({}, props, {
+    children: props.children
+  }));
+};
+PopperContentBase.propTypes = _extends({}, PopperContent.propTypes && PopperContent.propTypes);
+
+Object.assign({}, PopperTargetHelper.prototype.props);
+
+/**
+ *
+ * @param {PopperTargetHelperBaseProps} props
+ * @returns
+ */
+const PopperTargetHelperBase = props => {
+  return /*#__PURE__*/jsx(PopperTargetHelper, _extends({}, props, {
+    children: props.children
+  }));
+};
+PopperTargetHelperBase.propTypes = _extends({}, PopperTargetHelper.propTypes && PopperTargetHelper.propTypes);
+
+Object.assign({}, PopoverHeader.prototype.props);
+/**
+ *
+ * @param {PopoverHeaderBaseProps} props
+ * @returns
+ */
+const PopoverHeaderBase = props => {
+  return /*#__PURE__*/jsx(PopoverHeader, _extends({}, props, {
+    children: props.children
+  }));
+};
+PopoverHeaderBase.propTypes = _extends({}, PopoverHeader.propTypes && PopoverHeader.propTypes);
+
+Object.assign({}, PopoverBody.prototype.props);
+
+/**
+ *
+ * @param {PopoverBodyBaseProps} props
+ * @returns
+ */
+const PopoverBodyBase = props => {
+  return /*#__PURE__*/jsx(PopoverBody, _extends({}, props, {
+    children: props.children
+  }));
+};
+PopoverBodyBase.propTypes = _extends({}, PopoverBody.propTypes && PopoverBody.propTypes);
+
+Object.assign({}, UncontrolledPopover.prototype.props);
+
+/**
+ *
+ * @param {UncontrolledPopoverBaseProps} props
+ * @returns
+ */
+const UncontrolledPopoverBase = props => {
+  return /*#__PURE__*/jsx(UncontrolledPopover, _extends({}, props, {
+    children: props.children
+  }));
+};
+UncontrolledPopoverBase.propTypes = _extends({}, UncontrolledPopover.propTypes && UncontrolledPopover.propTypes);
+
+const _excluded$I = ["children"];
+Object.assign({}, Modal.prototype.props);
+
+/**
+ *
+ * @param {ModalBaseProps} props
+ * @returns
+ */
+
+const ModalBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$I);
+  return /*#__PURE__*/jsx(Modal, _extends({}, rest, {
+    children: children
+  }));
+};
+ModalBase.propTypes = _extends({}, Modal.propTypes && Modal.propTypes);
+
+const _excluded$H = ["children"];
+Object.assign({}, ModalBody.prototype.props);
+
+/**
+ *
+ * @param {ModalBodyBaseProps} props
+ * @returns
+ */
+
+const ModalBodyBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$H);
+  return /*#__PURE__*/jsx(ModalBody, _extends({}, rest, {
+    children: children
+  }));
+};
+ModalBodyBase.propTypes = _extends({}, ModalBody.propTypes && ModalBody.propTypes);
+
+const _excluded$G = ["children"];
+Object.assign({}, ModalFooter.prototype.props);
+
+/**
+ *
+ * @param {ModalFooterBaseProps} props
+ * @returns
+ */
+
+const ModalFooterBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$G);
+  return /*#__PURE__*/jsx(ModalFooter, _extends({}, rest, {
+    children: children
+  }));
+};
+ModalFooterBase.propTypes = _extends({}, ModalFooter.propTypes && ModalFooter.propTypes);
+
+const _excluded$F = ["children"];
+Object.assign({}, ModalHeader.prototype.props);
+
+/**
+ *
+ * @param {ModalHeaderBaseProps} props
+ * @returns
+ */
+
+const ModalHeaderBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$F);
+  return /*#__PURE__*/jsx(ModalHeader, _extends({}, rest, {
+    children: children
+  }));
+};
+ModalHeaderBase.propTypes = _extends({}, ModalHeader.propTypes && ModalHeader.propTypes);
+
+const _excluded$E = ["children"];
+Object.assign({}, UncontrolledTooltip.prototype.props);
+
+/**
+ * @param {UncontrolledTooltipBaseProps} props
+ * @returns
+ * */
+
+const UncontrolledTooltipBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$E);
+  return /*#__PURE__*/jsx(UncontrolledTooltip, _extends({}, rest, {
+    children: children
+  }));
+};
+UncontrolledTooltipBase.propTypes = _extends({}, UncontrolledTooltip.propTypes && UncontrolledTooltip.propTypes);
+
+Object.assign({}, Table$2.prototype.props);
+
+/**
+ *
+ * @param {TableBaseProps} props
+ * @returns
+ */
+const TableBase = props => {
+  return /*#__PURE__*/jsx(Table$2, _extends({}, props, {
+    children: props.children
+  }));
+};
+TableBase.propTypes = _extends({}, Table$2.propTypes && Table$2.propTypes);
+
+const _excluded$D = ["onRowClick", "active", "linear"],
+  _excluded2$1 = ["onRowClick"];
+const ImsSimpleTable = _ref => {
+  let {
+      onRowClick = () => {},
+      active,
+      linear
+    } = _ref,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$D);
+  const [selectedRow, setSelectedRow] = React.useState(null);
+  const handleActiveRow = e => {
+    const index = e.currentTarget.rowIndex - 1;
+    setSelectedRow(index);
+  };
+  return /*#__PURE__*/jsxs(Table$2, _extends({
+    hover: true
+  }, props, {
+    className: classNames(props.className, {
+      "table-linear": linear
+    }),
+    children: [/*#__PURE__*/jsx("thead", {
+      children: /*#__PURE__*/jsx("tr", {
+        children: props.thead.map((prop, key) => {
+          return /*#__PURE__*/jsx("th", {
+            className: classNames("", {
+              "text-right": props.thead.length - 1 === key
+            }),
+            children: prop.text
+          }, key);
+        })
+      })
+    }), /*#__PURE__*/jsx("tbody", {
+      children: props.tbody.map((_ref2, key) => {
+        let {
+            onRowClick = function () {}
+          } = _ref2,
+          prop = _objectWithoutPropertiesLoose(_ref2, _excluded2$1);
+        return /*#__PURE__*/jsxs("tr", {
+          onClick: e => {
+            handleActiveRow(e);
+            onRowClick(e);
+          },
+          className: classNames({
+            /** allow row active feature only if sepcified in the prop */
+            "table-active": active && selectedRow === key
+          }),
+          children: [prop.data.map((data, k) => {
+            return /*#__PURE__*/jsx("td", {
+              className: classNames({
+                [data.className]: data.className !== undefined
+              }),
+              children: data.item
+            }, k);
+          }), prop.actions && /*#__PURE__*/jsx("td", {
+            className: "text-right",
+            children: prop.actions
+          })]
+        }, key);
+      })
+    })]
+  }));
+};
+ImsSimpleTable.propTypes = {
+  thead: PropTypes.arrayOf(PropTypes.shape({
+    className: PropTypes.string,
+    text: PropTypes.string.isRequired
+  })).isRequired,
+  tbody: PropTypes.arrayOf(PropTypes.shape({
+    className: PropTypes.string,
+    data: PropTypes.arrayOf(PropTypes.shape({
+      className: PropTypes.string,
+      item: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]).isRequired
+    })).isRequired,
+    actions: PropTypes.node
+  })).isRequired,
+  active: PropTypes.bool
+};
+
+function useDebounce$1(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+  return debouncedValue;
+}
+
+const FilterAndSearch$1 = ({
+  onFilter: _onFilter = () => {},
+  onSearch: _onSearch = () => {},
+  filters: _filters = []
+}) => {
+  let [searchString, setSearchString] = React.useState("");
+  const debouncedSearchString = useDebounce$1(searchString, 500);
+  React.useEffect(() => {
+    _onSearch({
+      value: {
+        clientSearch: debouncedSearchString
+      }
+    });
+  }, [debouncedSearchString]);
+  return /*#__PURE__*/jsxs(Row, {
+    children: [/*#__PURE__*/jsx(Col, {
+      md: "3",
+      children: /*#__PURE__*/jsx(ReactSelect, {
+        className: "react-select default m-0 w-100",
+        classNamePrefix: "react-select",
+        name: "singleSelect",
+        onChange: value => {
+          _onFilter(value);
+        },
+        defaultValue: _filters.find(item => item.default),
+        options: _filters,
+        placeholder: "Select filter"
+      })
+    }), /*#__PURE__*/jsx(Col, {
+      md: "6",
+      children: /*#__PURE__*/jsx(InputGroup, {
+        children: /*#__PURE__*/jsx(Input, {
+          onChange: e => setSearchString(e.currentTarget.value.toString()),
+          placeholder: "Search item"
+        })
+      })
+    })]
+  });
+};
+
+const DOTS = '...';
+const range = (start, end) => {
+  let length = end - start + 1;
+  return Array.from({
+    length
+  }, (_, idx) => idx + start);
+};
+const usePagination = ({
+  totalCount,
+  pageSize,
+  siblingCount: _siblingCount = 1,
+  currentPage
+}) => {
+  const paginationRange = useMemo(() => {
+    const totalPageCount = Math.ceil(totalCount / pageSize);
+    const totalPageNumbers = _siblingCount + 5;
+    if (totalPageNumbers >= totalPageCount) {
+      return range(1, totalPageCount);
+    }
+    const leftSiblingIndex = Math.max(currentPage - _siblingCount, 1);
+    const rightSiblingIndex = Math.min(currentPage + _siblingCount, totalPageCount);
+    const shouldShowLeftDots = leftSiblingIndex > 2;
+    const shouldShowRightDots = rightSiblingIndex < totalPageCount - 2;
+    const firstPageIndex = 1;
+    const lastPageIndex = totalPageCount;
+    if (!shouldShowLeftDots && shouldShowRightDots) {
+      let leftItemCount = 3 + 2 * _siblingCount;
+      let leftRange = range(1, leftItemCount);
+      return [...leftRange, DOTS, totalPageCount];
+    }
+    if (shouldShowLeftDots && !shouldShowRightDots) {
+      let rightItemCount = 3 + 2 * _siblingCount;
+      let rightRange = range(totalPageCount - rightItemCount + 1, totalPageCount);
+      return [firstPageIndex, DOTS, ...rightRange];
+    }
+    if (shouldShowLeftDots && shouldShowRightDots) {
+      let middleRange = range(leftSiblingIndex, rightSiblingIndex);
+      return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
+    }
+  }, [totalCount, pageSize, _siblingCount, currentPage]);
+  return paginationRange;
+};
+
+const Pagination = props => {
+  const {
+    onPageChange = () => {},
+    totalCount = 0,
+    siblingCount = 1,
+    currentPage = 1,
+    pageSize = 10
+  } = props;
+  const paginationRange = usePagination({
+    currentPage,
+    totalCount,
+    siblingCount,
+    pageSize
+  });
+  if (currentPage === 0 || paginationRange.length < 2) {
+    return null;
+  }
+  const onNext = () => {
+    onPageChange && onPageChange(currentPage + 1);
+  };
+  const onPrevious = () => {
+    onPageChange && onPageChange(currentPage - 1);
+  };
+  let lastPage = paginationRange[paginationRange.length - 1];
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsx("nav", {
+      "aria-label": "Page navigation",
+      children: /*#__PURE__*/jsxs("ul", {
+        className: "pagination",
+        children: [/*#__PURE__*/jsx("li", {
+          className: "page-item",
+          children: /*#__PURE__*/jsxs("button", {
+            onClick: onPrevious,
+            className: "page-link",
+            "aria-label": "Next",
+            children: [/*#__PURE__*/jsx("span", {
+              "aria-hidden": "true",
+              children: "\xAB"
+            }), /*#__PURE__*/jsx("span", {
+              className: "sr-only",
+              children: "Previous"
+            })]
+          })
+        }, "first-button"), paginationRange.map((pageNumber, i) => {
+          if (pageNumber === DOTS) return /*#__PURE__*/jsx("li", {
+            className: "pagination-item dots",
+            children: "\u2026"
+          }, DOTS + i);
+          return /*#__PURE__*/jsx("li", {
+            className: `page-item ${currentPage === pageNumber && ` active`}`,
+            children: /*#__PURE__*/jsx("button", {
+              className: "page-link",
+              onClick: () => onPageChange(pageNumber),
+              children: pageNumber
+            })
+          }, pageNumber);
+        }), /*#__PURE__*/jsx("li", {
+          className: "page-item",
+          children: /*#__PURE__*/jsxs("button", {
+            disabled: currentPage === lastPage,
+            className: "page-link",
+            onClick: onNext,
+            "aria-label": "Next",
+            children: [/*#__PURE__*/jsx("span", {
+              "aria-hidden": "true",
+              children: "\xBB"
+            }), /*#__PURE__*/jsx("span", {
+              className: "sr-only",
+              children: "Next"
+            })]
+          })
+        }, "next-button")]
+      })
+    })
+  });
+};
+
+function Table$1({
+  columns,
+  data,
+  renderRowSubComponent,
+  rowProps = () => ({}),
+  className = "-highlight -striped ",
+  handleSearch = () => {},
+  handleFilter = () => {},
+  handlePagination = () => {},
+  filters = [],
+  pagination = {
+    currentPage: 1,
+    hasNextPage: true,
+    hasPrevPage: false,
+    nextPage: 2,
+    prevPage: null,
+    size: 10,
+    totalPages: 2,
+    totalResults: 17
+  }
+}) {
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    page,
+    prepareRow,
+    state: {
+      expanded
+    },
+    visibleColumns
+  } = useTable({
+    columns,
+    data,
+    initialState: {
+      pageSize: 10,
+      pageIndex: 0
+    }
+  }, useSortBy, useExpanded, usePagination$1, useResizeColumns, useFlexLayout);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs("div", {
+      className: "ReactTable " + className,
+      children: [/*#__PURE__*/jsx("div", {
+        className: "pagination-top",
+        children: /*#__PURE__*/jsx(FilterAndSearch$1, {
+          filters: filters,
+          onFilter: filter => handleFilter(filter),
+          onSearch: search => handleSearch(search)
+        })
+      }), /*#__PURE__*/jsxs("table", _extends({}, getTableProps(), {
+        className: "rt-table",
+        children: [/*#__PURE__*/jsx("thead", {
+          className: "rt-thead -header",
+          children: headerGroups.map(headerGroup => /*#__PURE__*/jsx("tr", _extends({}, headerGroup.getHeaderGroupProps(), {
+            className: "rt-tr",
+            children: headerGroup.headers.map((column, key) => /*#__PURE__*/jsxs("th", _extends({}, column.getHeaderProps(column.getSortByToggleProps()), {
+              className: classNames("rt-th rt-resizable-header", {
+                "-cursor-pointer": headerGroup.headers.length - 1 !== key,
+                "-sort-asc": column.isSorted && !column.isSortedDesc,
+                "-sort-desc": column.isSorted && column.isSortedDesc
+              }),
+              children: [/*#__PURE__*/jsxs("div", {
+                className: "rt-resizable-header-content",
+                children: [column.render("Header"), /*#__PURE__*/jsx("div", _extends({}, column.getResizerProps(), {
+                  className: classNames("col-resizer", {
+                    " active": column.isResizing
+                  })
+                }))]
+              }), /*#__PURE__*/jsx("div", {
+                children: headerGroup.headers.length - 1 === key ? null : column.canFilter ? column.render("Filter") : null
+              })]
+            })))
+          })))
+        }), /*#__PURE__*/jsx("tbody", _extends({}, getTableBodyProps(), {
+          className: "rt-tbody",
+          children: page.map((row, i) => {
+            var _row$getRowProps;
+            prepareRow(row);
+            const rowStyel = classNames("rt-tr", {
+              " -odd": i % 2 === 0
+            }, {
+              " -even": i % 2 === 1
+            });
+            return /*#__PURE__*/jsxs(React.Fragment, {
+              children: [/*#__PURE__*/jsx("tr", _extends({
+                /**
+                 * in the follwing we are muting row object and putting classNames
+                 * this is a custom property added to get control from outside
+                 */
+                className: rowStyel
+              }, row.getRowProps(rowProps(_extends({}, row, {
+                className: rowStyel
+              }))), {
+                children: row.cells.map(cell => {
+                  return /*#__PURE__*/jsx("td", _extends({}, cell.getCellProps(), {
+                    className: "rt-td",
+                    children: cell.render("Cell")
+                  }));
+                })
+              })), row.isExpanded ? /*#__PURE__*/jsx("tr", {
+                children: /*#__PURE__*/jsx("td", {
+                  colSpan: visibleColumns.length,
+                  children: renderRowSubComponent && renderRowSubComponent({
+                    row
+                  })
+                })
+              }) : null]
+            }, (_row$getRowProps = row.getRowProps()) == null ? void 0 : _row$getRowProps.key);
+          })
+        }))]
+      })), /*#__PURE__*/jsx("div", {
+        className: "pagination-bottom",
+        children: /*#__PURE__*/jsx("div", {
+          className: "-pagination",
+          children: /*#__PURE__*/jsx("div", {
+            className: "-center flex-nowrap",
+            children: /*#__PURE__*/jsx(Pagination, {
+              className: "pagination-bar",
+              pagination: pagination,
+              currentPage: pagination.currentPage,
+              totalCount: pagination.totalResults,
+              pageSize: pagination.size,
+              onPageChange: page => {
+                handlePagination({
+                  page
+                });
+              }
+            })
+          })
+        })
+      })]
+    })
+  });
+}
+
+Object.assign({}, Input.prototype.props);
+
+/**
+ *
+ * @param {InputBaseProps} props
+ * @returns
+ */
+const InputBase$1 = props => {
+  return /*#__PURE__*/jsx(Input, _extends({}, props, {
+    children: props.children
+  }));
+};
+InputBase$1.propTypes = _extends({}, Input.propTypes && Input.propTypes);
+
+function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+  return debouncedValue;
+}
+
+const FilterAndSearch = ({
+  onFilter: _onFilter = () => {},
+  onSearch: _onSearch = () => {},
+  onSort: _onSort = () => {},
+  isSearchable,
+  isFilterable,
+  hasBulkActions,
+  isSortable,
+  sorts: _sorts = [],
+  tableToolbar,
+  filterToolbar,
+  title: _title = ""
+}) => {
+  React.useState("");
+  let [sortLabel, setSortLabel] = React.useState("");
+  let [searchString, setSearchString] = React.useState("");
+  const debouncedSearchString = useDebounce(searchString, 500);
+  const [sortDropdownOpen, setSortDropdownOpen] = React.useState(false);
+  const sortToggle = () => setSortDropdownOpen(!sortDropdownOpen);
+  React.useEffect(() => {
+    _onSearch({
+      value: {
+        clientSearch: debouncedSearchString
+      }
+    });
+  }, [debouncedSearchString]);
+  return /*#__PURE__*/jsx(React.Fragment, {
+    children: /*#__PURE__*/jsxs(RowBase, {
+      className: "filter-search d-lg-flex justify-around align-items-center px-lg-4 my-4",
+      children: [/*#__PURE__*/jsx(ColBase, {
+        md: "4",
+        sm: "12",
+        className: " mb-3",
+        children: _title && /*#__PURE__*/jsx("h4", {
+          children: _title
+        })
+      }), /*#__PURE__*/jsx(ColBase, {
+        md: "8",
+        sm: "12",
+        className: "mb-3",
+        children: /*#__PURE__*/jsxs("div", {
+          className: "d-flex justify-content-lg-end justify-content-md-end action-container",
+          children: [tableToolbar && /*#__PURE__*/jsx("div", {
+            className: "me-md-3 mr-md-3 create-filer",
+            children: tableToolbar
+          }), hasBulkActions && /*#__PURE__*/jsx(Fragment, {
+            children: /*#__PURE__*/jsxs(UncontrolledDropdown, {
+              children: [/*#__PURE__*/jsx(DropdownToogleBase, {
+                className: " p-0 table-actions border-primary text-primary",
+                children: /*#__PURE__*/jsx("i", {
+                  class: "fa-solid fa-ellipsis-vertical"
+                })
+              }), /*#__PURE__*/jsxs(DropdownMenuBase, {
+                children: [/*#__PURE__*/jsx(DropdownItemBase, {
+                  children: "hello"
+                }), /*#__PURE__*/jsx(DropdownItemBase, {
+                  children: "world"
+                })]
+              })]
+            })
+          })]
+        })
+      }), /*#__PURE__*/jsx(ColBase, {
+        md: "12",
+        sm: "12",
+        children: /*#__PURE__*/jsxs("div", {
+          className: "d-flex justify-content-lg-start justify-content-md-start action-container",
+          children: [/*#__PURE__*/jsx("div", {
+            className: "d-flex create-filter-wrapper",
+            children: isFilterable && filterToolbar && /*#__PURE__*/jsx("div", {
+              className: "me-md-3 mr-md-3 create-filer",
+              children: filterToolbar
+            })
+          }), isSearchable && /*#__PURE__*/jsxs("div", {
+            className: "me-md-3 mr-md-3  table-search-container shadow-sm--hover",
+            children: [/*#__PURE__*/jsx("i", {
+              className: "fa-solid fa-search my-auto ms-3 ml-3 p-0"
+            }), /*#__PURE__*/jsx(InputBase$1, {
+              size: "sm",
+              onChange: e => setSearchString(e.currentTarget.value.toString()),
+              placeholder: "Search",
+              className: "border-0 table-search-input",
+              type: "text"
+            })]
+          }), /*#__PURE__*/jsx("div", {
+            className: "d-flex create-filter-wrapper",
+            children: isSortable && /*#__PURE__*/jsx("div", {
+              className: "me-md-3 mr-md-3 create-filer",
+              children: /*#__PURE__*/jsxs(DropdownBase, {
+                isOpen: sortDropdownOpen,
+                toggle: sortToggle,
+                children: [/*#__PURE__*/jsxs(DropdownToogleBase, {
+                  className: "filter",
+                  color: "secondary",
+                  outline: true,
+                  size: "md",
+                  children: [/*#__PURE__*/jsx("i", {
+                    class: "fa-solid fa-sort me-2 mr-2 p-0 shadow-sm--hover"
+                  }), sortLabel ? sortLabel : "Sort"]
+                }), /*#__PURE__*/jsx(DropdownMenuBase, {
+                  className: "mt-3",
+                  children: _sorts && _sorts.length > 0 && _sorts.map(sort => /*#__PURE__*/jsx(DropdownItemBase, {
+                    style: {
+                      fontWeight: "500",
+                      fontSize: "14px",
+                      color: "#152536"
+                    },
+                    onClick: () => {
+                      setSortLabel(sort.label);
+                      _onSort(sort);
+                    },
+                    className: "d-flex align-items-center fw-bold my-2",
+                    children: sort.label
+                  }))
+                })]
+              })
+            })
+          })]
+        })
+      })]
+    })
+  });
+};
+
+const _excluded$C = ["columns", "data", "renderRowSubComponent", "rowProps", "className", "handleCreate", "handleSearch", "handleFilter", "handlePagination", "filters", "pagination"];
+function Table(_ref) {
+  let {
+      columns,
+      data,
+      renderRowSubComponent,
+      rowProps = () => ({}),
+      className = "-highlight -striped ",
+      handleCreate = () => {},
+      handleSearch = () => {},
+      handleFilter = () => {},
+      handlePagination = () => {},
+      filters = [],
+      pagination = {
+        currentPage: 1,
+        hasNextPage: true,
+        hasPrevPage: false,
+        nextPage: 2,
+        prevPage: null,
+        size: 10,
+        totalPages: 2,
+        totalResults: 17
+      }
+    } = _ref,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$C);
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    page,
+    prepareRow,
+    state: {
+      expanded
+    },
+    visibleColumns
+  } = useTable({
+    columns,
+    data,
+    initialState: {
+      pageSize: 10,
+      pageIndex: 0
+    }
+  }, useSortBy, useExpanded, usePagination$1, useResizeColumns, useFlexLayout);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsx("div", {
+      className: "visual-table",
+      children: /*#__PURE__*/jsxs("div", {
+        className: "ReactTable " + className,
+        children: [/*#__PURE__*/jsx("div", {
+          className: "pagination-top",
+          children: /*#__PURE__*/jsx(FilterAndSearch, _extends({
+            filters: filters,
+            onFilter: filter => handleFilter(filter),
+            onSearch: search => handleSearch(search),
+            onClick: () => handleCreate()
+          }, props))
+        }), /*#__PURE__*/jsxs("table", _extends({}, getTableProps(), {
+          className: "rt-table ",
+          children: [/*#__PURE__*/jsx("thead", {
+            className: "rt-thead -header",
+            children: headerGroups.map(headerGroup => /*#__PURE__*/jsx("tr", _extends({}, headerGroup.getHeaderGroupProps(), {
+              className: "rt-tr",
+              children: headerGroup.headers.map((column, key) => /*#__PURE__*/jsxs("th", _extends({}, column.getHeaderProps(column.getSortByToggleProps()), {
+                className: classNames("rt-th rt-resizable-header", {
+                  "-cursor-pointer": column.canSort,
+                  "-sort-asc": column.isSorted && !column.isSortedDesc,
+                  "-sort-desc": column.isSorted && column.isSortedDesc
+                }),
+                children: [/*#__PURE__*/jsxs("div", {
+                  className: "rt-resizable-header-content",
+                  children: [column.render("Header"), /*#__PURE__*/jsx("div", _extends({}, column.getResizerProps(), {
+                    className: classNames("col-resizer", {
+                      " active": column.isResizing
+                    })
+                  }))]
+                }), /*#__PURE__*/jsx("div", {
+                  children: headerGroup.headers.length - 1 === key ? null : column.canFilter ? column.render("Filter") : null
+                })]
+              })))
+            })))
+          }), /*#__PURE__*/jsx("tbody", _extends({}, getTableBodyProps(), {
+            className: "rt-tbody",
+            children: page.map((row, i) => {
+              var _row$getRowProps;
+              prepareRow(row);
+              const rowStyel = classNames("rt-tr", {
+                " -odd": i % 2 === 0
+              }, {
+                " -even": i % 2 === 1
+              });
+              return /*#__PURE__*/jsxs(React.Fragment, {
+                children: [/*#__PURE__*/jsx("tr", _extends({
+                  /**
+                   * in the follwing we are muting row object and putting classNames
+                   * this is a custom property added to get control from outside
+                   */
+                  className: rowStyel
+                }, row.getRowProps(rowProps(_extends({}, row, {
+                  className: rowStyel
+                }))), {
+                  children: row.cells.map(cell => {
+                    return /*#__PURE__*/jsx("td", _extends({}, cell.getCellProps(), {
+                      className: "rt-td",
+                      children: cell.render("Cell")
+                    }));
+                  })
+                })), row.isExpanded ? /*#__PURE__*/jsx("tr", {
+                  children: /*#__PURE__*/jsx("td", {
+                    colSpan: visibleColumns.length,
+                    children: renderRowSubComponent && renderRowSubComponent({
+                      row
+                    })
+                  })
+                }) : null]
+              }, (_row$getRowProps = row.getRowProps()) == null ? void 0 : _row$getRowProps.key);
+            })
+          }))]
+        })), /*#__PURE__*/jsx("div", {
+          className: "pagination-bottom",
+          children: /*#__PURE__*/jsx("div", {
+            className: "-pagination",
+            children: /*#__PURE__*/jsx("div", {
+              className: "-center flex-nowrap",
+              children: /*#__PURE__*/jsx(Pagination, {
+                className: "pagination-bar",
+                pagination: pagination,
+                currentPage: pagination.currentPage,
+                totalCount: pagination.totalResults,
+                pageSize: pagination.size,
+                onPageChange: page => {
+                  handlePagination({
+                    page
+                  });
+                }
+              })
+            })
+          })
+        })]
+      })
+    })
+  });
+}
+
+const _excluded$B = ["children"];
+var _List$prototype;
+Object.assign({}, (_List$prototype = List.prototype) == null ? void 0 : _List$prototype.props);
+
+/**
+ *
+ * @param {ListBaseProps} props
+ * @returns
+ */
+
+const ListBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$B);
+  return /*#__PURE__*/jsx(List, _extends({}, rest, {
+    children: children
+  }));
+};
+ListBase.propTypes = _extends({}, List.propTypes && List.propTypes);
+
+const _excluded$A = ["children"];
+var _ListGroup$prototype;
+Object.assign({}, (_ListGroup$prototype = ListGroup.prototype) == null ? void 0 : _ListGroup$prototype.props);
+
+/**
+ *
+ * @param {ListGroupBaseProps} props
+ * @returns
+ */
+
+const ListGroupBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$A);
+  return /*#__PURE__*/jsx(ListGroup, _extends({}, rest, {
+    children: children
+  }));
+};
+ListGroupBase.propTypes = _extends({}, ListGroup.propTypes && ListGroup.propTypes);
+
+const _excluded$z = ["children"];
+var _ListGroupItem$protot;
+Object.assign({}, (_ListGroupItem$protot = ListGroupItem.prototype) == null ? void 0 : _ListGroupItem$protot.props);
+
+/**
+ *
+ * @param {ListGroupItemBaseProps} props
+ * @returns
+ */
+
+const ListGroupItemBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$z);
+  return /*#__PURE__*/jsx(ListGroupItem, _extends({}, rest, {
+    children: children
+  }));
+};
+ListGroupItemBase.propTypes = _extends({}, ListGroupItem.propTypes && ListGroupItem.propTypes);
+
+const _excluded$y = ["children"];
+var _ListGroupItemHeading;
+Object.assign({}, (_ListGroupItemHeading = ListGroupItemHeading.prototype) == null ? void 0 : _ListGroupItemHeading.props);
+
+/**
+ *
+ * @param {ListGroupItemHeadingBaseProps} props
+ * @returns
+ */
+
+const ListGroupItemHeadingBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$y);
+  return /*#__PURE__*/jsx(ListGroupItemHeading, _extends({}, rest, {
+    children: children
+  }));
+};
+ListGroupItemHeadingBase.propTypes = _extends({}, ListGroupItemHeading.propTypes && ListGroupItemHeading.propTypes);
+
+const _excluded$x = ["children"];
+var _ListGroupItemText$pr;
+Object.assign({}, (_ListGroupItemText$pr = ListGroupItemText.prototype) == null ? void 0 : _ListGroupItemText$pr.props);
+
+/**
+ *
+ * @param {ListGroupItemTextBaseProps} props
+ * @returns
+ */
+
+const ListGroupItemTextBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$x);
+  return /*#__PURE__*/jsx(ListGroupItemText, _extends({}, rest, {
+    children: children
+  }));
+};
+ListGroupItemTextBase.propTypes = _extends({}, ListGroupItemText.propTypes && ListGroupItemText.propTypes);
+
+const _excluded$w = ["children"];
+var _ListInlineItem$proto;
+Object.assign({}, (_ListInlineItem$proto = ListInlineItem.prototype) == null ? void 0 : _ListInlineItem$proto.props);
+
+/**
+ *
+ * @param {ListInlineItemBaseProps} props
+ * @returns
+ */
+
+const ListInlineItemBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$w);
+  return /*#__PURE__*/jsx(ListInlineItem, _extends({}, rest, {
+    children: children
+  }));
+};
+ListInlineItemBase.propTypes = _extends({}, ListInlineItem.propTypes && ListInlineItem.propTypes);
+
+Object.assign({}, Form.prototype.props);
+
+/**
+ *
+ * @param {FormBaseProps} props
+ * @returns
+ */
+const FormBase = props => {
+  return /*#__PURE__*/jsx(Form, _extends({}, props, {
+    children: props.children
+  }));
+};
+FormBase.propTypes = _extends({}, Form.propTypes && Form.propTypes);
+
+Object.assign({}, FormFeedback.prototype.props);
+
+/**
+ *
+ * @param {FormFeedbackBaseProps} props
+ * @returns
+ */
+const FormFeedbackBase = props => {
+  return /*#__PURE__*/jsx(FormFeedback, _extends({}, props, {
+    children: props.children
+  }));
+};
+FormFeedbackBase.propTypes = _extends({}, FormFeedback.propTypes && FormFeedback.propTypes);
+
+Object.assign({}, FormText.prototype.props);
+
+/**
+ *
+ * @param {FormTextBaseProps} props
+ * @returns
+ */
+const FormTextBase = props => {
+  return /*#__PURE__*/jsx(FormText, _extends({}, props, {
+    children: props.children
+  }));
+};
+FormTextBase.propTypes = _extends({}, FormText.propTypes && FormText.propTypes);
+
+Object.assign({}, FormGroup.prototype.props);
+
+/**
+ *
+ * @param {FormGroupBaseProps} props
+ * @returns
+ */
+const FormGroupBase = props => {
+  return /*#__PURE__*/jsx(FormGroup, _extends({}, props, {
+    children: props.children
+  }));
+};
+FormGroupBase.propTypes = _extends({}, FormGroup.propTypes && FormGroup.propTypes);
+
+const formatCreateLabel = (word, inputValue) => {
+  return `${word} "${inputValue}"`;
+};
+
+const _excluded$v = ["leftPhrase"];
+const CreatableSelectBase = _ref => {
+  let {
+      leftPhrase = "Add"
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$v);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsx(CreatableSelect, _extends({
+      className: "react-select",
+      classNamePrefix: "react-select",
+      formatCreateLabel: inputValue => formatCreateLabel(leftPhrase, inputValue)
+    }, rest))
+  });
+};
+CreatableSelect.propTypes = {
+  // ...ReactSelect.propTypes,
+  isClearable: PropTypes.bool,
+  isSearchable: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  isMulti: PropTypes.bool,
+  isRtl: PropTypes.bool,
+  isOptionDisabled: PropTypes.func,
+  isOptionSelected: PropTypes.func,
+  isOptionFocused: PropTypes.func,
+  isFocused: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isInvalid: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  isCreatable: PropTypes.bool,
+  isMenuOpen: PropTypes.bool,
+  isMenuFixed: PropTypes.bool,
+  isMenuPortal: PropTypes.bool,
+  isMenuPositioned: PropTypes.bool,
+  isMenuPositionFixed: PropTypes.bool,
+  isMenuAutoFocused: PropTypes.bool,
+  isControlled: PropTypes.bool,
+  isFocusedOption: PropTypes.bool,
+  isHidden: PropTypes.bool,
+  size: PropTypes.oneOf(["sm", "lg"]),
+  word: PropTypes.string
+};
+
+const _excluded$u = ["loadOptions"];
+const ReactSearchBase = _ref => {
+  let {
+      loadOptions
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$u);
+  const [menuIsOpen, setMenuIsOpen] = React.useState(false);
+  const onInputChange = value => {
+    if (value.length > 0) {
+      setMenuIsOpen(true);
+    } else {
+      setMenuIsOpen(false);
+    }
+  };
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsx(AsyncSelect, _extends({
+      className: "react-select",
+      classNamePrefix: "react-select",
+      loadOptions: loadOptions,
+      onInputChange: onInputChange,
+      menuIsOpen: menuIsOpen
+    }, rest))
+  });
+};
+ReactSearchBase.propTypes = {
+  // ...ReactSelect.propTypes,
+  isClearable: PropTypes.bool,
+  isSearchable: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  isMulti: PropTypes.bool,
+  isRtl: PropTypes.bool,
+  //   isOptionDisabled: PropTypes.func,
+  isOptionSelected: PropTypes.func,
+  isOptionFocused: PropTypes.func,
+  isFocused: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isInvalid: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  isCreatable: PropTypes.bool,
+  isMenuOpen: PropTypes.bool,
+  isMenuFixed: PropTypes.bool,
+  isMenuPortal: PropTypes.bool,
+  isMenuPositioned: PropTypes.bool,
+  isMenuPositionFixed: PropTypes.bool,
+  isMenuAutoFocused: PropTypes.bool,
+  isControlled: PropTypes.bool,
+  isFocusedOption: PropTypes.bool,
+  isHidden: PropTypes.bool,
+  size: PropTypes.oneOf(["sm", "lg"]),
+  word: PropTypes.string
+};
+
+const ReactSelectBase = _ref => {
+  let rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(ReactSelect, _extends({
+    classNamePrefix: "react-select",
+    className: "react-select"
+  }, rest));
+};
+ReactSelect.propTypes = {
+  // ...ReactSelect.propTypes,
+  isClearable: PropTypes.bool,
+  isSearchable: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  isMulti: PropTypes.bool,
+  isRtl: PropTypes.bool,
+  isOptionDisabled: PropTypes.func,
+  isOptionSelected: PropTypes.func,
+  isOptionFocused: PropTypes.func,
+  isFocused: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isInvalid: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  isCreatable: PropTypes.bool,
+  isMenuOpen: PropTypes.bool,
+  isMenuFixed: PropTypes.bool,
+  isMenuPortal: PropTypes.bool,
+  isMenuPositioned: PropTypes.bool,
+  isMenuPositionFixed: PropTypes.bool,
+  isMenuAutoFocused: PropTypes.bool,
+  isControlled: PropTypes.bool,
+  isFocusedOption: PropTypes.bool,
+  isHidden: PropTypes.bool,
+  size: PropTypes.oneOf(["sm", "lg"]),
+  word: PropTypes.string
+};
+
+Object.assign({}, InputGroup.prototype.props);
+
+/**
+ *
+ * @param {InputGroupBaseProps} props
+ * @returns
+ */
+const InputGroupBase$1 = props => {
+  return /*#__PURE__*/jsx(InputGroup, _extends({}, props, {
+    children: props.children
+  }));
+};
+InputGroupBase$1.propTypes = _extends({}, InputGroup.propTypes && InputGroup.propTypes);
+
+Object.assign({}, InputGroupText.prototype.props);
+
+/**
+ *
+ * @param {InputGroupTextBaseProps} props
+ * @returns
+ */
+const InputGroupTextBase$1 = props => {
+  return /*#__PURE__*/jsx(InputGroupText, _extends({}, props, {
+    children: props.children
+  }));
+};
+InputGroupTextBase$1.propTypes = _extends({}, InputGroupText.propTypes && InputGroupText.propTypes);
+
+Object.assign({}, Label.prototype.props);
+
+/**
+ *
+ * @param {LabelBaseProps} props
+ * @returns
+ */
+const LabelBase = props => {
+  return /*#__PURE__*/jsx(Label, _extends({}, props, {
+    children: props.children
+  }));
+};
+LabelBase.propTypes = _extends({}, Label.propTypes && Label.propTypes);
+
+Object.assign({}, Media.prototype.props);
+
+/**
+ *
+ * @param {MediaBaseProps} props
+ * @returns
+ */
+const MediaBase = props => {
+  return /*#__PURE__*/jsx(Media, _extends({}, props, {
+    children: props.children
+  }));
+};
+MediaBase.propTypes = _extends({}, Media.propTypes && Media.propTypes);
+
+Object.assign({}, Offcanvas.prototype.props);
+
+/**
+ *
+ * @param {OffcanvasBaseProps} props
+ * @returns
+ */
+const OffcanvasBase = props => {
+  return /*#__PURE__*/jsx(Offcanvas, _extends({}, props, {
+    children: props.children
+  }));
+};
+OffcanvasBase.propTypes = _extends({}, Offcanvas.propTypes && Offcanvas.propTypes);
+
+Object.assign({}, OffcanvasBody.prototype.props);
+
+/**
+ *
+ * @param {OffcanvasBodyBaseProps} props
+ * @returns
+ */
+const OffcanvasBodyBase = props => {
+  return /*#__PURE__*/jsx(OffcanvasBody, _extends({}, props, {
+    children: props.children
+  }));
+};
+OffcanvasBodyBase.propTypes = _extends({}, OffcanvasBody.propTypes && OffcanvasBody.propTypes);
+
+Object.assign({}, OffcanvasHeader.prototype.props);
+
+/**
+ *
+ * @param {OffcanvasHeaderBaseProps} props
+ * @returns
+ */
+const OffcanvasHeaderBase = props => {
+  return /*#__PURE__*/jsx(OffcanvasHeader, _extends({}, props, {
+    children: props.children
+  }));
+};
+OffcanvasHeaderBase.propTypes = _extends({}, OffcanvasHeader.propTypes && OffcanvasHeader.propTypes);
+
+const _excluded$t = ["file", "name", "onDelete"],
+  _excluded2 = ["onSelected", "hint"];
+function bytesToSize(bytes) {
+  const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+  if (bytes === 0) return "n/a";
+  const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)), 10);
+  if (i === 0) return `${bytes} ${sizes[i]})`;
+  return `${(bytes / 1024 ** i).toFixed(1)} ${sizes[i]}`;
+}
+function Attachment(_ref) {
+  let {
+      file,
+      onDelete
+    } = _ref;
+    _objectWithoutPropertiesLoose(_ref, _excluded$t);
+  let [processing, setProcessing] = useState({
+    action: null,
+    id: null
+  });
+  let [uploading, setUploading] = useState({
+    status: false,
+    progress: 0
+  });
+  return /*#__PURE__*/jsx(Col, {
+    md: "4",
+    children: /*#__PURE__*/jsx(Card, {
+      className: "",
+      children: /*#__PURE__*/jsxs(CardBody, {
+        children: [/*#__PURE__*/jsxs("h5", {
+          className: "mb-1",
+          children: [/*#__PURE__*/jsx("i", {
+            className: "tim-icons icon-paper"
+          }), " ", file.path, " "]
+        }), /*#__PURE__*/jsxs("h5", {
+          className: "m-0",
+          children: [!processing.action ? /*#__PURE__*/jsx("i", {
+            onClick: e => onDelete(file),
+            className: "tim-icons icon-simple-remove"
+          }) : /*#__PURE__*/jsx(Spinner, {
+            color: "text-damger",
+            size: "sm"
+          }), " ", /*#__PURE__*/jsx("small", {
+            children: bytesToSize(file.size)
+          })]
+        }), uploading.status && uploading.progress < 100 && /*#__PURE__*/jsx(Progress, {
+          value: uploading.progress
+        })]
+      })
+    })
+  });
+}
+/**
+ * File drop zone can be used in any form elements along with other bootstrap forms. Allows users to
+ * direct file drag and drop from their machine or just simply select ability by clicking anywhere on it
+ */
+function FileDropZone(_ref2) {
+  let {
+      onSelected = () => {},
+      hint = "Drag 'n' drop, or click to select files"
+    } = _ref2,
+    props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const onDrop = React.useCallback((acceptedFiles, rejectedFiles) => {
+    let duplicatePaths = selectedFiles.map(file => file.path) || [];
+    acceptedFiles = acceptedFiles.filter(file => !duplicatePaths.includes(file.path));
+    setSelectedFiles(previousFiles => [...previousFiles, ...acceptedFiles]);
+  }, [selectedFiles]);
+  React.useEffect(() => {
+    onSelected(selectedFiles);
+  }, [selectedFiles]);
+  const {
+    getRootProps,
+    getInputProps
+  } = useDropzone(_extends({
+    onDrop
+  }, props.acceptedFileTypes && {
+    accept: props.acceptedFileTypes
+  }, {
+    multiple: props.noMultiple ? false : true,
+    disabled: props.disabled
+  }));
+  const handleRemove = deleteFile => setSelectedFiles(prevFiles => prevFiles.filter(file => file.path !== deleteFile.path));
+  return /*#__PURE__*/jsxs("section", {
+    children: [/*#__PURE__*/jsx("input", {
+      type: "file",
+      name: "",
+      id: ""
+    }), /*#__PURE__*/jsxs("div", _extends({}, getRootProps({
+      className: "dropzone"
+    }), {
+      children: [/*#__PURE__*/jsx("input", _extends({}, getInputProps())), /*#__PURE__*/jsx("p", {
+        children: hint
+      })]
+    })), /*#__PURE__*/jsx("aside", {
+      children: /*#__PURE__*/jsx(Row, {
+        children: selectedFiles.map(file => /*#__PURE__*/jsx(Attachment, {
+          file: file,
+          name: props.name,
+          onDelete: handleRemove
+        }, file.path))
+      })
+    })]
+  });
+}
+FileDropZone.propTypes = {
+  /** `hint` is a place holder or hint for users in the dropzone.  */
+  hint: PropTypes.string,
+  /**
+   * `onSelected` is fired when files are loaded from users system and provides files in the args.
+   */
+  onSelected: PropTypes.func,
+  /**
+   * `noMultiple` tells wheter or not multiple file selection is allowed or not.
+   */
+  noMultiple: PropTypes.bool,
+  /**
+   * `disabled` disables file selection.
+   */
+  disabled: PropTypes.bool
+};
+
+const _excluded$s = ["label", "mandatory", "onChange", "unselected", "error", "helperText"];
+let ImsInputCheckProps = Object.assign({}, Input.prototype.props);
+
+/**
+ *
+ * @param {ImsInputCheckProps} props
+ * @returns
+ */
+
+const ImsInputCheck = _ref => {
+  let {
+      label,
+      mandatory = false,
+      unselected = false,
+      error,
+      helperText
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$s);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      check: true,
+      className: classNames("", {
+        "unselected-checkbox": unselected
+      }),
+      children: [/*#__PURE__*/jsxs(Col, {
+        md: "12",
+        children: [/*#__PURE__*/jsx(Input, _extends({
+          type: "checkbox"
+        }, rest)), " ", /*#__PURE__*/jsxs(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          check: true,
+          children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
+            className: "text-danger",
+            children: "*"
+          }) : ""]
+        })]
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsxs("label", {
+          children: [" ", /*#__PURE__*/jsx("small", {
+            children: helperText
+          })]
+        })]
+      })]
+    })
+  });
+};
+ImsInputCheck.propTypes = _extends({}, ImsInputCheckProps || {}, {
+  /** Label for the input */
+  label: PropTypes.string,
+  /** Mandatory input */
+  mandatory: PropTypes.bool,
+  /** Unselected checkbox */
+  unselected: PropTypes.bool
+}, Input.propTypes);
+
+const DateTimeBase = _ref => {
+  let rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(Datetime, _extends({}, rest));
+};
+
+const ImsInputDate = ({
+  label,
+  name,
+  value,
+  onChange,
+  error,
+  mandatory: _mandatory = false,
+  disabled,
+  helperText
+}) => {
+  return /*#__PURE__*/jsxs(FormGroup, {
+    row: true,
+    children: [/*#__PURE__*/jsx(Col, {
+      sm: "12",
+      children: /*#__PURE__*/jsxs(Label, {
+        style: {
+          fontSize: "16px"
+        },
+        className: "text-dark",
+        children: [label, " ", _mandatory ? /*#__PURE__*/jsx("span", {
+          className: "text-danger",
+          children: "*"
+        }) : ""]
+      })
+    }), /*#__PURE__*/jsxs(Col, {
+      sm: "12",
+      children: [/*#__PURE__*/jsx(DateTimeBase, {
+        inputProps: {
+          disabled,
+          placeholder: "Select date",
+          className: "form-control",
+          value,
+          name,
+          // this onchange is direct input ...
+          onChange,
+          autoComplete: "off"
+        }
+        // this onchange is for calender ...
+        ,
+        onChange: e => {
+          if (typeof e === "object") {
+            let currentTarget = {
+              name,
+              value: e.format("D/M/YYYY")
+            };
+            onChange({
+              currentTarget
+            });
+          }
+        },
+        timeFormat: false,
+        dateFormat: "D/M/YYYY",
+        closeOnSelect: true
+      }), error && /*#__PURE__*/jsx("label", {
+        className: "text-danger",
+        children: /*#__PURE__*/jsx("small", {
+          children: error
+        })
+      }), helperText && /*#__PURE__*/jsx("label", {
+        className: "",
+        children: /*#__PURE__*/jsx("small", {
+          children: helperText
+        })
+      })]
+    })]
+  });
+};
+
+const _excluded$r = ["label", "error", "clearAll", "onLoad", "name", "onChange", "noMultiple"];
+const ImsInputDropZone = _ref => {
+  let {
+      label,
+      clearAll = false,
+      onLoad,
+      name,
+      noMultiple
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$r);
+  return /*#__PURE__*/jsxs(FormGroup, {
+    row: true,
+    children: [/*#__PURE__*/jsx(Col, {
+      sm: "12",
+      children: /*#__PURE__*/jsx(Label, {
+        style: {
+          fontSize: "16px"
+        },
+        className: "text-dark",
+        children: label
+      })
+    }), /*#__PURE__*/jsx(Col, {
+      sm: "12",
+      children: /*#__PURE__*/jsx(FileDropZone, _extends({}, rest, {
+        name: name,
+        clearAll: clearAll,
+        noMultiple: noMultiple,
+        onLoad: files => onLoad(files)
+      }))
+    })]
+  });
+};
+
+const _excluded$q = ["label", "mandatory", "unselected"];
+let ImsInputRadioProps = Object.assign({}, Input.prototype.props);
+
+/**
+ *
+ * @param {ImsInputRadioProps} props
+ * @returns
+ */
+
+const ImsRadioCheckbox = _ref => {
+  let {
+      label,
+      mandatory = false,
+      unselected = false
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$q);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      check: true,
+      className: classNames("", {
+        "unselected-radio": unselected
+      }),
+      children: [/*#__PURE__*/jsx(Input, _extends({
+        type: "radio"
+      }, rest)), " ", /*#__PURE__*/jsxs(Label, {
+        style: {
+          fontSize: "16px"
+        },
+        className: "text-dark",
+        check: true,
+        children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
+          className: "text-danger",
+          children: "*"
+        }) : ""]
+      })]
+    })
+  });
+};
+ImsRadioCheckbox.propTypes = _extends({}, ImsInputRadioProps || {}, {
+  /** Label for the input */
+  label: PropTypes.string,
+  /** Mandatory input */
+  mandatory: PropTypes.bool,
+  /** Unselected checkbox */
+  unselected: PropTypes.bool
+}, Input.propTypes);
+
+const _excluded$p = ["label", "onChange", "values", "unselected", "defaultChecked", "verticalAlign", "error", "helperText"];
+const ImsInputRadio = _ref => {
+  let {
+      label,
+      onChange,
+      values,
+      unselected,
+      defaultChecked,
+      verticalAlign = false,
+      error,
+      helperText
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$p);
+  return /*#__PURE__*/jsx(React.Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      check: true,
+      row: true,
+      children: [/*#__PURE__*/jsx(Col, {
+        sm: "12",
+        children: /*#__PURE__*/jsx(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          sm: "12",
+          children: label
+        })
+      }), /*#__PURE__*/jsx(Col, {
+        sm: "12",
+        children: /*#__PURE__*/jsx("div", {
+          className: classNames("", {
+            "d-flex flex-wrap": !verticalAlign
+          }),
+          children: values && (values == null ? void 0 : values.map((value, index) => /*#__PURE__*/jsx("span", {
+            className: classNames("", {
+              "mr-3 me-3": !verticalAlign
+            }),
+            children: /*#__PURE__*/jsx(ImsRadioCheckbox, _extends({
+              label: value,
+              onChange: onChange,
+              unselected: unselected,
+              defaultChecked: defaultChecked && defaultChecked === value ? true : false
+            }, rest))
+          }, index)))
+        })
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsxs("label", {
+          children: [" ", /*#__PURE__*/jsx("small", {
+            children: helperText
+          })]
+        })]
+      })]
+    })
+  });
+};
+
+const _excluded$o = ["label", "error", "name", "onChange", "mandatory", "helperText", "sideBtn"];
+const ImsInputSelect = _ref => {
+  let {
+      label,
+      error,
+      name,
+      onChange = () => {},
+      mandatory = false,
+      helperText,
+      sideBtn
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$o);
+  const handleChange = changes => {
+    if (!changes) {
+      let currentTarget = {
+        name,
+        value: []
+      };
+      onChange({
+        currentTarget
+      });
+    } else if (Array.isArray(changes)) {
+      let currentTarget = {
+        name,
+        value: changes //changes.map(item => item.value)
+      };
+      onChange({
+        currentTarget
+      });
+    } else {
+      let currentTarget = {
+        name,
+        value: changes //changes.value
+      };
+      onChange({
+        currentTarget
+      });
+    }
+  };
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      row: true,
+      children: [/*#__PURE__*/jsx(Col, {
+        sm: "12",
+        className: "d-flex",
+        children: /*#__PURE__*/jsxs(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
+            className: "text-danger",
+            children: "*"
+          }) : "", " ", sideBtn && sideBtn]
+        })
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [/*#__PURE__*/jsx(ReactSelectBase, _extends({}, rest, {
+          onChange: handleChange
+        })), error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsxs("label", {
+          children: [" ", /*#__PURE__*/jsx("small", {
+            children: helperText
+          })]
+        })]
+      })]
+    })
+  });
+};
+
+const _excluded$n = ["children"];
+Object.assign({}, InputGroup.prototype.props);
+
+/**
+ *
+ * @param {InputGroupBaseProps} props
+ * @returns
+ */
+
+const InputGroupBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$n);
+  return /*#__PURE__*/jsx(InputGroup, _extends({}, rest, {
+    children: children
+  }));
+};
+InputGroupBase.propTypes = _extends({}, InputGroup.propTypes && InputGroup.propTypes);
+
+const handleGroupFocus = e => {
+  var _e$target$parentEleme;
+  (_e$target$parentEleme = e.target.parentElement.parentElement.children[1]) == null || _e$target$parentEleme.focus();
+  if (e.target.parentElement.parentElement.children[0]) {
+    var _e$target$parentEleme2;
+    (_e$target$parentEleme2 = e.target.parentElement.parentElement.children[0]) == null || _e$target$parentEleme2.focus();
+  }
+  if (e.target.parentElement.parentElement.children[2]) {
+    var _e$target$parentEleme3;
+    (_e$target$parentEleme3 = e.target.parentElement.parentElement.children[2]) == null || _e$target$parentEleme3.focus();
+  }
+};
+
+const _excluded$m = ["children", "onClick"];
+Object.assign({}, InputGroupText.prototype.props);
+
+/**
+ *
+ * @param {InputGroupTextBaseProps} props
+ * @returns
+ */
+
+const InputGroupTextBase = _ref => {
+  let {
+      children,
+      onClick
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$m);
+  return /*#__PURE__*/jsx(InputGroupText, _extends({
+    onClick: e => {
+      if (!onClick) handleGroupFocus(e);else onClick(e);
+    }
+  }, rest, {
+    children: children
+  }));
+};
+InputGroupTextBase.propTypes = _extends({}, InputGroupText.propTypes && InputGroupText.propTypes);
+
+const _excluded$l = ["label", "error", "icon", "name", "onChange", "mandatory", "helperText"];
+const ImsInputSelectWithIcon = _ref => {
+  let {
+      label,
+      error,
+      icon,
+      name,
+      onChange = () => {},
+      mandatory = false,
+      helperText
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$l);
+  const handleChange = changes => {
+    if (!changes) {
+      let currentTarget = {
+        name,
+        value: []
+      };
+      onChange({
+        currentTarget
+      });
+    } else if (Array.isArray(changes)) {
+      let currentTarget = {
+        name,
+        value: changes //changes.map(item => item.value)
+      };
+      onChange({
+        currentTarget
+      });
+    } else {
+      let currentTarget = {
+        name,
+        value: changes //changes.value
+      };
+      onChange({
+        currentTarget
+      });
+    }
+  };
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      row: true,
+      children: [/*#__PURE__*/jsx(Col, {
+        sm: "12",
+        children: /*#__PURE__*/jsxs(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
+            className: "text-danger",
+            children: "*"
+          }) : ""]
+        })
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [/*#__PURE__*/jsxs(InputGroupBase, {
+          children: [/*#__PURE__*/jsx(InputGroupTextBase, {
+            children: /*#__PURE__*/jsx("i", {
+              className: `${icon}`
+            })
+          }), /*#__PURE__*/jsx(ReactSelectBase, _extends({}, rest, {
+            onChange: handleChange
+          }))]
+        }), error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsx("label", {
+          children: /*#__PURE__*/jsx("small", {
+            children: helperText
+          })
+        })]
+      })]
+    })
+  });
+};
+
+const _excluded$k = ["label", "mandatory", "error", "feedbackText", "helperText"];
+let ImsInputTextProps = Object.assign({}, InputBase$1.prototype.props);
+
+/**
+ * @param {ImsInputTextProps} props
+ * @returns
+ */
+
+const ImsInputText = _ref => {
+  let {
+      label,
+      mandatory = false,
+      error = "",
+      feedbackText = "",
+      helperText = ""
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$k);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      row: true,
+      children: [label && /*#__PURE__*/jsx(Col, {
+        sm: "12",
+        children: /*#__PURE__*/jsxs(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
+            className: "text-danger",
+            children: "*"
+          }) : ""]
+        })
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [/*#__PURE__*/jsx(InputBase$1, _extends({
+          invalid: error
+        }, rest)), error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsxs("label", {
+          children: [" ", /*#__PURE__*/jsx("small", {
+            children: helperText
+          })]
+        })]
+      })]
+    })
+  });
+};
+ImsInputText.propTypes = _extends({}, ImsInputTextProps && ImsInputTextProps, {
+  /** Left Icon */
+  leftIcon: PropTypes.string,
+  /** Right Icon */
+  rightIcon: PropTypes.string,
+  /** Left Icon Style */
+  leftIconStyle: PropTypes.string,
+  /** Right Icon Style */
+  rightIconStyle: PropTypes.string,
+  /** Label */
+  label: PropTypes.string,
+  /** Type */
+  type: PropTypes.string,
+  /** Mandatory */
+  mandatory: PropTypes.bool,
+  /** Error */
+  error: PropTypes.string,
+  /** Valid */
+  //** Helper Text */
+  helperText: PropTypes.string,
+  valid: PropTypes.bool,
+  /** On Change */
+  onChange: PropTypes.func,
+  /** Label Column */
+  labelCol: PropTypes.string,
+  /** Input Column */
+  inputCol: PropTypes.string,
+  /** Value */
+  value: PropTypes.string,
+  /** Placeholder */
+  placeholder: PropTypes.string
+}, InputBase$1.propTypes);
+
+const _excluded$j = ["label", "onChange", "icon", "type", "mandatory", "error", "defaultOpt", "helperText"];
+const ImsInputTextWithIcon = _ref => {
+  let {
+      label,
+      icon,
+      type = "text",
+      mandatory = false,
+      error,
+      helperText
+    } = _ref;
+    _objectWithoutPropertiesLoose(_ref, _excluded$j);
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      row: true,
+      children: [label && /*#__PURE__*/jsx(Col, {
+        sm: "12",
+        children: /*#__PURE__*/jsxs(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
+            className: "text-danger",
+            children: "*"
+          }) : ""]
+        })
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [/*#__PURE__*/jsx(InputGroupBase, {
+          children: /*#__PURE__*/jsx(InputGroupTextBase, {
+            children: /*#__PURE__*/jsx("i", {
+              className: `${icon}`
+            })
+          })
+        }), error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsx("label", {
+          className: "",
+          children: /*#__PURE__*/jsx("small", {
+            children: helperText
+          })
+        })]
+      })]
+    })
+  });
+};
+
+const ImsInputTime = ({
+  label,
+  name,
+  value,
+  onChange,
+  error,
+  disabled,
+  helperText
+}) => {
+  return /*#__PURE__*/jsx(Fragment, {
+    children: /*#__PURE__*/jsxs(FormGroup, {
+      row: true,
+      children: [/*#__PURE__*/jsx(Col, {
+        sm: "12",
+        children: /*#__PURE__*/jsx(Label, {
+          style: {
+            fontSize: "16px"
+          },
+          className: "text-dark",
+          children: label
+        })
+      }), /*#__PURE__*/jsxs(Col, {
+        sm: "12",
+        children: [/*#__PURE__*/jsx(Datetime, {
+          dateFormat: false,
+          timeIntervals: 30,
+          timeFormat: "HH:mm",
+          inputProps: {
+            disabled,
+            className: "form-control",
+            placeholder: "Select a time",
+            value,
+            name,
+            // this onchange is direct input ...
+            onChange,
+            autoComplete: "off"
+          }
+          // this onchange is for calender ...
+          ,
+          onChange: e => {
+            if (typeof e === "object") {
+              let currentTarget = {
+                name,
+                value: e.format("HH:mm")
+              };
+              onChange({
+                currentTarget
+              });
+            }
+          },
+          className: "text-dark"
+        }), error && /*#__PURE__*/jsx("label", {
+          className: "text-danger",
+          children: /*#__PURE__*/jsx("small", {
+            children: error
+          })
+        }), helperText && /*#__PURE__*/jsx("label", {
+          children: /*#__PURE__*/jsx("small", {
+            children: helperText
+          })
+        })]
+      })]
+    })
+  });
+};
+
+Object.assign({}, Input.prototype.props);
+
+/**
+ *
+ * @param {InputBaseProps} props
+ * @returns
+ */
+
+const InputBase = _ref => {
+  let rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return /*#__PURE__*/jsx(Input, _extends({}, rest));
+};
+InputBase.propTypes = _extends({}, Input.propTypes && Input.propTypes);
+
+const _excluded$i = ["children"];
+Object.assign({
+  separated: PropTypes.bool
+}, Pagination$1.prototype.props);
+/**
+ *
+ * @param {PaginationBaseProps} props
+ * @returns
+ */
+
+const PaginationBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$i);
+  return /*#__PURE__*/jsx(Pagination$1, _extends({
+    className: classNames(`pagination-separated ${rest.className}`, {})
+  }, rest, {
+    children: children
+  }));
+};
+PaginationBase.propTypes = _extends({
+  separated: PropTypes.bool
+}, Pagination$1.propTypes && Pagination$1.propTypes);
+
+const _excluded$h = ["children"];
+Object.assign({}, PaginationItem.prototype.props);
+/**
+ *
+ * @param {PaginationItemBaseProps} props
+ * @returns
+ */
+
+const PaginationItemBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$h);
+  return /*#__PURE__*/jsx(PaginationItem, _extends({}, rest, {
+    children: children
+  }));
+};
+PaginationItemBase.propTypes = _extends({}, PaginationItem.propTypes && PaginationItem.propTypes);
+
+const _excluded$g = ["children"];
+Object.assign({}, PaginationLink.prototype.props);
+/**
+ *
+ * @param {PaginationLinkBaseProps} props
+ * @returns
+ */
+
+const PaginationLinkBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$g);
+  return /*#__PURE__*/jsx(ButtonBase, _extends({
+    className: classNames(`page-link ${rest.className}`, {})
+  }, rest, {
+    children: children
+  }));
+};
+PaginationLinkBase.propTypes = _extends({}, PaginationLink.propTypes && PaginationLink.propTypes);
+
+const _excluded$f = ["children"];
+var _TabContent$prototype;
+Object.assign({}, (_TabContent$prototype = TabContent.prototype) == null ? void 0 : _TabContent$prototype.props);
+
+/**
+ *
+ * @param {TabContentBaseProps} props
+ * @returns
+ */
+const TabContentBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$f);
+  return /*#__PURE__*/jsx(TabContent, _extends({}, rest, {
+    children: children
+  }));
+};
+TabContentBase.propTypes = _extends({}, TabContent.propTypes && TabContent.propTypes);
+
+const _excluded$e = ["children"];
+var _TabPane$prototype;
+Object.assign({}, (_TabPane$prototype = TabPane.prototype) == null ? void 0 : _TabPane$prototype.props);
+
+/**
+ *
+ * @param {TabPaneBaseProps} props
+ * @returns
+ */
+
+const TabPaneBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$e);
+  return /*#__PURE__*/jsx(TabPane, _extends({}, rest, {
+    children: children
+  }));
+};
+TabPaneBase.propTypes = _extends({}, TabPane.propTypes && TabPane.propTypes);
+
+const _excluded$d = ["children"];
+var _Alert$prototype;
+Object.assign({}, (_Alert$prototype = Alert.prototype) == null ? void 0 : _Alert$prototype.props);
+
+/**
+ * @param {AlertBaseProps} props
+ * @returns
+ * */
+
+const AlertBase = _ref => {
+  let {
+      children
+    } = _ref;
+    _objectWithoutPropertiesLoose(_ref, _excluded$d);
+  return /*#__PURE__*/jsx(Alert, {
+    children: children
+  });
+};
+AlertBase.propTypes = _extends({}, Alert.propTypes && Alert.propTypes);
+
+const _excluded$c = ["children"];
+var _UncontrolledAlert$pr;
+Object.assign({}, (_UncontrolledAlert$pr = UncontrolledAlert.prototype) == null ? void 0 : _UncontrolledAlert$pr.props);
+
+/**
+ * @param {UncontrolledAlertBaseProps} props
+ * @returns
+ * */
+
+const UncontrolledAlertBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$c);
+  return /*#__PURE__*/jsx(UncontrolledAlert, _extends({}, rest, {
+    children: children
+  }));
+};
+UncontrolledAlertBase.propTypes = _extends({}, UncontrolledAlert.propTypes && UncontrolledAlert.propTypes);
+
+const _excluded$b = ["children"];
+var _Toast$prototype;
+Object.assign({}, (_Toast$prototype = Toast.prototype) == null ? void 0 : _Toast$prototype.props);
+
+/**
+ * @param {ToastBaseProps} props
+ * @returns
+ * */
+
+const ToastBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$b);
+  return /*#__PURE__*/jsx(Toast, _extends({}, rest, {
+    children: children
+  }));
+};
+ToastBase.propTypes = _extends({}, Toast.propTypes && Toast.propTypes);
+
+const _excluded$a = ["children"];
+var _ToastBody$prototype;
+Object.assign({}, (_ToastBody$prototype = ToastBody.prototype) == null ? void 0 : _ToastBody$prototype.props);
+
+/**
+ * @param {ToastBodyBaseProps} props
+ *  @returns
+ * */
+
+const ToastBodyBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$a);
+  return /*#__PURE__*/jsx(ToastBody, _extends({}, rest, {
+    children: children
+  }));
+};
+ToastBodyBase.propTypes = _extends({}, ToastBody.propTypes && ToastBody.propTypes);
+
+const _excluded$9 = ["children"];
+var _ToastHeader$prototyp;
+Object.assign({}, (_ToastHeader$prototyp = ToastHeader.prototype) == null ? void 0 : _ToastHeader$prototyp.props);
+
+/**
+ * @param {ToastHeaderBaseProps} props
+ * @returns
+ * */
+
+const ToastHeaderBase = _ref => {
+  let rest = _objectWithoutPropertiesLoose(_ref, _excluded$9);
+  return /*#__PURE__*/jsx(ToastHeader, _extends({}, rest, {
+    children: "ToastHeaderBase"
+  }));
+};
+ToastHeaderBase.propTypes = _extends({}, ToastHeader.propTypes && ToastHeader.propTypes);
+
+const _excluded$8 = ["children"];
+var _Collapse$prototype;
+Object.assign({}, (_Collapse$prototype = Collapse.prototype) == null ? void 0 : _Collapse$prototype.props);
+
+/**
+ * @param {CollapseBaseProps} props
+ * @returns
+ * */
+
+const CollapseBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$8);
+  return /*#__PURE__*/jsx(Collapse, _extends({}, rest, {
+    children: children
+  }));
+};
+CollapseBase.propTypes = _extends({}, Collapse.propTypes && Collapse.propTypes);
+
+const _excluded$7 = ["children"];
+var _UncontrolledCollapse;
+Object.assign({}, (_UncontrolledCollapse = UncontrolledCollapse.prototype) == null ? void 0 : _UncontrolledCollapse.props);
+
+/**
+ * @param {UncontrolledCollapseBaseProps} props
+ * @returns
+ * */
+
+const UncontrolledCollapseBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$7);
+  return /*#__PURE__*/jsx(UncontrolledCollapse, _extends({}, rest, {
+    children: children
+  }));
+};
+UncontrolledCollapseBase.propTypes = _extends({}, UncontrolledCollapse.propTypes && UncontrolledCollapse.propTypes);
+
+Object.assign({}, Progress.prototype.props);
+
+/**
+ *
+ * @param {ProgressBaseProps} props
+ * @returns
+ */
+const ProgressBase = props => {
+  return /*#__PURE__*/jsx(Progress, _extends({}, props));
+};
+ProgressBase.propTypes = _extends({}, Progress.propTypes && Progress.propTypes);
+
+const _excluded$6 = ["children"];
+Object.assign({}, Spinner.prototype.props);
+
+/**
+ * @param {SpinnerBaseProps} props
+ * @returns
+ * */
+
+const SpinnerBase = _ref => {
+  let {
+      children
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$6);
+  return /*#__PURE__*/jsx(Spinner, _extends({}, rest, {
+    children: children
+  }));
+};
+SpinnerBase.propTypes = _extends({}, Spinner.propTypes && Spinner.propTypes);
+
+Object.assign({}, Placeholder.prototype.props);
+
+/**
+ *
+ * @param {PlaceholderBaseProps} props
+ * @returns
+ */
+const PlaceholderBase = props => {
+  return /*#__PURE__*/jsx(Placeholder, _extends({}, props, {
+    children: props.children
+  }));
+};
+PlaceholderBase.propTypes = _extends({}, Placeholder.propTypes && Placeholder.propTypes);
+
+Object.assign({}, PlaceholderButton.prototype.props);
+
+/**
+ *
+ * @param {PlaceholderButtonBaseProps} props
+ * @returns
+ */
+const PlaceholderButtonBase = props => {
+  return /*#__PURE__*/jsx(PlaceholderButton, _extends({}, props, {
+    children: props.children
+  }));
+};
+PlaceholderButtonBase.propTypes = _extends({}, PlaceholderButton.propTypes && PlaceholderButton.propTypes);
+
+const _excluded$5 = ["avatar", "name", "subHeading", "activity", "footer"];
+const ActivityBase = _ref => {
+  let {
+      avatar,
+      name,
+      subHeading,
+      activity,
+      footer
+    } = _ref;
+    _objectWithoutPropertiesLoose(_ref, _excluded$5);
+  return /*#__PURE__*/jsxs(CardBase, {
+    className: "bg-transparent border-0 shadow-none activity ms-5 ml-5 mb-0",
+    children: [/*#__PURE__*/jsx(CardHeaderBase, {
+      className: "bg-transparent border-0 shadow-none ",
+      children: /*#__PURE__*/jsxs("div", {
+        className: "d-flex",
+        children: [/*#__PURE__*/jsx("div", {
+          className: "avatar-container",
+          children: /*#__PURE__*/jsx("img", {
+            src: avatar,
+            alt: "avatar",
+            className: "avatar mt-1 ms-3 ml-3"
+          })
+        }), /*#__PURE__*/jsxs("div", {
+          children: [/*#__PURE__*/jsx("p", {
+            className: "m-0 font-size-body-2 text-type-dark",
+            children: name
+          }), subHeading && /*#__PURE__*/jsx("h6", {
+            className: "mb-1  font-size-caption text-type-medium",
+            children: subHeading
+          })]
+        })]
+      })
+    }), /*#__PURE__*/jsx(CardBodyBase, {
+      className: "bg-transparent border-0 shadow-none p-0 ",
+      children: activity
+    }), /*#__PURE__*/jsx(CardFooterBase, {
+      className: "bg-transparent border-0 shadow-none pt-2",
+      children: footer
+    })]
+  });
+};
+
+Object.assign({
+  cardProps: {
+    type: Object,
+    default: () => {}
+  },
+  cardHeaderProps: {
+    type: Object,
+    default: () => {}
+  },
+  cardFooterProps: {
+    type: Object,
+    default: () => {}
+  },
+  cardBodyProps: {
+    type: Object,
+    default: () => {}
+  }
+}, CardBase.prototype.props);
+
+/**
+ *
+ * @param {ImsCardProps} props
+ * @returns
+ */
+
+const ImsCard = ({
+  children,
+  cardProps,
+  cardHeaderProps,
+  cardFooterProps,
+  cardBodyProps
+}) => {
+  return /*#__PURE__*/jsxs(CardBase, _extends({}, cardProps, {
+    children: [(cardHeaderProps == null ? void 0 : cardHeaderProps.children) && /*#__PURE__*/jsx(CardHeaderBase, _extends({}, cardHeaderProps, {
+      children: cardHeaderProps == null ? void 0 : cardHeaderProps.children
+    })), /*#__PURE__*/jsx(CardBodyBase, _extends({}, cardBodyProps, {
+      children: children
+    })), (cardFooterProps == null ? void 0 : cardFooterProps.children) && /*#__PURE__*/jsx(CardFooterBase, _extends({}, cardFooterProps, {
+      children: cardFooterProps == null ? void 0 : cardFooterProps.children
+    }))]
+  }));
+};
+ImsCard.propTypes = _extends({}, CardBase.propTypes && CardBase.propTypes, {
+  cardProps: PropTypes.object,
+  cardHeaderProps: PropTypes.object,
+  cardFooterProps: PropTypes.object,
+  cardBodyProps: PropTypes.object
+});
+
+const PanelWindow = ({
+  children,
+  tabId
+}) => {
+  return /*#__PURE__*/jsx(React.Fragment, {
+    children: /*#__PURE__*/jsx(TabPane, {
+      tabId: tabId,
+      children: children
+    })
+  });
+};
+
+const _excluded$4 = ["children", "onClick", "active", "index", "label"];
+const PanelTab = _ref => {
+  let {
+      children,
+      onClick,
+      active,
+      index
+    } = _ref,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$4);
+  return /*#__PURE__*/jsx(React.Fragment, {
+    children: /*#__PURE__*/jsx(NavItemBase, _extends({}, props, {
+      children: /*#__PURE__*/jsx(NavLinkBase, _extends({
+        "data-toggle": "tab",
+        href: "#",
+        className: classNames("nav-link", {
+          " active": active
+        }),
+        onClick: onClick,
+        id: `ims-tab-${index}`,
+        "aria-controls": `ims-tabpanel-${index}`
+      }, props, {
+        children: children
+      }))
+    }))
+  });
+};
+
+const _excluded$3 = ["children", "activeTab", "variant"];
+const PanelTabs = _ref => {
+  let {
+      children,
+      activeTab = 0,
+      variant
+    } = _ref,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$3);
+  const [value, setValue] = React.useState(activeTab);
+  const handleChange = (e, index) => {
+    setValue(index);
+  };
+  return /*#__PURE__*/jsx(React.Fragment, {
+    children: /*#__PURE__*/jsxs("div", {
+      className: "panel-tabs",
+      children: [/*#__PURE__*/jsx(NavBase, {
+        tabs: true,
+        variant: variant && variant,
+        children: /*#__PURE__*/jsx("div", {
+          className: "d-flex flex-fill gx-0 gy-3",
+          children: React.Children.map(children, (child, index) => {
+            if (child.type === PanelTab) return /*#__PURE__*/React.cloneElement(child, _extends({
+              onClick: e => handleChange(e, index),
+              active: index === value,
+              index: index
+            }, props));
+          })
+        })
+      }), /*#__PURE__*/jsx(TabContentBase, _extends({
+        activeTab: value,
+        className: "panel-windows"
+      }, props, {
+        children: React.Children.map(children, (child, index) => {
+          if (child.type === PanelWindow) return /*#__PURE__*/React.cloneElement(child, _extends({}, props));
+        })
+      }))]
+    })
+  });
+};
+
+function ImsCarousel({
+  children,
+  slidesPerView = 3,
+  spaceBetween = 30,
+  navigation = false
+}) {
+  const swiperRef = useRef(null);
+  const handlePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+  const handleNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.params.slidesPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 992 ? 2 : 3;
+        swiperRef.current.swiper.update();
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return /*#__PURE__*/jsxs(React.Fragment, {
+    children: [navigation && /*#__PURE__*/jsxs("div", {
+      className: "my-2 d-flex justify-content-end align-items-center",
+      children: [/*#__PURE__*/jsx(Button, {
+        outline: true,
+        className: "border-0",
+        onClick: handlePrev,
+        children: /*#__PURE__*/jsx("i", {
+          class: "fa-solid fa-angle-left p-0"
+        })
+      }), /*#__PURE__*/jsx(Button, {
+        outline: true,
+        className: "border-0",
+        onClick: handleNext,
+        children: /*#__PURE__*/jsx("i", {
+          class: "fa-solid fa-angle-right p-0"
+        })
+      })]
+    }), /*#__PURE__*/jsx(Swiper, {
+      ref: swiperRef,
+      slidesPerView: window.innerWidth < 768 ? 1 : window.innerWidth < 992 ? 2 : slidesPerView,
+      spaceBetween: spaceBetween,
+      grabCursor: true,
+      mousewheel: true,
+      navigation: true,
+      modules: [Mousewheel, Navigation],
+      className: "ims-swiper-carousel",
+      children: React.Children.map(children, child => {
+        if (child) {
+          return /*#__PURE__*/jsx(SwiperSlide, {
+            children: child
+          });
+        } else {
+          // Return null if the condition is not met
+          return null;
+        }
+      })
+    })]
+  });
+}
+
+const _excluded$2 = ["percentage", "customPercentage"];
+function RadialProgressBar(_ref) {
+  let {
+      percentage = 0,
+      customPercentage = 0.75
+    } = _ref,
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$2);
+  let text = props.text || `${percentage}%`;
+  let options = _extends({
+    pathColor: "blue",
+    rotation: 0.63,
+    strokeLinecap: "butt",
+    textSize: "16px"
+  }, props.options);
+  return /*#__PURE__*/jsx("div", {
+    className: "radial-progress-bar",
+    children: /*#__PURE__*/jsx(CircularProgressbar, {
+      value: percentage * customPercentage,
+      text: text,
+      styles: buildStyles(options)
+    })
+  });
+}
+RadialProgressBar.propTypes = _extends({}, ProgressBase.propTypes && ProgressBase.propTypes);
+
+function useDrawerStore(config) {
+  const [openDrawers, setOpenDrawers] = useState([]);
+  function toggle(drawerId) {
+    setOpenDrawers(ids => {
+      if (ids.includes(drawerId)) return ids.filter(id => id !== drawerId);else return [...ids, drawerId];
+    });
+  }
+  function isOpen(drawerId) {
+    return openDrawers.includes(drawerId);
+  }
+  //close function for the top most drawer
+  function closeDrawer(drawerId) {
+    setOpenDrawers(ids => {
+      if (ids.includes(drawerId)) return ids.filter(id => id !== drawerId);else return ids;
+    });
+  }
+  //function to only open drawer
+  function openDrawer(drawerId) {
+    setOpenDrawers(ids => {
+      if (ids.includes(drawerId)) return ids;else return [...ids, drawerId];
+    });
+  }
+  //function to close all drawers
+  function closeAllDrawers() {
+    setOpenDrawers([]);
+  }
+  return {
+    isOpen,
+    toggle,
+    openDrawer,
+    closeDrawer,
+    closeAllDrawers
+  };
+}
+
+const _excluded$1 = ["children"];
+const DrawerContext = /*#__PURE__*/React.createContext();
+const DrawerContextProvider = _ref => {
+  let {
+      children
+    } = _ref;
+    _objectWithoutPropertiesLoose(_ref, _excluded$1);
+  let _useDocumentStore = useDrawerStore(),
+    store = _extends({}, (_objectDestructuringEmpty(_useDocumentStore), _useDocumentStore));
+  return /*#__PURE__*/jsx(DrawerContext.Provider, {
+    value: _extends({}, store),
+    children: children
+  });
+};
+
+function useDrawer() {
+  const _useContext = useContext(DrawerContext),
+    store = _extends({}, (_objectDestructuringEmpty(_useContext), _useContext));
+  return _extends({}, store);
+}
+
+const _excluded = ["drawerId", "children", "onClick"];
+const DrawerOpener = _ref => {
+  let {
+      drawerId = "",
+      children,
+      onClick = () => {}
+    } = _ref,
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded);
+  const {
+    openDrawer
+  } = useDrawer();
+  return /*#__PURE__*/jsx("span", _extends({
+    onClick: e => {
+      openDrawer(drawerId);
+      onClick(e);
+    }
+  }, rest, {
+    children: children
+  }));
+};
+
+function useInternalState() {
+  const {
+    isOpen,
+    toggle,
+    closeDrawer,
+    openDrawer,
+    closeAllDrawers
+  } = useDrawer();
+  //get window inner width form size prop
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  function _getSize(size) {
+    if (windowWidth > 1300) return `${size}vw`;
+    if (windowWidth > 1200) return `50vw`;
+    if (windowWidth > 992) return `60vw`;
+    return `100vw`;
+  }
+  return {
+    isOpen,
+    toggle,
+    _getSize,
+    closeDrawer,
+    openDrawer,
+    closeAllDrawers
+  };
+}
+const DrawerRight = ({
+  drawerId: _drawerId = "",
+  children,
+  size: _size = 40,
+  toolbar: _toolbar = null,
+  containerRef,
+  onDrawerClose: _onDrawerClose = () => {},
+  onScroll: _onScroll = () => {}
+}) => {
+  const {
+    isOpen,
+    _getSize,
+    closeDrawer
+  } = useInternalState();
+  return /*#__PURE__*/jsx(React.Fragment, {
+    children: /*#__PURE__*/jsx(Drawer, {
+      lockBackgroundScroll: true,
+      open: isOpen(_drawerId),
+      onClose: () => {
+        closeDrawer(_drawerId);
+        _onDrawerClose();
+      },
+      direction: "right",
+      size: _getSize(_size),
+      zIndex: 1051,
+      children: /*#__PURE__*/jsxs("div", {
+        ref: containerRef,
+        onScroll: _onScroll,
+        className: "p-4 h-100 overflow-y-scroll scrollbar-primary",
+        children: [/*#__PURE__*/jsx(RowBase, {
+          children: /*#__PURE__*/jsx(ColBase, {
+            md: "12",
+            children: /*#__PURE__*/jsxs("div", {
+              className: "d-flex flex-row-reverse align-items-center",
+              children: [/*#__PURE__*/jsx(ButtonBase, {
+                className: "border-0 pull-right",
+                onClick: () => {
+                  closeDrawer(_drawerId);
+                  _onDrawerClose();
+                },
+                color: "danger",
+                outline: true,
+                size: "sm",
+                children: /*#__PURE__*/jsx("i", {
+                  className: "ims-icons icon-icon-cross-24"
+                })
+              }), _toolbar]
+            })
+          })
+        }), children]
+      })
+    })
+  });
+};
+
+const useAPIError = () => {
+  function isAPIError(err) {
+    return err instanceof AxiosError;
+  }
+  function hanldeAPIError(err) {
+    /** we only allowd netword of api realted error here */
+    if (err instanceof AxiosError) {
+      var _err$response, _err$response2, _err$response3;
+      let statusCode = (_err$response = err.response) == null ? void 0 : _err$response.status;
+      /** here we have set up the priority levels of messages */
+      let message = ((_err$response2 = err.response) == null || (_err$response2 = _err$response2.data.details) == null ? void 0 : _err$response2.description) || ((_err$response3 = err.response) == null ? void 0 : _err$response3.data.message) || err.message;
+      /** 4xx errors need to be shown to users. */
+      if (statusCode >= 400 && statusCode <= 499) {
+        return toast.error(message);
+      }
+      if (statusCode >= 500 && statusCode <= 599) {
+        if (process.env.NODE_ENV === "development") {
+          return toast.error(message);
+        } else {
+          return toast.error("Unexpected server error occured. Please contact support for help at support@imssystems.tech");
+        }
+      }
+    }
+    /**
+     * if code reaches here it means an UI or frontend related error.
+     * we only show toast in development mode for better development experience.
+     */
+    if (process.env.NODE_ENV === "development") {
+      return toast.error("Unknown error detected in API Error handler: ", err.message);
+    }
+  }
+  return {
+    isAPIError,
+    hanldeAPIError
+  };
+};
+
+function useError() {
+  const {
+    isAPIError,
+    hanldeAPIError
+  } = useAPIError();
+  function handleError(error) {
+    if (isAPIError(error)) {
+      return hanldeAPIError(error);
+    }
+  }
+  return {
+    handleError
+  };
+}
+
+function useQuery(initial) {
+  const initialQueryState = {
+    required: _buildDefault(initial).required,
+    filter: _buildDefault(initial).filter,
+    search: _buildDefault(initial).search,
+    pagination: _buildDefault(initial).pagination
+  };
+  const initialToolState = {
+    filter: initial && initial.filter || {},
+    required: initial && initial.required || {},
+    search: "",
+    pagination: initial && initial.pagination || {
+      page: 1,
+      size: 10
+    }
+  };
+  let [query, setQuery] = useState(initialQueryState);
+  let [toolState, setToolState] = useState(initialQueryState);
+  function fullReset() {
+    setQuery(initialQueryState);
+    setToolState(initialToolState);
+  }
+  function _buildDefault(initial) {
+    return {
+      required: initial && initial.required ? objectToQuery(initial.required.value) : "",
+      filter: initial && initial.filter ? objectToQuery(initial.filter.value) : "",
+      search: initial && initial.search ? objectToQuery(initial.search.value) : "",
+      pagination: initial && initial.pagination ? objectToQuery(initial.pagination.value) : "page=1"
+    };
+  }
+  function isObject(object) {
+    return object !== null && typeof object === "object";
+  }
+  function objectToQuery(object) {
+    if (!object) return "";
+    const queryBucket = [];
+    function dig(obj, build = "") {
+      if (!isObject(obj)) return queryBucket.push(build + `=${encodeURIComponent(obj)}`);
+      const keys = Object.keys(obj);
+      for (let key of keys) {
+        if (isObject(obj)) {
+          let attach = !build ? `${key}` : !Array.isArray(obj) ? `[${key}]` : `[]`;
+          dig(obj[key], build + attach);
+        }
+      }
+      return obj;
+    }
+    dig(object);
+    return queryBucket.join("&");
+  }
+  let formatString = str => str ? "&" + str : str;
+  function getQuery() {
+    let processedString = "";
+    let keys = Object.keys(query);
+    for (let key of keys) {
+      processedString = processedString ? processedString + formatString(query[key]) : query[key];
+    }
+    return processedString;
+  }
+  function handleRequired(requiredQuery) {
+    setQuery(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        required: objectToQuery(requiredQuery.value),
+        pagination: "page=1"
+      });
+    });
+    _updateRequired(requiredQuery);
+    _updatePagination({
+      page: 1,
+      size: 10
+    });
+  }
+  function handleFilter(filterQuery) {
+    setQuery(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        filter: objectToQuery(filterQuery.value),
+        pagination: "page=1"
+      });
+    });
+    _updateFilter(filterQuery);
+    _updatePagination({
+      page: 1,
+      size: 10
+    });
+  }
+  function handlePagination(page = 1, size = 10) {
+    setQuery(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        pagination: objectToQuery({
+          page,
+          size
+        })
+      });
+    });
+    _updatePagination({
+      page,
+      size
+    });
+  }
+  function handleSearch(searchQuery) {
+    setQuery(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        search: objectToQuery(searchQuery.value),
+        pagination: "page=1"
+      });
+    });
+    _updatePagination({
+      page: 1,
+      size: 10
+    });
+  }
+  function _updatePagination(pagination) {
+    setToolState(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        pagination
+      });
+    });
+  }
+  function _updateFilter(filter) {
+    setToolState(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        filter
+      });
+    });
+  }
+  function _updateRequired(required) {
+    setToolState(prevState => {
+      /**
+       * I'm using JSON to avoid object mutation, this is used only for performence.
+       * Date, function, Infinity , Maps , Blobs are not cloned. So be mindfull of using,
+       * basic and simple objects in state.
+       */
+      return _extends({}, JSON.parse(JSON.stringify(prevState)), {
+        required
+      });
+    });
+  }
+  return {
+    query,
+    toolState,
+    fullReset,
+    getQuery,
+    handleFilter,
+    handlePagination,
+    handleSearch,
+    handleRequired
+  };
+}
+
+const byString = function byString(object, accessString) {
+  accessString = accessString.replace(/\[(\w+)\]/g, ".$1");
+  accessString = accessString.replace(/^\./, "");
+  let accessKeys = accessString.split(".");
+  for (let i = 0, n = accessKeys.length; i < n; ++i) {
+    let key = accessKeys[i];
+    if (key in object) {
+      object = object[key];
+    } else {
+      return;
+    }
+  }
+  return object;
+};
+
+Object.byString = byString;
+const useForm = (initdataModel, schema) => {
+  const [dataModel, setDataModel] = useState(initdataModel);
+  const [validationErrors, setValidationErrors] = useState({});
+  const [isBusy, setIsBusy] = useState(false);
+  const validate = async () => {
+    const options = {
+      abortEarly: false
+    };
+    const errors = {};
+    try {
+      await schema.validate(dataModel, options);
+      return null;
+    } catch (err) {
+      err.inner.forEach(item => {
+        errors[item.path] = item.message;
+      });
+      return errors;
+    }
+  };
+  const validateProperty = async (field, value) => {
+    const errors = _extends({}, validationErrors);
+    try {
+      const objSchema = yup.reach(schema, field);
+      await objSchema.validate(value);
+      /**
+       * if reached this block after promise it means validation success.
+       * remove the errors if there is any regarding this field.
+       */
+      delete errors[field];
+    } catch (err) {
+      /**
+       * invalid input detected. update with proper error message on the
+       * respective field.
+       */
+      errors[field] = err.message;
+    } finally {
+      /**
+       * finally we are just setting the erros to state.
+       */
+      setValidationErrors(errors);
+    }
+  };
+  const handleSubmit = async (e, doSubmit, reset = true, options = {}) => {
+    e.preventDefault();
+    const errors = await validate();
+    if (errors) return setValidationErrors(errors);
+    // Form submission logic here ....
+    function submission() {
+      return new Promise(async (resolve, reject) => {
+        try {
+          await doSubmit(dataModel, e);
+          if (reset) resetForm();
+          return resolve();
+        } catch (err) {
+          return reject(err);
+        }
+      });
+    }
+    try {
+      setIsBusy(true);
+      await submission();
+    } catch (err) {
+      console.log(err);
+    }
+    setIsBusy(false);
+  };
+  const handleChange = ({
+    field,
+    value
+  }) => {
+    const data = _extends({}, dataModel);
+    data[field] = value;
+    setDataModel(data);
+    validateProperty(field, value);
+  };
+  const handleFileChange = (files, name) => {
+    const data = _extends({}, dataModel);
+    data[name] = files;
+    setDataModel(data);
+    validateProperty(name, files);
+  };
+  const resetForm = () => {
+    setDataModel(initdataModel);
+    setValidationErrors({});
+  };
+  const _isObject = object => object !== null && typeof object === "object";
+  const _deepEqual = (referenceObject, testObject) => {
+    const referenceKeys = Object.keys(referenceObject);
+    const testKeys = Object.keys(testObject);
+    if (referenceKeys.length !== testKeys.length) return false;
+    for (const key of referenceKeys) {
+      const referenceValue = referenceObject[key];
+      const testValue = testObject[key];
+      const hasProperties = _isObject(referenceValue);
+      if (!hasProperties && referenceValue !== testValue) return false;
+      if (hasProperties && !_deepEqual(referenceValue, testValue)) return false;
+    }
+    return true;
+  };
+  const hasUnsavedData = () => !_deepEqual(initdataModel, dataModel);
+  const isFormValid = () => Object.keys(validationErrors).length === 0;
+  useEffect(() => {
+    console.log("datamodel", dataModel);
+    console.log("validation error:", validationErrors);
+  }, [dataModel, validationErrors]);
+  /** validation runner is required the first time the form renders. */
+  useEffect(() => {
+    // (async function () {
+    //   const errors = await validate();
+    //   if (errors) return setValidationErrors(errors);
+    // })();
+  }, []);
+  return {
+    dataModel,
+    validationErrors,
+    isBusy,
+    handleChange,
+    handleSubmit,
+    isFormValid,
+    resetForm,
+    hasUnsavedData,
+    handleFileChange
+  };
+};
+
+const useDualStateController = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggle = () => {
+    setIsOpen(isOpen => !isOpen);
+  };
+  return {
+    isOpen,
+    toggle
+  };
+};
+
+const defaultPaginationState = {
+  currentPage: 1,
+  hasNextPage: false,
+  hasPrevPage: false,
+  nextPage: null,
+  prevPage: null,
+  size: 10,
+  totalPages: 0,
+  totalResults: 0
+};
+const usePaginationState = () => {
+  const [pagination, setPagination] = useState(defaultPaginationState);
+  function updatePaginaion(pagination = defaultPaginationState) {
+    setPagination(pagination);
+  }
+  return {
+    pagination,
+    updatePaginaion
+  };
+};
+
+const useProcessing = initializers => {
+  let initState = {};
+  initializers.forEach(process => {
+    initState[process.action] = {
+      status: process.status,
+      id: null
+    };
+  });
+  let [processing, setProcessing] = useState(initState);
+  let dispatch = state => {
+    setProcessing(currentProcesses => {
+      let key = Object.keys(state)[0];
+      let value = Object.values(state)[0];
+      let updatedProcesses = _extends({}, currentProcesses);
+      updatedProcesses[key] = value;
+      return updatedProcesses;
+    });
+  };
+  return {
+    processing,
+    dispatch
+  };
+};
+
+const SUCCESS_TIMEOUT = 2500;
+const useClipboard = () => {
+  const [copySuccess, setCopySuccess] = useState(false);
+  const contentElementReference = useRef(null);
+  async function copyFormatedToClipboard() {
+    if (contentElementReference.current) {
+      /** create a range to select contents that will be copied. */
+      // const range = document.createRange();
+      // range.selectNodeContents(contentElementReference.current);
+      /** copy the contents to clipboard. */
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.write([new ClipboardItem({
+            "text/html": new Blob([contentElementReference.current.innerHTML], {
+              type: "text/html"
+            })
+          })]);
+          setCopySuccess(true);
+          console.log("Contentns copied.");
+        } catch (err) {
+          console.log("Error copying to clipboard.");
+          console.log(err);
+        }
+        setTimeout(() => setCopySuccess(false), SUCCESS_TIMEOUT);
+      }
+    }
+  }
+  async function copyPlainTextToClipBoard(value, cb = () => {}) {
+    if (navigator.clipboard) {
+      setCopySuccess(true);
+      await navigator.clipboard.writeText(value);
+      setTimeout(() => setCopySuccess(false), SUCCESS_TIMEOUT);
+    }
+  }
+  return {
+    contentElementReference,
+    copySuccess,
+    copyFormatedToClipboard,
+    copyPlainTextToClipBoard
+  };
+};
+
+forms;
+
+export { AccordionBase as Accordion, AccordionBodyBase as AccordionBody, AccordionHeaderBase as AccordionHeader, AccordionItemBase as AccordionItem, ActivityBase as Activity, Table as AdvancedExpandedTable, Table$1 as AdvancedTable, AlertBase as Alert, BadgeBase as Badge, BreadcrumbBase as Breadcrumb, BreadcrumbItemBase as BreadcrumbItem, ButtonBase as Button, ButtonDropdownBase as ButtonDropdown, ButtonGroupBase as ButtonGroup, ButtonToggleBase as ButtonToggle, ButtonToolbarBase as ButtonToolbar, CardBase as Card, CardBodyBase as CardBody, CardColumnsBase as CardColumns, CardDeckBase as CardDeck, CardFooterBase as CardFooter, CardGroupBase as CardGroup, CardHeaderBase as CardHeader, CardImgBase as CardImg, CardImgOverlayBase as CardImgOverlay, CardLinkBase as CardLink, CardSubtitleBase as CardSubtitle, CardTextBase as CardText, CardTitleBase as CardTitle, CarouselBase as Carousel, CarouselCaptionBase as CarouselCaption, CarouselControlBase as CarouselControl, CarouselIndicatorsBase as CarouselIndicators, CarouselItemBase as CarouselItem, CloseButtonBase as CloseButton, ColBase as Col, CollapseBase as Collapse, ContainerBase as Container, CreatableSelectBase as CreatableSelect, DrawerContextProvider, DrawerOpener, DrawerRight, DropdownBase as Dropdown, DropdownItemBase as DropdownItem, DropdownMenuBase as DropdownMenu, DropdownToogleBase as DropdownToggle, FadeBase as Fade, FileDropZone as FileDropzone, FormBase as Form, FormFeedbackBase as FormFeedback, FormGroupBase as FormGroup, FormTextBase as FormText, ImsCard, ImsCarousel, ImsInputCheck, ImsInputDate, ImsInputDropZone, ImsInputRadio, ImsInputSelect, ImsInputSelectWithIcon, ImsInputText, ImsInputTextWithIcon, ImsInputTime, InputBase$1 as Input, InputGroupBase$1 as InputGroup, InputGroupTextBase$1 as InputGroupText, LabelBase as Label, ListBase as List, ListGroupBase as ListGroup, ListGroupItemBase as ListGroupItem, ListGroupItemHeadingBase as ListGroupItemHeading, ListGroupItemTextBase as ListGroupItemText, ListInlineItemBase as ListInlineItem, MediaBase as Media, ModalBase as Modal, ModalBodyBase as ModalBody, ModalFooterBase as ModalFooter, ModalHeaderBase as ModalHeader, NavBase as Nav, NavItemBase as NavItem, NavLinkBase as NavLink, NavBarBase as Navbar, NavbarBrandBase as NavbarBrand, NavbarTextBase as NavbarText, NavbarTogglerBase as NavbarToggler, OffcanvasBase as Offcanvas, OffcanvasBodyBase as OffcanvasBody, OffcanvasHeaderBase as OffcanvasHeader, PaginationBase as Pagination, PaginationItemBase as PaginationItem, PaginationLinkBase as PaginationLink, PanelTab, PanelTabs, PanelWindow, PlaceholderBase as Placeholder, PlaceholderButtonBase as PlaceholderButton, PopoverBase as Popover, PopoverBodyBase as PopoverBody, PopoverHeaderBase as PopoverHeader, PopperContentBase as PopperContent, PopperTargetHelperBase as PopperTargetHelper, ProgressBase as Progress, RadialProgressBar, ImsRadioCheckbox as RadioCheckbox, RowBase as Row, ReactSearchBase as SearchSelect, ReactSelectBase as Select, ImsSimpleTable as SimpleTable, SpinnerBase as Spinner, TabContentBase as TabContent, TabPaneBase as TabPane, TableBase as Table, InputBase as TextInput, ToastBase as Toast, ToastBodyBase as ToastBody, ToastHeaderBase as ToastHeader, UncontrolledTooltipBase as Tooltip, UncontrolledAccordionBase as UncontrolledAccordion, UncontrolledAlertBase as UncontrolledAlert, UncontrolledButtonDropdownBase as UncontrolledButtonDropdown, UncontrolledCarouselBase as UncontrolledCarousel, UncontrolledCollapseBase as UncontrolledCollapse, UncontrolledDropdownBase as UncontrolledDropdown, UncontrolledPopoverBase as UncontrolledPopover, useError as useAPIError, useClipboard, useDrawer, useDualStateController, useForm, usePaginationState, useProcessing, useQuery };
 //# sourceMappingURL=index.modern.mjs.map
