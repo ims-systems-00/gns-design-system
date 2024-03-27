@@ -1,8 +1,8 @@
-import { Container, Col, Row, Navbar, NavbarBrand, NavbarText, NavbarToggler, Nav, NavItem, NavLink, Breadcrumb, BreadcrumbItem, Button, ButtonDropdown, ButtonGroup, ButtonToggle, ButtonToolbar, CloseButton, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, UncontrolledDropdown, Fade, Accordion, AccordionBody, AccordionHeader, AccordionItem, UncontrolledAccordion, Badge, Card, CardBody, CardColumns, CardDeck, CardGroup, CardFooter, CardHeader, CardImgOverlay, CardTitle, CardSubtitle, CardImg, CardLink, CardText, Carousel, UncontrolledCarousel, CarouselControl, CarouselCaption, CarouselItem, CarouselIndicators, Popover, PopperContent, PopperTargetHelper, PopoverHeader, PopoverBody, UncontrolledPopover, Modal, ModalBody, ModalFooter, ModalHeader, UncontrolledTooltip, Table as Table$2, InputGroup, Input, List, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, ListInlineItem, Form, FormFeedback, FormText, FormGroup, InputGroupText, Label, Media as Media$1, Offcanvas, OffcanvasBody, OffcanvasHeader, Spinner, Progress, Pagination as Pagination$1, PaginationItem, PaginationLink, TabContent, TabPane, Alert, UncontrolledAlert, Toast, ToastBody, ToastHeader, Collapse, UncontrolledCollapse, Placeholder, PlaceholderButton } from 'reactstrap';
+import { Container, Col, Row, Navbar, NavbarBrand, NavbarText, NavbarToggler, Nav, NavItem, NavLink, Breadcrumb, BreadcrumbItem, Button, ButtonDropdown, ButtonGroup, ButtonToggle, ButtonToolbar, CloseButton, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, UncontrolledDropdown, Fade, Accordion, AccordionBody, AccordionHeader, AccordionItem, UncontrolledAccordion, Badge, Card, CardBody, CardColumns, CardDeck, CardGroup, CardFooter, CardHeader, CardImgOverlay, CardTitle, CardSubtitle, CardImg, CardLink, CardText, Carousel, UncontrolledCarousel, CarouselControl, CarouselCaption, CarouselItem, CarouselIndicators, Popover, PopperContent, PopperTargetHelper, PopoverHeader, PopoverBody, UncontrolledPopover, Modal, ModalBody, ModalFooter, ModalHeader, UncontrolledTooltip, Table as Table$2, InputGroup, Input, List, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, ListInlineItem, Form, FormFeedback, FormText, FormGroup, InputGroupText, Label, Media, Offcanvas, OffcanvasBody, OffcanvasHeader, Spinner, Progress, Pagination as Pagination$1, PaginationItem, PaginationLink, TabContent, TabPane, Alert, UncontrolledAlert, Toast, ToastBody, ToastHeader, Collapse, UncontrolledCollapse, Placeholder, PlaceholderButton } from 'reactstrap';
 export { Card, Input as TextInput } from 'reactstrap';
 import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
-import React, { useState, useEffect, useMemo, useCallback, useContext, useRef } from 'react';
-import classnames from 'classnames';
+import React, { useState, useEffect, useMemo, useRef, useContext } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useTable, useSortBy, useExpanded, usePagination as usePagination$1, useResizeColumns, useFlexLayout } from 'react-table';
 import ReactSelect from 'react-select';
@@ -11,7 +11,6 @@ import AsyncSelect from 'react-select/async';
 import { useDropzone } from 'react-dropzone';
 import Datetime from 'react-datetime';
 import 'react-datetime/css/react-datetime.css';
-import { Modifier, EditorState, CompositeDecorator, convertToRaw, ContentState, convertFromRaw, RichUtils, SelectionState, AtomicBlockUtils, Editor } from 'draft-js';
 import { Mousewheel, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -96,7 +95,7 @@ const RowBase = props => {
 };
 RowBase.propTypes = _extends({}, Row.propTypes && Row.propTypes);
 
-const _excluded$1c = ["children"];
+const _excluded$12 = ["children"];
 Object.assign({}, Navbar.prototype.props);
 
 /**
@@ -109,14 +108,14 @@ const NavBarBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$1c);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$12);
   return /*#__PURE__*/jsx(Navbar, _extends({}, rest, {
     children: children
   }));
 };
 NavBarBase.propTypes = _extends({}, Navbar.propTypes && Navbar.propTypes);
 
-const _excluded$1b = ["children"];
+const _excluded$11 = ["children"];
 Object.assign({}, NavbarBrand.prototype.props);
 
 /**
@@ -129,14 +128,14 @@ const NavbarBrandBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$1b);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$11);
   return /*#__PURE__*/jsx(NavbarBrand, _extends({}, rest, {
     children: children
   }));
 };
 NavbarBrandBase.propTypes = _extends({}, NavbarBrand.propTypes && NavbarBrand.propTypes);
 
-const _excluded$1a = ["children"];
+const _excluded$10 = ["children"];
 Object.assign({}, NavbarText.prototype.props);
 
 /**
@@ -149,14 +148,14 @@ const NavbarTextBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$1a);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$10);
   return /*#__PURE__*/jsx(NavbarText, _extends({}, rest, {
     children: children
   }));
 };
 NavbarTextBase.propTypes = _extends({}, NavbarText.propTypes && NavbarText.propTypes);
 
-const _excluded$19 = ["children"];
+const _excluded$$ = ["children"];
 Object.assign({}, NavbarToggler.prototype.props);
 
 /**
@@ -169,20 +168,20 @@ const NavbarTogglerBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$19);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$$);
   return /*#__PURE__*/jsx(NavbarToggler, _extends({}, rest, {
     children: children
   }));
 };
 NavbarTogglerBase.propTypes = _extends({}, NavbarToggler.propTypes && NavbarToggler.propTypes);
 
-const _excluded$18 = ["children", "variant"];
+const _excluded$_ = ["children", "variant"];
 const NavBase = _ref => {
   let {
       children,
       variant = "primary"
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$18);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$_);
   Object.assign({
     variant: PropTypes.oneOf(["primary", "secondary", "outline"])
   }, Nav.prototype.props);
@@ -196,7 +195,7 @@ const NavBase = _ref => {
   //variant="secondary"
   //variant="outline"
   return /*#__PURE__*/jsx(Nav, _extends({
-    className: classnames(`${rest.className || ""}`, {
+    className: classNames(`${rest.className || ""}`, {
       "nav-tabs-primary": variant === "primary",
       "nav-tabs-secondary": variant === "secondary",
       "nav-tabs-outline": variant === "outline"
@@ -209,7 +208,7 @@ NavBase.propTypes = _extends({
   variant: PropTypes.oneOf(["primary", "secondary", "outline"])
 }, Nav.propTypes && Nav.propTypes);
 
-const _excluded$17 = ["children"];
+const _excluded$Z = ["children"];
 Object.assign({}, NavItem.prototype.props);
 
 /**
@@ -222,14 +221,14 @@ const NavItemBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$17);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Z);
   return /*#__PURE__*/jsx(NavItem, _extends({}, rest, {
     children: children
   }));
 };
 NavItemBase.propTypes = _extends({}, NavItem.propTypes && NavItem.propTypes);
 
-const _excluded$16 = ["children"];
+const _excluded$Y = ["children"];
 Object.assign({}, NavLink.prototype.props);
 
 /**
@@ -242,9 +241,9 @@ const NavLinkBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$16);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Y);
   return /*#__PURE__*/jsx("span", _extends({
-    className: classnames(`nav-link ${rest.className}`, {
+    className: classNames(`nav-link ${rest.className}`, {
       active: rest.active
     })
   }, rest, {
@@ -253,7 +252,7 @@ const NavLinkBase = _ref => {
 };
 NavLinkBase.propTypes = _extends({}, NavLink.propTypes && NavLink.propTypes);
 
-const _excluded$15 = ["children"];
+const _excluded$X = ["children"];
 var _Breadcrumb$prototype;
 Object.assign({}, (_Breadcrumb$prototype = Breadcrumb.prototype) == null ? void 0 : _Breadcrumb$prototype.props);
 
@@ -266,14 +265,14 @@ const BreadcrumbBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$15);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$X);
   return /*#__PURE__*/jsx(Breadcrumb, _extends({}, rest, {
     children: children
   }));
 };
 BreadcrumbBase.propTypes = _extends({}, Breadcrumb.propTypes && Breadcrumb.propTypes);
 
-const _excluded$14 = ["children"];
+const _excluded$W = ["children"];
 var _BreadcrumbItem$proto;
 Object.assign({}, (_BreadcrumbItem$proto = BreadcrumbItem.prototype) == null ? void 0 : _BreadcrumbItem$proto.props);
 
@@ -286,7 +285,7 @@ const BreadcrumbItemBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$14);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$W);
   return /*#__PURE__*/jsx(BreadcrumbItem, _extends({}, rest, {
     children: children
   }));
@@ -306,9 +305,9 @@ Object.assign({
 const ButtonBase = props => {
   return /*#__PURE__*/jsxs(Button, _extends({}, props, {
     children: [props.leftIcon ? /*#__PURE__*/jsx("i", {
-      className: classnames(props.leftIcon, "me-2")
+      className: classNames(props.leftIcon, "me-2")
     }) : null, props.children, props.rightIcon ? /*#__PURE__*/jsx("i", {
-      className: classnames(props.rightIcon, "ms-2")
+      className: classNames(props.rightIcon, "ms-2")
     }) : null]
   }));
 };
@@ -317,7 +316,7 @@ ButtonBase.propTypes = _extends({
   rightIcon: PropTypes.string
 }, Button.propTypes && Button.propTypes);
 
-const _excluded$13 = ["children"];
+const _excluded$V = ["children"];
 var _ButtonDropdown$proto;
 Object.assign({}, (_ButtonDropdown$proto = ButtonDropdown.prototype) == null ? void 0 : _ButtonDropdown$proto.props);
 
@@ -331,14 +330,14 @@ const ButtonDropdownBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$13);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$V);
   return /*#__PURE__*/jsx(ButtonDropdown, _extends({}, rest, {
     children: children
   }));
 };
 ButtonDropdownBase.propTypes = _extends({}, ButtonDropdown.propTypes && ButtonDropdown.propTypes);
 
-const _excluded$12 = ["children"];
+const _excluded$U = ["children"];
 var _ButtonGroup$prototyp;
 Object.assign({}, (_ButtonGroup$prototyp = ButtonGroup.prototype) == null ? void 0 : _ButtonGroup$prototyp.props);
 
@@ -352,14 +351,14 @@ const ButtonGroupBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$12);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$U);
   return /*#__PURE__*/jsx(ButtonGroup, _extends({}, rest, {
     children: children
   }));
 };
 ButtonGroupBase.propTypes = _extends({}, ButtonGroup.propTypes && ButtonGroup.propTypes);
 
-const _excluded$11 = ["children"];
+const _excluded$T = ["children"];
 var _ButtonToggle$prototy;
 Object.assign({}, (_ButtonToggle$prototy = ButtonToggle.prototype) == null ? void 0 : _ButtonToggle$prototy.props);
 
@@ -373,14 +372,14 @@ const ButtonToggleBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$11);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$T);
   return /*#__PURE__*/jsx(ButtonToggle, _extends({}, rest, {
     children: children
   }));
 };
 ButtonToggleBase.propTypes = _extends({}, ButtonToggle.propTypes && ButtonToggle.propTypes);
 
-const _excluded$10 = ["children"];
+const _excluded$S = ["children"];
 var _ButtonToolbar$protot;
 Object.assign({}, (_ButtonToolbar$protot = ButtonToolbar.prototype) == null ? void 0 : _ButtonToolbar$protot.props);
 
@@ -393,14 +392,14 @@ const ButtonToolbarBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$10);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$S);
   return /*#__PURE__*/jsx(ButtonToolbar, _extends({}, rest, {
     children: children
   }));
 };
 ButtonToolbarBase.propTypes = _extends({}, ButtonToolbar.propTypes && ButtonToolbar.propTypes);
 
-const _excluded$$ = ["children"];
+const _excluded$R = ["children"];
 var _CloseButton$prototyp;
 Object.assign({}, (_CloseButton$prototyp = CloseButton.prototype) == null ? void 0 : _CloseButton$prototyp.props);
 
@@ -414,7 +413,7 @@ const CloseButtonBase = _ref => {
   let {
       children
     } = _ref;
-    _objectWithoutPropertiesLoose(_ref, _excluded$$);
+    _objectWithoutPropertiesLoose(_ref, _excluded$R);
   return /*#__PURE__*/jsx(CloseButton, {
     children: children
   });
@@ -479,14 +478,14 @@ const DropdownToogleBase = _ref => {
   return /*#__PURE__*/jsx(Fragment, {
     children: /*#__PURE__*/jsxs(DropdownToggle, _extends({}, props, {
       children: [props.startIcon && /*#__PURE__*/jsx("i", {
-        className: classnames(props.startIcon, "me-2")
+        className: classNames(props.startIcon, "me-2")
       }), props.children]
     }))
   });
 };
 DropdownToogleBase.propTypes = _extends({}, DropdownToggle.propTypes && DropdownToggle.propTypes);
 
-const _excluded$_ = ["children"];
+const _excluded$Q = ["children"];
 var _UncontrolledButtonDr;
 Object.assign({}, (_UncontrolledButtonDr = UncontrolledButtonDropdown.prototype) == null ? void 0 : _UncontrolledButtonDr.props);
 
@@ -500,14 +499,14 @@ const UncontrolledButtonDropdownBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$_);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Q);
   return /*#__PURE__*/jsx(UncontrolledButtonDropdown, _extends({}, rest, {
     children: children
   }));
 };
 UncontrolledButtonDropdownBase.propTypes = _extends({}, UncontrolledButtonDropdown.propTypes && UncontrolledButtonDropdown.propTypes);
 
-const _excluded$Z = ["children"];
+const _excluded$P = ["children"];
 Object.assign({}, UncontrolledDropdown.prototype.props);
 
 /**
@@ -521,28 +520,28 @@ const UncontrolledDropdownBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Z);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$P);
   return /*#__PURE__*/jsx(UncontrolledDropdown, _extends({}, rest, {
     children: children
   }));
 };
 UncontrolledDropdownBase.propTypes = _extends({}, UncontrolledDropdown.propTypes && UncontrolledDropdown.propTypes);
 
-const _excluded$Y = ["children"];
+const _excluded$O = ["children"];
 var _Fade$prototype;
 Object.assign({}, (_Fade$prototype = Fade.prototype) == null ? void 0 : _Fade$prototype.props);
 const FadeBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Y);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$O);
   return /*#__PURE__*/jsx(Fade, _extends({}, rest, {
     children: children
   }));
 };
 FadeBase.propTypes = _extends({}, FadeBase.propTypes && FadeBase.propTypes);
 
-const _excluded$X = ["children"];
+const _excluded$N = ["children"];
 var _Accordion$prototype;
 Object.assign({}, (_Accordion$prototype = Accordion.prototype) == null ? void 0 : _Accordion$prototype.props);
 
@@ -555,14 +554,14 @@ const AccordionBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$X);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$N);
   return /*#__PURE__*/jsx(Accordion, _extends({}, rest, {
     children: children
   }));
 };
 AccordionBase.propTypes = _extends({}, Accordion.propTypes && Accordion.propTypes);
 
-const _excluded$W = ["children"];
+const _excluded$M = ["children"];
 var _AccordionBody$protot;
 Object.assign({}, (_AccordionBody$protot = AccordionBody.prototype) == null ? void 0 : _AccordionBody$protot.props);
 /**
@@ -574,14 +573,14 @@ const AccordionBodyBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$W);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$M);
   return /*#__PURE__*/jsx(AccordionBody, _extends({}, rest, {
     children: children
   }));
 };
 AccordionBodyBase.propTypes = _extends({}, AccordionBody.propTypes && AccordionBody.propTypes);
 
-const _excluded$V = ["children"];
+const _excluded$L = ["children"];
 var _AccordionHeader$prot;
 Object.assign({}, (_AccordionHeader$prot = AccordionHeader.prototype) == null ? void 0 : _AccordionHeader$prot.props);
 
@@ -594,14 +593,14 @@ const AccordionHeaderBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$V);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$L);
   return /*#__PURE__*/jsx(AccordionHeader, _extends({}, rest, {
     children: children
   }));
 };
 AccordionHeaderBase.propTypes = _extends({}, AccordionHeader.propTypes && AccordionHeader.propTypes);
 
-const _excluded$U = ["children"];
+const _excluded$K = ["children"];
 var _AccordionItem$protot;
 Object.assign({}, (_AccordionItem$protot = AccordionItem.prototype) == null ? void 0 : _AccordionItem$protot.props);
 
@@ -614,14 +613,14 @@ const AccordionItemBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$U);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$K);
   return /*#__PURE__*/jsx(AccordionItem, _extends({}, rest, {
     children: children
   }));
 };
 AccordionItemBase.propTypes = _extends({}, AccordionItem.propTypes && AccordionItem.propTypes);
 
-const _excluded$T = ["children"];
+const _excluded$J = ["children"];
 var _UncontrolledAccordio;
 Object.assign({}, (_UncontrolledAccordio = UncontrolledAccordion.prototype) == null ? void 0 : _UncontrolledAccordio.props);
 
@@ -634,14 +633,14 @@ const UncontrolledAccordionBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$T);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$J);
   return /*#__PURE__*/jsx(UncontrolledAccordion, _extends({}, rest, {
     children: children
   }));
 };
 UncontrolledAccordionBase.propTypes = _extends({}, UncontrolledAccordion.propTypes && UncontrolledAccordion.propTypes);
 
-const _excluded$S = ["children", "color", "outline", "fade"];
+const _excluded$I = ["children", "color", "outline", "fade"];
 Object.assign({
   color: "",
   outline: "",
@@ -662,10 +661,10 @@ const BadgeBase = _ref => {
       outline,
       fade
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$S);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$I);
   return /*#__PURE__*/jsx(Badge, _extends({
     color: color,
-    className: classnames(rest.className, {
+    className: classNames(rest.className, {
       "bg-secondary bg-pending": color === "pending",
       "badge-outline-primary": outline === "primary",
       "badge-outline-info": outline === "info",
@@ -1032,7 +1031,7 @@ const UncontrolledPopoverBase = props => {
 };
 UncontrolledPopoverBase.propTypes = _extends({}, UncontrolledPopover.propTypes && UncontrolledPopover.propTypes);
 
-const _excluded$R = ["children"];
+const _excluded$H = ["children"];
 Object.assign({}, Modal.prototype.props);
 
 /**
@@ -1045,14 +1044,14 @@ const ModalBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$R);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$H);
   return /*#__PURE__*/jsx(Modal, _extends({}, rest, {
     children: children
   }));
 };
 ModalBase.propTypes = _extends({}, Modal.propTypes && Modal.propTypes);
 
-const _excluded$Q = ["children"];
+const _excluded$G = ["children"];
 Object.assign({}, ModalBody.prototype.props);
 
 /**
@@ -1065,14 +1064,14 @@ const ModalBodyBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$Q);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$G);
   return /*#__PURE__*/jsx(ModalBody, _extends({}, rest, {
     children: children
   }));
 };
 ModalBodyBase.propTypes = _extends({}, ModalBody.propTypes && ModalBody.propTypes);
 
-const _excluded$P = ["children"];
+const _excluded$F = ["children"];
 Object.assign({}, ModalFooter.prototype.props);
 
 /**
@@ -1085,14 +1084,14 @@ const ModalFooterBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$P);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$F);
   return /*#__PURE__*/jsx(ModalFooter, _extends({}, rest, {
     children: children
   }));
 };
 ModalFooterBase.propTypes = _extends({}, ModalFooter.propTypes && ModalFooter.propTypes);
 
-const _excluded$O = ["children"];
+const _excluded$E = ["children"];
 Object.assign({}, ModalHeader.prototype.props);
 
 /**
@@ -1105,14 +1104,14 @@ const ModalHeaderBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$O);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$E);
   return /*#__PURE__*/jsx(ModalHeader, _extends({}, rest, {
     children: children
   }));
 };
 ModalHeaderBase.propTypes = _extends({}, ModalHeader.propTypes && ModalHeader.propTypes);
 
-const _excluded$N = ["children"];
+const _excluded$D = ["children"];
 Object.assign({}, UncontrolledTooltip.prototype.props);
 
 /**
@@ -1124,7 +1123,7 @@ const UncontrolledTooltipBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$N);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$D);
   return /*#__PURE__*/jsx(UncontrolledTooltip, _extends({}, rest, {
     children: children
   }));
@@ -1145,7 +1144,7 @@ const TableBase = props => {
 };
 TableBase.propTypes = _extends({}, Table$2.propTypes && Table$2.propTypes);
 
-const _excluded$M = ["onRowClick", "active", "linear"],
+const _excluded$C = ["onRowClick", "active", "linear"],
   _excluded2$1 = ["onRowClick"];
 const ImsSimpleTable = _ref => {
   let {
@@ -1153,7 +1152,7 @@ const ImsSimpleTable = _ref => {
       active,
       linear
     } = _ref,
-    props = _objectWithoutPropertiesLoose(_ref, _excluded$M);
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$C);
   const [selectedRow, setSelectedRow] = React.useState(null);
   const handleActiveRow = e => {
     const index = e.currentTarget.rowIndex - 1;
@@ -1162,14 +1161,14 @@ const ImsSimpleTable = _ref => {
   return /*#__PURE__*/jsxs(Table$2, _extends({
     hover: true
   }, props, {
-    className: classnames(props.className, {
+    className: classNames(props.className, {
       "table-linear": linear
     }),
     children: [/*#__PURE__*/jsx("thead", {
       children: /*#__PURE__*/jsx("tr", {
         children: props.thead.map((prop, key) => {
           return /*#__PURE__*/jsx("th", {
-            className: classnames("", {
+            className: classNames("", {
               "text-right": props.thead.length - 1 === key
             }),
             children: prop.text
@@ -1187,13 +1186,13 @@ const ImsSimpleTable = _ref => {
             handleActiveRow(e);
             onRowClick(e);
           },
-          className: classnames({
+          className: classNames({
             /** allow row active feature only if sepcified in the prop */
             "table-active": active && selectedRow === key
           }),
           children: [prop.data.map((data, k) => {
             return /*#__PURE__*/jsx("td", {
-              className: classnames({
+              className: classNames({
                 [data.className]: data.className !== undefined
               }),
               children: data.item
@@ -1452,7 +1451,7 @@ function Table$1({
           children: headerGroups.map(headerGroup => /*#__PURE__*/jsx("tr", _extends({}, headerGroup.getHeaderGroupProps(), {
             className: "rt-tr",
             children: headerGroup.headers.map((column, key) => /*#__PURE__*/jsxs("th", _extends({}, column.getHeaderProps(column.getSortByToggleProps()), {
-              className: classnames("rt-th rt-resizable-header", {
+              className: classNames("rt-th rt-resizable-header", {
                 "-cursor-pointer": headerGroup.headers.length - 1 !== key,
                 "-sort-asc": column.isSorted && !column.isSortedDesc,
                 "-sort-desc": column.isSorted && column.isSortedDesc
@@ -1460,7 +1459,7 @@ function Table$1({
               children: [/*#__PURE__*/jsxs("div", {
                 className: "rt-resizable-header-content",
                 children: [column.render("Header"), /*#__PURE__*/jsx("div", _extends({}, column.getResizerProps(), {
-                  className: classnames("col-resizer", {
+                  className: classNames("col-resizer", {
                     " active": column.isResizing
                   })
                 }))]
@@ -1474,7 +1473,7 @@ function Table$1({
           children: page.map((row, i) => {
             var _row$getRowProps;
             prepareRow(row);
-            const rowStyel = classnames("rt-tr", {
+            const rowStyel = classNames("rt-tr", {
               " -odd": i % 2 === 0
             }, {
               " -even": i % 2 === 1
@@ -1530,6 +1529,20 @@ function Table$1({
     })
   });
 }
+
+Object.assign({}, Input.prototype.props);
+
+/**
+ *
+ * @param {InputBaseProps} props
+ * @returns
+ */
+const InputBase = props => {
+  return /*#__PURE__*/jsx(Input, _extends({}, props, {
+    children: props.children
+  }));
+};
+InputBase.propTypes = _extends({}, Input.propTypes && Input.propTypes);
 
 function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -1668,7 +1681,7 @@ const FilterAndSearch = ({
   });
 };
 
-const _excluded$L = ["columns", "data", "renderRowSubComponent", "rowProps", "className", "handleCreate", "handleSearch", "handleFilter", "handlePagination", "filters", "pagination"];
+const _excluded$B = ["columns", "data", "renderRowSubComponent", "rowProps", "className", "handleCreate", "handleSearch", "handleFilter", "handlePagination", "filters", "pagination"];
 function Table(_ref) {
   let {
       columns,
@@ -1692,7 +1705,7 @@ function Table(_ref) {
         totalResults: 17
       }
     } = _ref,
-    props = _objectWithoutPropertiesLoose(_ref, _excluded$L);
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$B);
   const {
     getTableProps,
     getTableBodyProps,
@@ -1731,7 +1744,7 @@ function Table(_ref) {
             children: headerGroups.map(headerGroup => /*#__PURE__*/jsx("tr", _extends({}, headerGroup.getHeaderGroupProps(), {
               className: "rt-tr",
               children: headerGroup.headers.map((column, key) => /*#__PURE__*/jsxs("th", _extends({}, column.getHeaderProps(column.getSortByToggleProps()), {
-                className: classnames("rt-th rt-resizable-header", {
+                className: classNames("rt-th rt-resizable-header", {
                   "-cursor-pointer": column.canSort,
                   "-sort-asc": column.isSorted && !column.isSortedDesc,
                   "-sort-desc": column.isSorted && column.isSortedDesc
@@ -1739,7 +1752,7 @@ function Table(_ref) {
                 children: [/*#__PURE__*/jsxs("div", {
                   className: "rt-resizable-header-content",
                   children: [column.render("Header"), /*#__PURE__*/jsx("div", _extends({}, column.getResizerProps(), {
-                    className: classnames("col-resizer", {
+                    className: classNames("col-resizer", {
                       " active": column.isResizing
                     })
                   }))]
@@ -1753,7 +1766,7 @@ function Table(_ref) {
             children: page.map((row, i) => {
               var _row$getRowProps;
               prepareRow(row);
-              const rowStyel = classnames("rt-tr", {
+              const rowStyel = classNames("rt-tr", {
                 " -odd": i % 2 === 0
               }, {
                 " -even": i % 2 === 1
@@ -1811,7 +1824,7 @@ function Table(_ref) {
   });
 }
 
-const _excluded$K = ["children"];
+const _excluded$A = ["children"];
 var _List$prototype;
 Object.assign({}, (_List$prototype = List.prototype) == null ? void 0 : _List$prototype.props);
 
@@ -1825,14 +1838,14 @@ const ListBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$K);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$A);
   return /*#__PURE__*/jsx(List, _extends({}, rest, {
     children: children
   }));
 };
 ListBase.propTypes = _extends({}, List.propTypes && List.propTypes);
 
-const _excluded$J = ["children"];
+const _excluded$z = ["children"];
 var _ListGroup$prototype;
 Object.assign({}, (_ListGroup$prototype = ListGroup.prototype) == null ? void 0 : _ListGroup$prototype.props);
 
@@ -1846,14 +1859,14 @@ const ListGroupBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$J);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$z);
   return /*#__PURE__*/jsx(ListGroup, _extends({}, rest, {
     children: children
   }));
 };
 ListGroupBase.propTypes = _extends({}, ListGroup.propTypes && ListGroup.propTypes);
 
-const _excluded$I = ["children"];
+const _excluded$y = ["children"];
 var _ListGroupItem$protot;
 Object.assign({}, (_ListGroupItem$protot = ListGroupItem.prototype) == null ? void 0 : _ListGroupItem$protot.props);
 
@@ -1867,14 +1880,14 @@ const ListGroupItemBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$I);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$y);
   return /*#__PURE__*/jsx(ListGroupItem, _extends({}, rest, {
     children: children
   }));
 };
 ListGroupItemBase.propTypes = _extends({}, ListGroupItem.propTypes && ListGroupItem.propTypes);
 
-const _excluded$H = ["children"];
+const _excluded$x = ["children"];
 var _ListGroupItemHeading;
 Object.assign({}, (_ListGroupItemHeading = ListGroupItemHeading.prototype) == null ? void 0 : _ListGroupItemHeading.props);
 
@@ -1888,14 +1901,14 @@ const ListGroupItemHeadingBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$H);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$x);
   return /*#__PURE__*/jsx(ListGroupItemHeading, _extends({}, rest, {
     children: children
   }));
 };
 ListGroupItemHeadingBase.propTypes = _extends({}, ListGroupItemHeading.propTypes && ListGroupItemHeading.propTypes);
 
-const _excluded$G = ["children"];
+const _excluded$w = ["children"];
 var _ListGroupItemText$pr;
 Object.assign({}, (_ListGroupItemText$pr = ListGroupItemText.prototype) == null ? void 0 : _ListGroupItemText$pr.props);
 
@@ -1909,14 +1922,14 @@ const ListGroupItemTextBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$G);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$w);
   return /*#__PURE__*/jsx(ListGroupItemText, _extends({}, rest, {
     children: children
   }));
 };
 ListGroupItemTextBase.propTypes = _extends({}, ListGroupItemText.propTypes && ListGroupItemText.propTypes);
 
-const _excluded$F = ["children"];
+const _excluded$v = ["children"];
 var _ListInlineItem$proto;
 Object.assign({}, (_ListInlineItem$proto = ListInlineItem.prototype) == null ? void 0 : _ListInlineItem$proto.props);
 
@@ -1930,7 +1943,7 @@ const ListInlineItemBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$F);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$v);
   return /*#__PURE__*/jsx(ListInlineItem, _extends({}, rest, {
     children: children
   }));
@@ -1993,30 +2006,16 @@ const FormGroupBase = props => {
 };
 FormGroupBase.propTypes = _extends({}, FormGroup.propTypes && FormGroup.propTypes);
 
-Object.assign({}, Input.prototype.props);
-
-/**
- *
- * @param {InputBaseProps} props
- * @returns
- */
-const InputBase = props => {
-  return /*#__PURE__*/jsx(Input, _extends({}, props, {
-    children: props.children
-  }));
-};
-InputBase.propTypes = _extends({}, Input.propTypes && Input.propTypes);
-
 const formatCreateLabel = (word, inputValue) => {
   return `${word} "${inputValue}"`;
 };
 
-const _excluded$E = ["leftPhrase"];
+const _excluded$u = ["leftPhrase"];
 const CreatableSelectBase = _ref => {
   let {
       leftPhrase = "Add"
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$E);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$u);
   return /*#__PURE__*/jsx(Fragment, {
     children: /*#__PURE__*/jsx(CreatableSelect, _extends({
       className: "react-select",
@@ -2053,12 +2052,12 @@ CreatableSelect.propTypes = {
   word: PropTypes.string
 };
 
-const _excluded$D = ["loadOptions"];
+const _excluded$t = ["loadOptions"];
 const ReactSearchBase = _ref => {
   let {
       loadOptions
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$D);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$t);
   const [menuIsOpen, setMenuIsOpen] = React.useState(false);
   const onInputChange = value => {
     if (value.length > 0) {
@@ -2182,7 +2181,7 @@ const LabelBase = props => {
 };
 LabelBase.propTypes = _extends({}, Label.propTypes && Label.propTypes);
 
-Object.assign({}, Media$1.prototype.props);
+Object.assign({}, Media.prototype.props);
 
 /**
  *
@@ -2190,11 +2189,11 @@ Object.assign({}, Media$1.prototype.props);
  * @returns
  */
 const MediaBase = props => {
-  return /*#__PURE__*/jsx(Media$1, _extends({}, props, {
+  return /*#__PURE__*/jsx(Media, _extends({}, props, {
     children: props.children
   }));
 };
-MediaBase.propTypes = _extends({}, Media$1.propTypes && Media$1.propTypes);
+MediaBase.propTypes = _extends({}, Media.propTypes && Media.propTypes);
 
 Object.assign({}, Offcanvas.prototype.props);
 
@@ -2238,7 +2237,7 @@ const OffcanvasHeaderBase = props => {
 };
 OffcanvasHeaderBase.propTypes = _extends({}, OffcanvasHeader.propTypes && OffcanvasHeader.propTypes);
 
-const _excluded$C = ["file", "name", "onDelete"],
+const _excluded$s = ["file", "name", "onDelete"],
   _excluded2 = ["onSelected", "hint"];
 function bytesToSize(bytes) {
   const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
@@ -2252,7 +2251,7 @@ function Attachment(_ref) {
       file,
       onDelete
     } = _ref;
-    _objectWithoutPropertiesLoose(_ref, _excluded$C);
+    _objectWithoutPropertiesLoose(_ref, _excluded$s);
   let [processing, setProcessing] = useState({
     action: null,
     id: null
@@ -2359,7 +2358,7 @@ FileDropZone.propTypes = {
   disabled: PropTypes.bool
 };
 
-const _excluded$B = ["label", "mandatory", "onChange", "unselected", "error", "helperText"];
+const _excluded$r = ["label", "mandatory", "onChange", "unselected", "error", "helperText"];
 let ImsInputCheckProps = Object.assign({}, Input.prototype.props);
 
 /**
@@ -2376,11 +2375,11 @@ const ImsInputCheck = _ref => {
       error,
       helperText
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$B);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$r);
   return /*#__PURE__*/jsx(Fragment, {
     children: /*#__PURE__*/jsxs(FormGroup, {
       check: true,
-      className: classnames("", {
+      className: classNames("", {
         "unselected-checkbox": unselected
       }),
       children: [/*#__PURE__*/jsxs(Col, {
@@ -2496,7 +2495,7 @@ const ImsInputDate = ({
   });
 };
 
-const _excluded$A = ["label", "error", "clearAll", "onLoad", "name", "onChange", "noMultiple"];
+const _excluded$q = ["label", "error", "clearAll", "onLoad", "name", "onChange", "noMultiple"];
 const ImsInputDropZone = _ref => {
   let {
       label,
@@ -2505,7 +2504,7 @@ const ImsInputDropZone = _ref => {
       name,
       noMultiple
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$A);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$q);
   return /*#__PURE__*/jsxs(FormGroup, {
     row: true,
     children: [/*#__PURE__*/jsx(Col, {
@@ -2529,7 +2528,7 @@ const ImsInputDropZone = _ref => {
   });
 };
 
-const _excluded$z = ["label", "mandatory", "unselected"];
+const _excluded$p = ["label", "mandatory", "unselected"];
 let ImsInputRadioProps = Object.assign({}, Input.prototype.props);
 
 /**
@@ -2544,11 +2543,11 @@ const ImsRadioCheckbox = _ref => {
       mandatory = false,
       unselected = false
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$z);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$p);
   return /*#__PURE__*/jsx(Fragment, {
     children: /*#__PURE__*/jsxs(FormGroup, {
       check: true,
-      className: classnames("", {
+      className: classNames("", {
         "unselected-radio": unselected
       }),
       children: [/*#__PURE__*/jsx(Input, _extends({
@@ -2576,7 +2575,7 @@ ImsRadioCheckbox.propTypes = _extends({}, ImsInputRadioProps || {}, {
   unselected: PropTypes.bool
 }, Input.propTypes);
 
-const _excluded$y = ["label", "onChange", "values", "unselected", "defaultChecked", "verticalAlign", "error", "helperText"];
+const _excluded$o = ["label", "onChange", "values", "unselected", "defaultChecked", "verticalAlign", "error", "helperText"];
 const ImsInputRadio = _ref => {
   let {
       label,
@@ -2588,7 +2587,7 @@ const ImsInputRadio = _ref => {
       error,
       helperText
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$y);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$o);
   return /*#__PURE__*/jsx(React.Fragment, {
     children: /*#__PURE__*/jsxs(FormGroup, {
       check: true,
@@ -2606,11 +2605,11 @@ const ImsInputRadio = _ref => {
       }), /*#__PURE__*/jsx(Col, {
         sm: "12",
         children: /*#__PURE__*/jsx("div", {
-          className: classnames("", {
+          className: classNames("", {
             "d-flex flex-wrap": !verticalAlign
           }),
           children: values && (values == null ? void 0 : values.map((value, index) => /*#__PURE__*/jsx("span", {
-            className: classnames("", {
+            className: classNames("", {
               "mr-3 me-3": !verticalAlign
             }),
             children: /*#__PURE__*/jsx(ImsRadioCheckbox, _extends({
@@ -2638,7 +2637,7 @@ const ImsInputRadio = _ref => {
   });
 };
 
-const _excluded$x = ["label", "error", "name", "onChange", "mandatory", "helperText", "sideBtn"];
+const _excluded$n = ["label", "error", "name", "onChange", "mandatory", "helperText", "sideBtn"];
 const ImsInputSelect = _ref => {
   let {
       label,
@@ -2649,7 +2648,7 @@ const ImsInputSelect = _ref => {
       helperText,
       sideBtn
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$x);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$n);
   const handleChange = changes => {
     if (!changes) {
       let currentTarget = {
@@ -2712,7 +2711,7 @@ const ImsInputSelect = _ref => {
   });
 };
 
-const _excluded$w = ["children"];
+const _excluded$m = ["children"];
 Object.assign({}, InputGroup.prototype.props);
 
 /**
@@ -2725,7 +2724,7 @@ const InputGroupBase = _ref => {
   let {
       children
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$w);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$m);
   return /*#__PURE__*/jsx(InputGroup, _extends({}, rest, {
     children: children
   }));
@@ -2745,7 +2744,7 @@ const handleGroupFocus = e => {
   }
 };
 
-const _excluded$v = ["children", "onClick"];
+const _excluded$l = ["children", "onClick"];
 Object.assign({}, InputGroupText.prototype.props);
 
 /**
@@ -2759,7 +2758,7 @@ const InputGroupTextBase = _ref => {
       children,
       onClick
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$v);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$l);
   return /*#__PURE__*/jsx(InputGroupText, _extends({
     onClick: e => {
       if (!onClick) handleGroupFocus(e);else onClick(e);
@@ -2770,7 +2769,7 @@ const InputGroupTextBase = _ref => {
 };
 InputGroupTextBase.propTypes = _extends({}, InputGroupText.propTypes && InputGroupText.propTypes);
 
-const _excluded$u = ["label", "error", "icon", "name", "onChange", "mandatory", "helperText"];
+const _excluded$k = ["label", "error", "icon", "name", "onChange", "mandatory", "helperText"];
 const ImsInputSelectWithIcon = _ref => {
   let {
       label,
@@ -2781,7 +2780,7 @@ const ImsInputSelectWithIcon = _ref => {
       mandatory = false,
       helperText
     } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$u);
+    rest = _objectWithoutPropertiesLoose(_ref, _excluded$k);
   const handleChange = changes => {
     if (!changes) {
       let currentTarget = {
@@ -2849,90 +2848,11 @@ const ImsInputSelectWithIcon = _ref => {
   });
 };
 
-const _excluded$t = ["label", "mandatory", "error", "feedbackText", "helperText"];
-let ImsInputTextProps = Object.assign({}, InputBase.prototype.props);
+function F(p) {
+  return /*#__PURE__*/jsx("input", _extends({}, p));
+}
 
-/**
- * @param {ImsInputTextProps} props
- * @returns
- */
-
-const ImsInputText = _ref => {
-  let {
-      label,
-      mandatory = false,
-      error = "",
-      feedbackText = "",
-      helperText = ""
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$t);
-  return /*#__PURE__*/jsx(Fragment, {
-    children: /*#__PURE__*/jsxs(FormGroup, {
-      row: true,
-      children: [label && /*#__PURE__*/jsx(Col, {
-        sm: "12",
-        children: /*#__PURE__*/jsxs(Label, {
-          style: {
-            fontSize: "16px"
-          },
-          className: "text-dark",
-          children: [label, " ", mandatory ? /*#__PURE__*/jsx("span", {
-            className: "text-danger",
-            children: "*"
-          }) : ""]
-        })
-      }), /*#__PURE__*/jsxs(Col, {
-        sm: "12",
-        children: [/*#__PURE__*/jsx(InputBase, _extends({
-          invalid: error
-        }, rest)), error && /*#__PURE__*/jsx("label", {
-          className: "text-danger",
-          children: /*#__PURE__*/jsx("small", {
-            children: error
-          })
-        }), helperText && /*#__PURE__*/jsxs("label", {
-          children: [" ", /*#__PURE__*/jsx("small", {
-            children: helperText
-          })]
-        })]
-      })]
-    })
-  });
-};
-ImsInputText.propTypes = _extends({}, ImsInputTextProps && ImsInputTextProps, {
-  /** Left Icon */
-  leftIcon: PropTypes.string,
-  /** Right Icon */
-  rightIcon: PropTypes.string,
-  /** Left Icon Style */
-  leftIconStyle: PropTypes.string,
-  /** Right Icon Style */
-  rightIconStyle: PropTypes.string,
-  /** Label */
-  label: PropTypes.string,
-  /** Type */
-  type: PropTypes.string,
-  /** Mandatory */
-  mandatory: PropTypes.bool,
-  /** Error */
-  error: PropTypes.string,
-  /** Valid */
-  //** Helper Text */
-  helperText: PropTypes.string,
-  valid: PropTypes.bool,
-  /** On Change */
-  onChange: PropTypes.func,
-  /** Label Column */
-  labelCol: PropTypes.string,
-  /** Input Column */
-  inputCol: PropTypes.string,
-  /** Value */
-  value: PropTypes.string,
-  /** Placeholder */
-  placeholder: PropTypes.string
-}, InputBase.propTypes);
-
-const _excluded$s = ["label", "onChange", "icon", "type", "mandatory", "error", "defaultOpt", "helperText"];
+const _excluded$j = ["label", "onChange", "icon", "type", "mandatory", "error", "defaultOpt", "helperText"];
 const ImsInputTextWithIcon = _ref => {
   let {
       label,
@@ -2942,7 +2862,7 @@ const ImsInputTextWithIcon = _ref => {
       error,
       helperText
     } = _ref;
-    _objectWithoutPropertiesLoose(_ref, _excluded$s);
+    _objectWithoutPropertiesLoose(_ref, _excluded$j);
   return /*#__PURE__*/jsx(Fragment, {
     children: /*#__PURE__*/jsxs(FormGroup, {
       row: true,
@@ -3048,1097 +2968,6 @@ const ImsInputTime = ({
   });
 };
 
-const ELEMENT_TYPES = {
-  INLINE_DEFAULT: "inline-default",
-  BLOCK_DEFAULT: "block-default",
-  ATOMIC_ENTITY: "atomic-entity"
-};
-
-const ENTITY_NAME = {
-  IMAGE: "image",
-  DIVIDER: "divider",
-  LINK: "link",
-  MENTION: "mention",
-  CHECKLIST: "checklist",
-  ALIGN_LEFT: "start",
-  ALIGN_CENTER: "center",
-  ALIGN_RIGHT: "end"
-};
-
-function Entry({
-  name,
-  profileImageSrc,
-  _id,
-  onSelect = () => {}
-}) {
-  let handleSelect = useCallback(e => {
-    e.preventDefault();
-    onSelect({
-      name,
-      profileImageSrc,
-      _id
-    });
-  });
-  return /*#__PURE__*/jsxs("div", {
-    className: "d-flex align-items-center",
-    children: [/*#__PURE__*/jsx("div", {
-      className: "avatar mb-1",
-      children: /*#__PURE__*/jsx("img", {
-        src: profileImageSrc || "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg",
-        alt: name
-      })
-    }), /*#__PURE__*/jsx("div", {
-      onClick: handleSelect,
-      className: "btn btn-link p-2 mb-1",
-      children: name
-    })]
-  });
-}
-
-const _excluded$r = ["suggestions"];
-function MentionSuggestions(_ref) {
-  let {
-      suggestions
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$r);
-  let {
-    computedPosForMentionSuggestions
-  } = useContext(TextEditorContext);
-  return /*#__PURE__*/jsx(Fragment, {
-    children: suggestions.length ? /*#__PURE__*/jsx("div", {
-      className: "mention-suggestions position-absolute mt-4 p-2 shadow-md",
-      style: _extends({}, computedPosForMentionSuggestions),
-      children: suggestions.map((suggestion, index) => {
-        return /*#__PURE__*/jsx(Entry, _extends({}, suggestion, rest), suggestion.name + index);
-      })
-    }) : null
-  });
-}
-
-function Mention(props) {
-  let mentionInputRef = useRef(null);
-  let {
-    editorRef,
-    mentionSuggestions,
-    updateComputedPosForMentionSuggestions,
-    handleMentionSelect
-  } = useContext(TextEditorContext);
-  const computeStylePos = useCallback(() => {
-    var _editorRef$current;
-    const editorRect = (_editorRef$current = editorRef.current) == null || (_editorRef$current = _editorRef$current.editor) == null ? void 0 : _editorRef$current.getBoundingClientRect();
-    let leftSpace = editorRect.width - mentionInputRef.current.offsetLeft < 240 ? mentionInputRef.current.offsetLeft - 230 : mentionInputRef.current.offsetLeft;
-    return {
-      left: leftSpace,
-      top: mentionInputRef.current.offsetTop,
-      display: "block"
-    };
-  }, []);
-  const hideSuggestions = useCallback(() => {
-    return {
-      display: "none"
-    };
-  }, []);
-  useEffect(() => {
-    if (mentionInputRef.current) updateComputedPosForMentionSuggestions(computeStylePos());
-  }, []);
-  function retriveEntityData() {
-    if (!props.entityKey) return null;
-    const entity = props.contentState.getEntity(props.entityKey);
-    return _extends({}, entity == null ? void 0 : entity.getData());
-  }
-  return /*#__PURE__*/jsxs(Fragment, {
-    children: [retriveEntityData() ? /*#__PURE__*/jsx("a", {
-      href: "/admin/users/" + retriveEntityData()._id,
-      className: "text-primary",
-      children: retriveEntityData().name
-    }) : /*#__PURE__*/jsx("span", {
-      ref: mentionInputRef,
-      className: "",
-      children: props.children
-    }), /*#__PURE__*/jsx(MentionSuggestions, {
-      suggestions: mentionSuggestions.filter(item => {
-        var _props$decoratedText;
-        return item.name.toLowerCase().includes(props.decoratedText.slice(1, props == null || (_props$decoratedText = props.decoratedText) == null ? void 0 : _props$decoratedText.length).toLowerCase());
-      }),
-      onSelect: ({
-        name,
-        profileImageSrc,
-        _id
-      }) => {
-        let userName = "@" + name.split(" ").join("_");
-        handleMentionSelect(props.contentState, props.blockKey, {
-          start: props.start,
-          end: props.end
-        }, {
-          mention: userName + " ",
-          profileImageSrc,
-          _id,
-          name
-        } // adding a trailing whitespace to create a smooth experience
-        );
-        updateComputedPosForMentionSuggestions(hideSuggestions());
-      }
-    })]
-  });
-}
-
-function findWithRegex(regex, contentBlock, callback) {
-  const text = contentBlock.getText();
-  let matchArr, start;
-  while ((matchArr = regex.exec(text)) !== null) {
-    start = matchArr.index;
-    callback(start, start + matchArr[0].length);
-  }
-}
-
-const HANDLE_REGEX$1 = /\B@\w+/g;
-/**
- *
- * @param {*} contentBlock - draft js sends a contentBlock to handle state
- * @param {*} callback - draft js sends a callback to handle state
- * @param {*} contentState - this draft js  parameter is not utilised at the minit
- */
-function mentionStrategy(contentBlock, callback, contentState) {
-  findWithRegex(HANDLE_REGEX$1, contentBlock, callback);
-}
-
-const mentionDecorator = {
-  strategy: mentionStrategy,
-  component: Mention
-};
-
-function HTTPSLink(props) {
-  return /*#__PURE__*/jsx("a", {
-    href: props.decoratedText,
-    title: props.decoratedText,
-    target: "_blank",
-    rel: "noreferrer",
-    children: props.children
-  });
-}
-
-const HANDLE_REGEX = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
-/**
- *
- * @param {*} contentBlock - draft js sends a contentBlock to handle state
- * @param {*} callback - draft js sends a callback to handle state
- * @param {*} contentState - this draft js  parameter is not utilised at the minit
- */
-function strategy(contentBlock, callback, contentState) {
-  findWithRegex(HANDLE_REGEX, contentBlock, callback);
-}
-
-const httpsLinkDecorator = {
-  strategy,
-  component: HTTPSLink
-};
-
-/**
- * TODO: following piece of codes are unstable and buggy need to 
- * work on these before integration.
- */
-const findLinkEntities = (contentBlock, callback, contentState) => {
-  contentBlock.findEntityRanges(character => {
-    const entityKey = character.getEntity();
-    return entityKey !== null && contentState.getEntity(entityKey).getType() === ENTITY_NAME.LINK;
-  }, callback);
-};
-const textLinkDecorator = {
-  strategy: findLinkEntities,
-  component: Link
-};
-const handleCreateLink = editorState => {
-  let link = window.prompt("Paste the link bellow:");
-  if (link) {
-    let linkText = window.prompt("Paste the link-text below:");
-    if (linkText) {
-      const currentContent = editorState.getCurrentContent();
-      currentContent.createEntity(ENTITY_NAME.LINK, "MUTABLE", {
-        href: link,
-        linkText
-      });
-      let entityKey = currentContent.getLastCreatedEntityKey();
-      const selection = editorState.getSelection();
-      const contentWithTextLinkEntity = Modifier.replaceText(currentContent, selection, linkText, null, entityKey);
-      const newSelectionState = selection.set("anchorOffset", selection.getAnchorOffset() + linkText.length);
-      const editorStateWithTextLinkEntity = EditorState.set(editorState, {
-        currentContent: contentWithTextLinkEntity
-      }, "create-entity");
-      const editorStateWithNewSelection = EditorState.forceSelection(editorStateWithTextLinkEntity, newSelectionState);
-      // console.log(
-      //   newSelectionState.getAnchorOffset(),
-      //   "editor selection anchor offset after link insert:",
-      //   editorStateWithNewSelection.getSelection().getAnchorOffset()
-      // );
-      return editorStateWithNewSelection;
-    }
-  }
-};
-function Link(props) {
-  let data = props.contentState.getEntity(props.entityKey).getData();
-  if (!!data.href) {
-    return /*#__PURE__*/jsx("a", {
-      href: data.href,
-      title: data.linkText,
-      target: "_blank",
-      rel: "noreferrer",
-      children: data.linkText || data.href
-    });
-  }
-  return null;
-}
-
-const compositeDecorator = new CompositeDecorator([mentionDecorator, httpsLinkDecorator, textLinkDecorator]);
-function useTextEditor(config) {
-  const editorRef = useRef(null);
-  const [editorState, setEditorState] = useState(EditorState.createEmpty(compositeDecorator));
-  const [focusedForEditing, setFocusedForEditing] = useState(false);
-  const [computedPosForMentionSuggestions, setComputedPosForMentionSuggestions] = useState({
-    display: "none"
-  });
-  const updateComputedPosForMentionSuggestions = position => setComputedPosForMentionSuggestions(position);
-  /**
-   * the following effect block handles if the component is being
-   * controlled by outside values.
-   */
-  const activateEditor = () => setFocusedForEditing(true);
-  const deactivateEditor = () => setFocusedForEditing(false);
-  function stateController() {
-    let currentContent;
-    try {
-      if (typeof config.value === "string") {
-        currentContent = JSON.parse(config.value);
-      }
-      if (typeof config.value === "object") {
-        currentContent = config.value;
-      }
-    } catch (err) {
-      console.log(err);
-      /**
-       * here we are handling if the content parsing failes because if preexisting
-       * plain text, we are converting that into a draft data structure for future
-       * this is usefull for handling legacy data or automatic migration to draft data
-       * structure
-       */
-      if (typeof config.value === "string") return handleEditorStateChange(EditorState.createWithContent(ContentState.createFromText(config.value)));
-    }
-    if (config.value || currentContent) {
-      return handleEditorStateChange(EditorState.push(editorState, convertFromRaw(currentContent), "change-block-data"));
-    }
-    return handleEditorStateChange(EditorState.createEmpty(compositeDecorator));
-  }
-  useEffect(() => {
-    stateController();
-  }, []);
-  useEffect(() => {
-    if (config.readOnly) {
-      return stateController();
-    }
-    if (!config.value) {
-      handleEditorStateChange(EditorState.createEmpty(compositeDecorator));
-    }
-  }, [config.value]);
-  const fileInput = useRef(null);
-  const _openFilePrompt = () => fileInput.current.click();
-  const _createAtomicBlockEntity = (command, data) => {
-    const contentState = editorState.getCurrentContent();
-    const contentStateWithEntity = contentState.createEntity(command, "IMMUTABLE", _extends({}, data));
-    const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
-    const newEditorState = EditorState.set(editorState, {
-      currentContent: contentStateWithEntity
-    }, "create-entity");
-    handleEditorStateChange(AtomicBlockUtils.insertAtomicBlock(newEditorState, entityKey, " "));
-  };
-  /**
-   * this function allows this component user to define own link generator.
-   * usefull if someone wants to preprocess a file through a backend before
-   * using as am image src or achor href
-   * @param {*} metaData
-   * @returns {Promise}
-   */
-  const generateLink = async metaData => {
-    if (!config.linkGeneratorFn || typeof config.linkGeneratorFn !== "function") return null;
-    return config.linkGeneratorFn(metaData);
-  };
-  /**
-   * this function updates editors state for the current instance of the component
-   * @param {EditorState} editorState
-   */
-  const handleEditorStateChange = editorState => {
-    const contentState = editorState.getCurrentContent();
-    setEditorState(editorState);
-    console.log(JSON.stringify(convertToRaw(contentState)));
-    // check if contentState has text or entity or block data to decide if we should send data to parent component or not to avoid unnecessary re-rendering
-    config.onDataStructureChange(JSON.stringify(convertToRaw(contentState)));
-    // if (
-    //   convertToRaw(contentState).blocks.every(
-    //     (block) => block.text.trim() === ""
-    //   ) &&
-    //   Object.values(convertToRaw(contentState).entityMap).length === 0
-    // ) {
-    //   config.onDataStructureChange("");
-    // } else {
-    //   config.onDataStructureChange(JSON.stringify(convertToRaw(contentState)));
-    //   //this will set cursor to the end of the editor
-    //   setTimeout(() => {
-    //     const selection = editorState.getSelection();
-    //     const newSelection = selection.merge({
-    //       anchorKey: selection.getAnchorKey(),
-    //       anchorOffset: selection.getAnchorOffset(),
-    //       focusKey: selection.getFocusKey(),
-    //       focusOffset: selection.getFocusOffset(),
-    //       isBackward: false,
-    //       hasFocus: true,
-    //     });
-    //     const newEditorState = EditorState.forceSelection(
-    //       editorState,
-    //       newSelection
-    //     );
-    //     setEditorState(newEditorState);
-    //   }, 0);
-    // }
-  };
-  const handleKeyCommand = (command, editorState) => {
-    let newState = RichUtils.handleKeyCommand(editorState, command);
-    if (newState) {
-      handleEditorStateChange(newState);
-      return "handled";
-    }
-    return "not-handled";
-  };
-  const _handleFiles = async files => {
-    if (!config.handleUpload) return console.log("Uploader function not specified");
-    let areImages = files.every(file => file.type.split("/")[0] === "image");
-    /** todo: check file size here */
-    if (!areImages) return console.log("All files has to be images");
-    try {
-      let storageInformations = await Promise.all(files.map(file => config.handleUpload(file)));
-      console.log(storageInformations);
-      if (!storageInformations.every(storageInfo => storageInfo)) console.log("one or mutiple files don't have storage info");
-      storageInformations.map(storageInfo => _createAtomicBlockEntity(ENTITY_NAME.IMAGE, {
-        storageInfo
-      }));
-    } catch (err) {
-      return console.log(err);
-    }
-  };
-  const _handleFileInputChange = e => {
-    e.preventDefault();
-    let files = e.target.files;
-    _handleFiles(Array.from(files));
-  };
-  const getFileInputProps = () => ({
-    ref: fileInput,
-    onChange: _handleFileInputChange
-  });
-  const _atomicEntityController = {
-    [ENTITY_NAME.IMAGE]: _openFilePrompt,
-    [ENTITY_NAME.LINK]: () => handleEditorStateChange(handleCreateLink(editorState)),
-    [ENTITY_NAME.DIVIDER]: () => _createAtomicBlockEntity(ENTITY_NAME.DIVIDER, {}),
-    [ENTITY_NAME.MENTION]: () => {},
-    [ENTITY_NAME.CHECKLIST]: () => {
-      _createAtomicBlockEntity(ENTITY_NAME.CHECKLIST, {});
-    }
-  };
-  const _buttonHandlers = {
-    [ELEMENT_TYPES.INLINE_DEFAULT]: command => handleEditorStateChange(RichUtils.toggleInlineStyle(editorState, command)),
-    [ELEMENT_TYPES.BLOCK_DEFAULT]: command => handleEditorStateChange(RichUtils.toggleBlockType(editorState, command)),
-    [ELEMENT_TYPES.ATOMIC_ENTITY]: command => {
-      _atomicEntityController[command]();
-    }
-  };
-  const handleToolClick = (tool, e) => {
-    e.preventDefault();
-    if (!editorState.getSelection().getHasFocus()) return null;
-    if (!(tool != null && tool.element)) return null;
-    _buttonHandlers[tool.element](tool.style);
-  };
-  const handleDroppedFiles = (selection, files) => _handleFiles(files);
-  const handlePastedFiles = files => _handleFiles(files);
-  const handleMentionSelect = (contentState, blockKey, position, mentionData) => {
-    let selectionState = SelectionState.createEmpty(blockKey);
-    let newContentState = contentState.createEntity(ENTITY_NAME.MENTION, "IMMUTABLE", _extends({}, mentionData));
-    let entityKey = newContentState.getLastCreatedEntityKey();
-    newContentState = Modifier.replaceText(contentState, selectionState.merge({
-      // The starting position of the range to be replaced.
-      anchorOffset: position.start,
-      // The end position of the range to be replaced.
-      focusOffset: position.end
-    }), mentionData.mention, editorState.getCurrentInlineStyle(), entityKey);
-    handleEditorStateChange(
-    /**
-     * in following solution we had to use moveFocusToEnd() and the force the
-     * selecion back to replaced text from  new content through forceSelection().
-     * This creates an effect that the cursor is at the end of mentioend name.
-     * Draftjs has got an issue with cursor positioning with entity and modifier.
-     * see issue : https://github.com/facebook/draft-js/issues/627
-     *
-     * otherwise expected behaviour is to only do an EditorState.set() to put the
-     * mentioned entity in the editor in the identified selection state starting with @.
-     */
-    EditorState.forceSelection(EditorState.moveFocusToEnd(EditorState.set(editorState, {
-      currentContent: newContentState
-    })), newContentState.getSelectionAfter()));
-  };
-  const forceFocusEditorEnd = e => {
-    var _editorRef$current$ed;
-    (e == null ? void 0 : e.preventDefault) && e.preventDefault();
-    (_editorRef$current$ed = editorRef.current.editor) == null || _editorRef$current$ed.focus();
-    handleEditorStateChange(EditorState.moveFocusToEnd(editorState));
-  };
-  const isToolActive = tool => {
-    return editorState.getCurrentInlineStyle().has(tool == null ? void 0 : tool.style) || (editorState == null ? void 0 : editorState.getCurrentContent().getBlockForKey(editorState == null ? void 0 : editorState.getSelection().getStartKey()).getType()) === (tool == null ? void 0 : tool.style);
-  };
-  return {
-    editorRef,
-    editorState,
-    computedPosForMentionSuggestions,
-    focusedForEditing,
-    getFileInputProps,
-    generateLink,
-    handleDroppedFiles,
-    handlePastedFiles,
-    handleEditorStateChange,
-    handleKeyCommand,
-    handleToolClick,
-    forceFocusEditorEnd,
-    updateComputedPosForMentionSuggestions,
-    handleMentionSelect,
-    activateEditor,
-    deactivateEditor,
-    isToolActive
-  };
-}
-
-const _excluded$q = ["children"];
-const TextEditorContext = /*#__PURE__*/React.createContext();
-const TextEditorContextProvider = _ref => {
-  let {
-      children
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$q);
-  let _useTextEditor = useTextEditor({
-      handleUpload: rest.handleUpload || async function () {},
-      linkGeneratorFn: rest.linkGeneratorFn,
-      onDataStructureChange: rest.onDataStructureChange || function () {},
-      value: rest.value || null,
-      readOnly: rest.readOnly
-    }),
-    editorUtils = _extends({}, (_objectDestructuringEmpty(_useTextEditor), _useTextEditor));
-  return /*#__PURE__*/jsx(TextEditorContext.Provider, {
-    value: _extends({}, editorUtils, {
-      mentionSuggestions: rest.mentionSuggestions || []
-    }),
-    children: children
-  });
-};
-
-// import noImagePlaceHolder from "assets/img/default-avatar.png";
-function usePreRenderProcessing(config) {
-  let [link, setLink] = React.useState(config.src);
-  React.useEffect(() => {
-    async function _prepareSource() {
-      /**
-       * we are trying to generate the link with some meta data as a second step
-       * if src is not provided. if the data can't generate link it will render
-       * the empty placeholder. this feature is usefull if someone wants to generate
-       * image src/link based on runtime thorugh a backend server.
-       */
-      if (!config.src) {
-        try {
-          if (!config.generateLink || typeof config.generateLink !== "function") throw Error("link gnerator function must be supplied");
-          let link = await config.generateLink(config.storageInfo);
-          if (!link) throw new Error("link generator function must return a valid link or else provide a valid  image source");
-          setLink(link);
-        } catch (err) {
-          setLink("https://assets.imssystems.tech/images/system/avatar-placeholder.jpg");
-          console.log(err);
-        }
-      }
-    }
-    _prepareSource();
-    return () => {};
-  }, [config.generateLink]);
-  return {
-    link
-  };
-}
-
-function Image(props) {
-  if (props.src || props.link) {
-    var _props$storageInfo;
-    return /*#__PURE__*/jsx("img", {
-      src: props.src || props.link,
-      alt: props.alt || ((_props$storageInfo = props.storageInfo) == null ? void 0 : _props$storageInfo.Key) || "...",
-      className: "unselectable"
-    });
-  }
-  return null;
-}
-
-function Divider() {
-  return /*#__PURE__*/jsx("hr", {});
-}
-
-function CheckListItem({
-  text
-}) {
-  return /*#__PURE__*/jsx(React.Fragment, {});
-}
-
-const _excluded$p = ["editorRef", "onResizeEnd", "reference", "currentSize"];
-const partitions = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
-function StretchBar(_ref) {
-  var _editorRef$current;
-  let {
-      editorRef,
-      onResizeEnd,
-      reference = "left",
-      currentSize = 10
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$p);
-  let [isDragging, setIsDragging] = React.useState(false);
-  let [currentlyHoverring, setCurrentlyHovering] = React.useState(currentSize);
-  /**
-   * we are getting editor bounding client rectangle to calculate
-   * styles in mutiple places for better fitting our resizing algorithm
-   */
-  const editorRect = (_editorRef$current = editorRef.current) == null || (_editorRef$current = _editorRef$current.editor) == null ? void 0 : _editorRef$current.getBoundingClientRect();
-  /**
-   * following function generates guide positions both in pixels and percentages
-   * when user is dragging to resize
-   */
-  let getGuidePositions = () => partitions.map(part => {
-    /**
-     * we are mapping out the partitions to it's corresponding
-     * abolute "X" pixels. editors left padding is added as an offset
-     * balance to all the absolute positioned guide elements.
-     */
-    parseInt(window.getComputedStyle(document.querySelector(".draft-editor-container"), null).getPropertyValue("padding-left"));
-    let offset = editorRect.width * part / 100;
-    return {
-      percentage: part,
-      pixels: Math.ceil(offset)
-    };
-  });
-  let handleMouseDown = React.useCallback(e => {
-    e.preventDefault();
-    const doDrag = e => {
-      /** we are copying the partitions constant so action array is not muted */
-      let partitionsCopy = [...partitions];
-      setIsDragging(true);
-      /** the algorithm finds the closed partiion to the current cursor
-       * and sorts the closed at the begining of the array.
-       * --------------------------------------------------------------
-       * caution: do not use e.offesetX (because event.offsetX changes depending on hovering element)
-       * alway good to calculate the offset value
-       */
-      let fullLength = reference === "center" ? editorRect.width / 2 : editorRect.width;
-      let refLine = reference === "center" ? editorRect.left + editorRect.width / 2 : reference === "end" ? editorRect.left + editorRect.width : editorRect.left;
-      let calculatedOffsetX = parseInt(Math.abs(e.clientX - refLine));
-      let needle = parseInt(calculatedOffsetX / fullLength * 100);
-      partitionsCopy.sort((a, b) => {
-        return Math.abs(needle - a) - Math.abs(needle - b);
-      });
-      /** we pick the closest partition position as the reszied to data */
-      let resizedTo = partitionsCopy[0];
-      setCurrentlyHovering(resizedTo);
-      let createdEvent = {
-        partition: resizedTo
-      };
-      onResizeEnd && onResizeEnd(createdEvent);
-      let entityKey = rest.block.getEntityAt(0);
-      rest.contentState.mergeEntityData(entityKey, {
-        size: resizedTo
-      });
-    };
-    const stopDrag = () => {
-      setIsDragging(false);
-      document.removeEventListener("mousemove", doDrag, false);
-      document.removeEventListener("mouseup", stopDrag, false);
-      /**
-       * - handle drag state
-       * - handle resized data
-       */
-    };
-    document.addEventListener("mousemove", doDrag, false);
-    document.addEventListener("mouseup", stopDrag, false);
-  }, [onResizeEnd]);
-  return /*#__PURE__*/jsxs(Fragment, {
-    children: [/*#__PURE__*/jsx("div", {
-      className: "d-inline-block p-2 unselectable",
-      style: {
-        cursor: "col-resize"
-      },
-      onMouseDown: handleMouseDown,
-      children: /*#__PURE__*/jsx("div", {
-        className: "bg-primary rounded resize-bar"
-      })
-    }), isDragging && /*#__PURE__*/jsx("div", {
-      className: "resize-guides-container position-absolute ",
-      children: getGuidePositions().map(guide => {
-        return /*#__PURE__*/jsx("div", {
-          className: classnames("resize-guide position-absolute rounded", {
-            "bg-info": /** match if alligned at left/start  */
-            reference === "start" && guide.percentage === currentlyHoverring || ( /** match if alligned at right/end  */
-            reference === "end" && 100 - guide.percentage === currentlyHoverring)
-          }),
-          style: {
-            left: guide.pixels
-          }
-        }, guide.pixels);
-      })
-    })]
-  });
-}
-
-const _excluded$o = ["editorRef", "onAlignmentChange"];
-const alignTools = [{
-  label: "Align left",
-  style: ENTITY_NAME.ALIGN_LEFT,
-  icon: "fa-solid fa-align-left"
-}, {
-  label: "Align center",
-  style: ENTITY_NAME.ALIGN_CENTER,
-  icon: "fa-solid fa-align-justify"
-}, {
-  label: "Align right",
-  style: ENTITY_NAME.ALIGN_RIGHT,
-  icon: "fa-solid fa-align-right"
-}];
-function Aligner(_ref) {
-  let {
-      onAlignmentChange
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$o);
-  let handleAlignment = useCallback(({
-    alignment
-  }) => {
-    onAlignmentChange && onAlignmentChange({
-      alignment
-    });
-    let entityKey = rest.block.getEntityAt(0);
-    rest.contentState.mergeEntityData(entityKey, {
-      alignment: alignment
-    });
-  }, [onAlignmentChange]);
-  return /*#__PURE__*/jsx("div", {
-    className: "d-inline-block shadow-md rounded mb-1",
-    children: alignTools.map(tool => {
-      return /*#__PURE__*/jsx(Button, {
-        title: tool == null ? void 0 : tool.label,
-        type: "button",
-        className: classnames("btn btn-icon m-0 text-muted", {}),
-        onClick: e => handleAlignment({
-          alignment: tool == null ? void 0 : tool.style
-        }),
-        children: tool.icon ? /*#__PURE__*/jsx("i", {
-          className: tool.icon
-        }) : tool == null ? void 0 : tool.label
-      }, tool == null ? void 0 : tool.style);
-    })
-  });
-}
-
-const _excluded$n = ["children"];
-function Resizer(_ref) {
-  let {
-      children
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$n);
-  let [isActive, setIsActive] = React.useState(false);
-  let toggleIsActive = () => setIsActive(curret => !curret);
-  let [currentSize, setCurrentSize] = React.useState(rest.size || 30);
-  let [alignment, setAlignment] = React.useState(rest.alignment || ENTITY_NAME.ALIGN_LEFT);
-  let alignementClasses = () => ({
-    "justify-content-start": alignment === "start",
-    "justify-content-center": alignment === "center",
-    "justify-content-end": alignment === "end"
-  });
-  return /*#__PURE__*/jsxs(Fragment, {
-    children: [isActive && alignment && /*#__PURE__*/jsx("div", {
-      className: classnames("d-flex", alignementClasses()),
-      children: /*#__PURE__*/jsx(Aligner, _extends({
-        onAlignmentChange: e => setAlignment(e.alignment)
-      }, rest))
-    }), /*#__PURE__*/jsxs("div", {
-      className: classnames("d-flex align-items-center position-relative", alignementClasses()),
-      children: [isActive && alignment !== "start" && /*#__PURE__*/jsx(StretchBar, _extends({}, rest, {
-        reference: alignment,
-        onResizeEnd: e => setCurrentSize(e.partition)
-      })), /*#__PURE__*/jsx("div", {
-        className: classnames("d-inline-block rounded resize-container unselectable", {
-          "resize-focused": isActive,
-          "w-10": currentSize === 10,
-          "w-15": currentSize === 15,
-          "w-20": currentSize === 20,
-          "w-25": currentSize === 25,
-          "w-30": currentSize === 30,
-          "w-35": currentSize === 35,
-          "w-40": currentSize === 40,
-          "w-45": currentSize === 45,
-          "w-50": currentSize === 50,
-          "w-55": currentSize === 55,
-          "w-60": currentSize === 60,
-          "w-65": currentSize === 65,
-          "w-70": currentSize === 70,
-          "w-75": currentSize === 75,
-          "w-80": currentSize === 80,
-          "w-85": currentSize === 85,
-          "w-90": currentSize === 90,
-          "w-95": currentSize === 95,
-          "w-100": currentSize === 100
-        }),
-        onClick: toggleIsActive,
-        children: children
-      }), isActive && alignment !== "end" && /*#__PURE__*/jsx(StretchBar, _extends({}, rest, {
-        reference: alignment,
-        currentSize: currentSize,
-        onResizeEnd: e => setCurrentSize(e.partition)
-      }))]
-    })]
-  });
-}
-
-const _excluded$m = ["type", "data", "editorControllers"];
-function Media(_ref) {
-  let {
-      type,
-      data,
-      editorControllers
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$m);
-  let media = null;
-  let toolProperties = _extends({}, data, editorControllers, rest);
-  if (type === ENTITY_NAME.IMAGE) {
-    media = /*#__PURE__*/jsx(Resizer, _extends({}, toolProperties, {
-      children: /*#__PURE__*/jsx(Image, _extends({}, data))
-    }));
-  }
-  if (type === ENTITY_NAME.DIVIDER) {
-    media = /*#__PURE__*/jsx(Divider, _extends({}, data));
-  }
-  if (type === ENTITY_NAME.CHECKLIST) {
-    media = /*#__PURE__*/jsx(CheckListItem, _extends({}, data));
-  }
-  return media;
-}
-
-const _excluded$l = ["generateLink"];
-const editorMediaBlockRenderer = block => {
-  if (block.getType() === "atomic") {
-    return {
-      component: ProcessedMedia,
-      editable: false
-    };
-  }
-  return null;
-};
-const ProcessedMedia = props => {
-  const entityKey = props.block.getEntityAt(0);
-  const entity = entityKey && props.contentState.getEntity(entityKey);
-  const type = entity == null ? void 0 : entity.getType();
-  const _useContext = useContext(TextEditorContext),
-    {
-      generateLink
-    } = _useContext,
-    rest = _objectWithoutPropertiesLoose(_useContext, _excluded$l);
-  let processedResults = usePreRenderProcessing(_extends({
-    generateLink
-  }, entity == null ? void 0 : entity.getData()));
-  return /*#__PURE__*/jsx(Media, _extends({
-    type: type,
-    data: _extends({}, entity == null ? void 0 : entity.getData(), processedResults),
-    editorControllers: _extends({}, rest)
-  }, props));
-};
-
-const _excluded$k = ["readOnly"];
-function TextEditor(_ref) {
-  let {
-      readOnly = false
-    } = _ref,
-    props = _objectWithoutPropertiesLoose(_ref, _excluded$k);
-  const {
-    editorRef,
-    editorState,
-    handleEditorStateChange,
-    handleDroppedFiles,
-    handlePastedFiles,
-    handleKeyCommand,
-    activateEditor,
-    deactivateEditor
-  } = React.useContext(TextEditorContext);
-  return /*#__PURE__*/jsx(Fragment, {
-    children: /*#__PURE__*/jsx(Editor, {
-      ref: editorRef,
-      blockRendererFn: editorMediaBlockRenderer,
-      placeholder: props.placeholder,
-      onChange: handleEditorStateChange,
-      editorState: editorState,
-      spellCheck: true,
-      handleKeyCommand: handleKeyCommand,
-      handleDroppedFiles: handleDroppedFiles,
-      handlePastedFiles: handlePastedFiles,
-      readOnly: readOnly,
-      onFocus: activateEditor,
-      onBlur: deactivateEditor
-    })
-  });
-}
-
-const INLINE_TYPES = [{
-  label: "Underline",
-  style: "UNDERLINE",
-  icon: "gns-icons-16 icon-icon-textunderline-24",
-  element: ELEMENT_TYPES.INLINE_DEFAULT
-}, {
-  label: "Bold",
-  style: "BOLD",
-  icon: "gns-icons-16 icon-icon-textbolder-24",
-  element: ELEMENT_TYPES.INLINE_DEFAULT
-}, {
-  label: "Italic",
-  style: "ITALIC",
-  icon: "gns-icons-16 icon-icon-textitalic-24",
-  element: ELEMENT_TYPES.INLINE_DEFAULT
-}, {
-  label: "Strike through",
-  style: "STRIKETHROUGH",
-  icon: "gns-icons-16 icon-icon-textstrikethrough-24",
-  element: ELEMENT_TYPES.INLINE_DEFAULT
-}];
-const BLOCK_TYPES = [{
-  label: "Header",
-  style: "header-three",
-  icon: "gns-icons-16 icon-icon-header-24",
-  element: ELEMENT_TYPES.BLOCK_DEFAULT
-}, {
-  label: "UL",
-  style: "unordered-list-item",
-  icon: "gns-icons-16 icon-icon-listdashes-24",
-  element: ELEMENT_TYPES.BLOCK_DEFAULT
-}, {
-  label: "OL",
-  style: "ordered-list-item",
-  icon: "gns-icons-16 icon-icon-listnumbers-24",
-  element: ELEMENT_TYPES.BLOCK_DEFAULT
-}, {
-  label: "Blockquote",
-  style: "blockquote",
-  icon: "gns-icons-16 icon-icon-quotes-24",
-  element: ELEMENT_TYPES.BLOCK_DEFAULT
-}, {
-  label: "Code block",
-  style: "code-block",
-  icon: "gns-icons-16 icon-icon-codesimple-24",
-  element: ELEMENT_TYPES.BLOCK_DEFAULT
-}
-// {
-//   lebel: "Align left",
-//   style: "editor-alignment-left",
-//   icon: "fa-solid fa-align-left",
-//   element: ELEMENT_TYPES.BLOCK_DEFAULT,
-// },
-// {
-//   lebel: "Align center",
-//   style: "editor-alignment-center",
-//   icon: "fa-solid fa-align-center",
-//   element: ELEMENT_TYPES.BLOCK_DEFAULT,
-// },
-// {
-//   lebel: "Align right",
-//   style: "editor-alignment-right",
-//   icon: "fa-solid fa-align-right",
-//   element: ELEMENT_TYPES.BLOCK_DEFAULT,
-// },
-// {
-//   lebel: "Align justify",
-//   style: "editor-alignment-justify",
-//   icon: "fa-solid fa-align-justify",
-//   element: ELEMENT_TYPES.BLOCK_DEFAULT,
-// },
-];
-const ENTITY_TYPES = [
-// {
-//   label: "Link",
-//   style: ENTITY_NAME.LINK,
-//   icon: "fa-solid fa-link",
-//   element: ELEMENT_TYPES.ATOMIC_ENTITY,
-// },
-{
-  label: "Image",
-  style: ENTITY_NAME.IMAGE,
-  icon: "gns-icons-16 icon-icon-imagesquare-24",
-  element: ELEMENT_TYPES.ATOMIC_ENTITY
-},
-// {
-//   label: "Mention",
-//   style: ENTITY_NAME.MENTION,
-//   icon: "fa-solid fa-at",
-//   element: ELEMENT_TYPES.ATOMIC_ENTITY,
-// },
-// {
-//   lable: "CL",
-//   style: ENTITY_NAME.CHECKLIST,
-//   icon: "fa-solid fa-list-check",
-//   element: ELEMENT_TYPES.ATOMIC_ENTITY,
-// },
-{
-  label: "Divider",
-  style: ENTITY_NAME.DIVIDER,
-  icon: "gns-icons-16 icon-icon-minus-24",
-  element: ELEMENT_TYPES.ATOMIC_ENTITY
-}];
-const toolType = {
-  INLINE_TYPES,
-  BLOCK_TYPES,
-  ENTITY_TYPES
-};
-
-function ButtonSeparator(props) {
-  return /*#__PURE__*/jsx("span", {
-    className: "draft-toolbar-button-separator",
-    children: "|"
-  });
-}
-
-const FilePicker = /*#__PURE__*/React.forwardRef((props, ref) => {
-  return /*#__PURE__*/jsx("input", _extends({}, props, {
-    ref: ref,
-    className: "d-none",
-    type: "file",
-    accept: props.accept || "image/*"
-  }));
-});
-
-function ToolBar(props) {
-  const {
-    getFileInputProps,
-    isToolActive,
-    handleToolClick,
-    focusedForEditing
-  } = React.useContext(TextEditorContext);
-  return /*#__PURE__*/jsxs(Fragment, {
-    children: [/*#__PURE__*/jsx(FilePicker, _extends({}, getFileInputProps())), Object.keys(toolType).map((type, index) => {
-      var _toolTypes$type;
-      return /*#__PURE__*/jsxs(React.Fragment, {
-        children: [(_toolTypes$type = toolType[type]) == null ? void 0 : _toolTypes$type.map(tool => {
-          return /*#__PURE__*/jsx(Button, {
-            title: tool == null ? void 0 : tool.label,
-            type: "button",
-            color: "link",
-            className: classnames("text-toolbar-btn", {
-              "text-muted": !focusedForEditing,
-              "text-secondary": focusedForEditing,
-              "text-primary": isToolActive(tool) && focusedForEditing
-            }),
-            onMouseDown: e => handleToolClick(tool, e),
-            children: tool.icon ? /*#__PURE__*/jsx("i", {
-              className: classnames(tool.icon, {
-                "text-primary": isToolActive(tool)
-              })
-            }) : tool == null ? void 0 : tool.label
-          }, tool == null ? void 0 : tool.style);
-        }), index < Object.keys(toolType).length - 1 && /*#__PURE__*/jsx(ButtonSeparator, {})]
-      }, type);
-    })]
-  });
-}
-
-function WrappedEditor(props) {
-  const {
-    forceFocusEditorEnd,
-    focusedForEditing
-  } = React.useContext(TextEditorContext);
-  return /*#__PURE__*/jsxs("div", {
-    className: classnames("draft-editor-container d-flex flex-column", {
-      "editor-disabled": props.readOnly,
-      "editor-active": focusedForEditing
-    }),
-    children: [!props.readOnly && /*#__PURE__*/jsx("div", {
-      className: "bg-light toolbar",
-      children: /*#__PURE__*/jsx(ToolBar, _extends({}, props))
-    }), /*#__PURE__*/jsxs("div", {
-      className: classnames("", {
-        "d-flex flex-column input-area bg-light m-3": !props.readOnly
-      }),
-      children: [/*#__PURE__*/jsx("div", {
-        className: classnames("", {
-          "px-3 pt-3": !props.readOnly
-        }),
-        children: /*#__PURE__*/jsx(TextEditor, _extends({}, props))
-      }), !props.readOnly && /*#__PURE__*/jsx("div", {
-        className: "flex-grow-1",
-        onMouseDown: forceFocusEditorEnd
-      })]
-    })]
-  });
-}
-
-function Index(props) {
-  return /*#__PURE__*/jsx(TextEditorContextProvider, _extends({}, props, {
-    children: /*#__PURE__*/jsx(WrappedEditor, _extends({}, props))
-  }));
-}
-Index.propTypes = {
-  /** pre populated contents in the editor */
-  value: PropTypes.string,
-  /** link generator function helps to  get the file links */
-  linkGeneratorFn: PropTypes.func,
-  /** helps to specify where any media resource should be stored */
-  handleUpload: PropTypes.func
-};
-
-const _excluded$j = ["label", "error", "name", "linkGenerator", "handleUpload", "onChange", "helperText"];
-const ImsTextEditor = _ref => {
-  let {
-      label,
-      error,
-      name,
-      linkGenerator,
-      handleUpload,
-      onChange = () => {},
-      helperText
-    } = _ref,
-    rest = _objectWithoutPropertiesLoose(_ref, _excluded$j);
-  return /*#__PURE__*/jsxs(FormGroup, {
-    row: true,
-    children: [label && /*#__PURE__*/jsx(Col, {
-      sm: "12",
-      children: /*#__PURE__*/jsx(Label, {
-        style: {
-          fontSize: "16px"
-        },
-        className: "text-dark",
-        children: label
-      })
-    }), /*#__PURE__*/jsxs(Col, {
-      sm: "12",
-      children: [/*#__PURE__*/jsx(Index, _extends({
-        onDataStructureChange: draftDataStructure => onChange({
-          currentTarget: {
-            name,
-            value: draftDataStructure
-          }
-        }),
-        linkGeneratorFn: linkGenerator,
-        handleUpload: handleUpload
-      }, rest)), error && /*#__PURE__*/jsx("label", {
-        className: "text-danger",
-        children: /*#__PURE__*/jsx("small", {
-          children: error
-        })
-      }), helperText && /*#__PURE__*/jsxs("label", {
-        className: "",
-        children: [" ", /*#__PURE__*/jsx("small", {
-          children: helperText
-        })]
-      })]
-    })]
-  });
-};
-
 Object.assign({}, Input.prototype.props);
 _extends({}, Input.propTypes && Input.propTypes);
 
@@ -4158,7 +2987,7 @@ const PaginationBase = _ref => {
     } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded$i);
   return /*#__PURE__*/jsx(Pagination$1, _extends({
-    className: classnames(`pagination-separated ${rest.className}`, {})
+    className: classNames(`pagination-separated ${rest.className}`, {})
   }, rest, {
     children: children
   }));
@@ -4200,7 +3029,7 @@ const PaginationLinkBase = _ref => {
     } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded$g);
   return /*#__PURE__*/jsx(ButtonBase, _extends({
-    className: classnames(`page-link ${rest.className}`, {})
+    className: classNames(`page-link ${rest.className}`, {})
   }, rest, {
     children: children
   }));
@@ -4562,7 +3391,7 @@ const PanelTab = _ref => {
       children: /*#__PURE__*/jsx(NavLinkBase, _extends({
         "data-toggle": "tab",
         href: "#",
-        className: classnames("nav-link", {
+        className: classNames("nav-link", {
           " active": active
         }),
         onClick: onClick,
@@ -5344,5 +4173,5 @@ const useClipboard = () => {
   };
 };
 
-export { AccordionBase as Accordion, AccordionBodyBase as AccordionBody, AccordionHeaderBase as AccordionHeader, AccordionItemBase as AccordionItem, ActivityBase as Activity, Table as AdvancedExpandedTable, Table$1 as AdvancedTable, AlertBase as Alert, BadgeBase as Badge, BreadcrumbBase as Breadcrumb, BreadcrumbItemBase as BreadcrumbItem, ButtonBase as Button, ButtonDropdownBase as ButtonDropdown, ButtonGroupBase as ButtonGroup, ButtonToggleBase as ButtonToggle, ButtonToolbarBase as ButtonToolbar, CardBodyBase as CardBody, CardColumnsBase as CardColumns, CardDeckBase as CardDeck, CardFooterBase as CardFooter, CardGroupBase as CardGroup, CardHeaderBase as CardHeader, CardImgBase as CardImg, CardImgOverlayBase as CardImgOverlay, CardLinkBase as CardLink, CardSubtitleBase as CardSubtitle, CardTextBase as CardText, CardTitleBase as CardTitle, CarouselBase as Carousel, CarouselCaptionBase as CarouselCaption, CarouselControlBase as CarouselControl, CarouselIndicatorsBase as CarouselIndicators, CarouselItemBase as CarouselItem, CloseButtonBase as CloseButton, ColBase as Col, CollapseBase as Collapse, ContainerBase as Container, CreatableSelectBase as CreatableSelect, DrawerContextProvider, DrawerOpener, DrawerRight, DropdownBase as Dropdown, DropdownItemBase as DropdownItem, DropdownMenuBase as DropdownMenu, DropdownToogleBase as DropdownToggle, FadeBase as Fade, FileDropZone as FileDropzone, FormBase as Form, FormFeedbackBase as FormFeedback, FormGroupBase as FormGroup, FormTextBase as FormText, ImsCard, ImsCarousel, ImsInputCheck, ImsInputDate, ImsInputDropZone, ImsInputRadio, ImsInputSelect, ImsInputSelectWithIcon, ImsInputText, ImsInputTextWithIcon, ImsInputTime, ImsTextEditor, InputBase as Input, InputGroupBase$1 as InputGroup, InputGroupTextBase$1 as InputGroupText, LabelBase as Label, ListBase as List, ListGroupBase as ListGroup, ListGroupItemBase as ListGroupItem, ListGroupItemHeadingBase as ListGroupItemHeading, ListGroupItemTextBase as ListGroupItemText, ListInlineItemBase as ListInlineItem, MediaBase as Media, ModalBase as Modal, ModalBodyBase as ModalBody, ModalFooterBase as ModalFooter, ModalHeaderBase as ModalHeader, NavBase as Nav, NavItemBase as NavItem, NavLinkBase as NavLink, NavBarBase as Navbar, NavbarBrandBase as NavbarBrand, NavbarTextBase as NavbarText, NavbarTogglerBase as NavbarToggler, OffcanvasBase as Offcanvas, OffcanvasBodyBase as OffcanvasBody, OffcanvasHeaderBase as OffcanvasHeader, PaginationBase as Pagination, PaginationItemBase as PaginationItem, PaginationLinkBase as PaginationLink, PanelTab, PanelTabs, PanelWindow, PlaceholderBase as Placeholder, PlaceholderButtonBase as PlaceholderButton, PopoverBase as Popover, PopoverBodyBase as PopoverBody, PopoverHeaderBase as PopoverHeader, PopperContentBase as PopperContent, PopperTargetHelperBase as PopperTargetHelper, ProgressBase as Progress, RadialProgressBar, ImsRadioCheckbox as RadioCheckbox, RowBase as Row, ReactSearchBase as SearchSelect, ReactSelectBase as Select, ImsSimpleTable as SimpleTable, SpinnerBase as Spinner, TabContentBase as TabContent, TabPaneBase as TabPane, TableBase as Table, Index as TextEditor, ToastBase as Toast, ToastBodyBase as ToastBody, ToastHeaderBase as ToastHeader, UncontrolledTooltipBase as Tooltip, UncontrolledAccordionBase as UncontrolledAccordion, UncontrolledAlertBase as UncontrolledAlert, UncontrolledButtonDropdownBase as UncontrolledButtonDropdown, UncontrolledCarouselBase as UncontrolledCarousel, UncontrolledCollapseBase as UncontrolledCollapse, UncontrolledDropdownBase as UncontrolledDropdown, UncontrolledPopoverBase as UncontrolledPopover, useError as useAPIError, useClipboard, useDrawer, useDualStateController, useForm, usePaginationState, useProcessing, useQuery };
+export { AccordionBase as Accordion, AccordionBodyBase as AccordionBody, AccordionHeaderBase as AccordionHeader, AccordionItemBase as AccordionItem, ActivityBase as Activity, Table as AdvancedExpandedTable, Table$1 as AdvancedTable, AlertBase as Alert, BadgeBase as Badge, BreadcrumbBase as Breadcrumb, BreadcrumbItemBase as BreadcrumbItem, ButtonBase as Button, ButtonDropdownBase as ButtonDropdown, ButtonGroupBase as ButtonGroup, ButtonToggleBase as ButtonToggle, ButtonToolbarBase as ButtonToolbar, CardBodyBase as CardBody, CardColumnsBase as CardColumns, CardDeckBase as CardDeck, CardFooterBase as CardFooter, CardGroupBase as CardGroup, CardHeaderBase as CardHeader, CardImgBase as CardImg, CardImgOverlayBase as CardImgOverlay, CardLinkBase as CardLink, CardSubtitleBase as CardSubtitle, CardTextBase as CardText, CardTitleBase as CardTitle, CarouselBase as Carousel, CarouselCaptionBase as CarouselCaption, CarouselControlBase as CarouselControl, CarouselIndicatorsBase as CarouselIndicators, CarouselItemBase as CarouselItem, CloseButtonBase as CloseButton, ColBase as Col, CollapseBase as Collapse, ContainerBase as Container, CreatableSelectBase as CreatableSelect, DrawerContextProvider, DrawerOpener, DrawerRight, DropdownBase as Dropdown, DropdownItemBase as DropdownItem, DropdownMenuBase as DropdownMenu, DropdownToogleBase as DropdownToggle, FadeBase as Fade, FileDropZone as FileDropzone, FormBase as Form, FormFeedbackBase as FormFeedback, FormGroupBase as FormGroup, FormTextBase as FormText, ImsCard, ImsCarousel, ImsInputCheck, ImsInputDate, ImsInputDropZone, ImsInputRadio, ImsInputSelect, ImsInputSelectWithIcon, F as ImsInputText, ImsInputTextWithIcon, ImsInputTime, InputBase as Input, InputGroupBase$1 as InputGroup, InputGroupTextBase$1 as InputGroupText, LabelBase as Label, ListBase as List, ListGroupBase as ListGroup, ListGroupItemBase as ListGroupItem, ListGroupItemHeadingBase as ListGroupItemHeading, ListGroupItemTextBase as ListGroupItemText, ListInlineItemBase as ListInlineItem, MediaBase as Media, ModalBase as Modal, ModalBodyBase as ModalBody, ModalFooterBase as ModalFooter, ModalHeaderBase as ModalHeader, NavBase as Nav, NavItemBase as NavItem, NavLinkBase as NavLink, NavBarBase as Navbar, NavbarBrandBase as NavbarBrand, NavbarTextBase as NavbarText, NavbarTogglerBase as NavbarToggler, OffcanvasBase as Offcanvas, OffcanvasBodyBase as OffcanvasBody, OffcanvasHeaderBase as OffcanvasHeader, PaginationBase as Pagination, PaginationItemBase as PaginationItem, PaginationLinkBase as PaginationLink, PanelTab, PanelTabs, PanelWindow, PlaceholderBase as Placeholder, PlaceholderButtonBase as PlaceholderButton, PopoverBase as Popover, PopoverBodyBase as PopoverBody, PopoverHeaderBase as PopoverHeader, PopperContentBase as PopperContent, PopperTargetHelperBase as PopperTargetHelper, ProgressBase as Progress, RadialProgressBar, ImsRadioCheckbox as RadioCheckbox, RowBase as Row, ReactSearchBase as SearchSelect, ReactSelectBase as Select, ImsSimpleTable as SimpleTable, SpinnerBase as Spinner, TabContentBase as TabContent, TabPaneBase as TabPane, TableBase as Table, ToastBase as Toast, ToastBodyBase as ToastBody, ToastHeaderBase as ToastHeader, UncontrolledTooltipBase as Tooltip, UncontrolledAccordionBase as UncontrolledAccordion, UncontrolledAlertBase as UncontrolledAlert, UncontrolledButtonDropdownBase as UncontrolledButtonDropdown, UncontrolledCarouselBase as UncontrolledCarousel, UncontrolledCollapseBase as UncontrolledCollapse, UncontrolledDropdownBase as UncontrolledDropdown, UncontrolledPopoverBase as UncontrolledPopover, useError as useAPIError, useClipboard, useDrawer, useDualStateController, useForm, usePaginationState, useProcessing, useQuery };
 //# sourceMappingURL=index.modern.mjs.map

@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "../../Buttons/ButtonBase";
-import { DrawerContextProvider, DrawerOpener, DrawerRight } from "../index";
+import { DrawerContextProvider } from "../store/Context";
+import DrawerOpener from '../DrawerOpener';
+import DrawerRight from '../DrawerRight'
 
 const DrawerExample = ({}) => {
   return (
