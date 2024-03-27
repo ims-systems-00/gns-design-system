@@ -46,4 +46,6 @@ CardBase.propTypes = {
   ...(Card.propTypes && Card.propTypes),
 };
 
-export default Card;
+export default function F(p) {
+  return <div>{p.children}</div>;
+}

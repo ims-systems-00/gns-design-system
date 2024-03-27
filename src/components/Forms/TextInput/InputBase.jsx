@@ -1,7 +1,6 @@
 import React from "react";
 import { Input } from "reactstrap";
 
-
 let InputBaseProps = Object.assign({}, Input.prototype.props);
 
 /**
@@ -18,4 +17,6 @@ InputBase.propTypes = {
   ...(Input.propTypes && Input.propTypes),
 };
 
-export default Input;
+export default function F(p) {
+  return <input {...p} />;
+}
