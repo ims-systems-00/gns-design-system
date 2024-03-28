@@ -41,10 +41,10 @@ export default function ImsCarousel({
       {navigation && (
         <div className="my-2 d-flex justify-content-end align-items-center">
           <Button outline className="border-0" onClick={handlePrev}>
-            <i class="fa-solid fa-angle-left p-0"></i>
+            <i class="gns-icons-16 icon-icon-caretleft-24 p-0"></i>
           </Button>
           <Button outline className="border-0" onClick={handleNext}>
-            <i class="fa-solid fa-angle-right p-0"></i>
+            <i class="gns-icons-16 icon-icon-caretright-24 p-0"></i>
           </Button>
         </div>
       )}
