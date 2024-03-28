@@ -1,6 +1,6 @@
 {
-  "name": "gns-ui",
-  "version": "1.0.25",
+  "name": "gns-design-system",
+  "version": "1.0.27",
   "source": "src/index.js",
   "files": [
     "dist",
