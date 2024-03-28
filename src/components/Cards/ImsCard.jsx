@@ -3,7 +3,6 @@ import CardBody from "./CardBodyBase";
 import CardFooter from "./CardFooterBase";
 import CardHeader from "./CardHeaderBase";
 import Proptype from "prop-types";
-
 let ImsCardProps = Object.assign(
   {
     cardProps: {

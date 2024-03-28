@@ -9,12 +9,12 @@ let InputBaseProps = Object.assign({}, Input.prototype.props);
  * @returns
  */
 
-const InputBase = ({ ...rest }) => {
+function InputBase({ ...rest }) {
   return <Input {...rest} />;
-};
+}
 
 InputBase.propTypes = {
   ...(Input.propTypes && Input.propTypes),
 };
 
-export default Input;
+export default InputBase;

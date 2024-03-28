@@ -1,14 +1,13 @@
+import React from "react";
 import classNames from "classnames";
 import { Card } from "reactstrap";
-
 let CardBaseProps = Object.assign({}, Card.prototype.props);
-
 /**
  *
  * @param {CardBaseProps} props
  * @returns
  */
-const CardBase = (props) => {
+function CardBase(props) {
   return (
     <Card
       className={classNames(props.className, {
@@ -40,10 +39,8 @@ const CardBase = (props) => {
       {props.children}
     </Card>
   );
-};
-
+}
 CardBase.propTypes = {
   ...(Card.propTypes && Card.propTypes),
 };
-
-export default Card
+export default CardBase;
