@@ -24,6 +24,7 @@ const NavBase = ({ children, variant = "primary", ...rest }) => {
         "nav-tabs-primary": variant === "primary",
         "nav-tabs-secondary": variant === "secondary",
         "nav-tabs-outline": variant === "outline",
+        "nav-tabs-block": variant === "block",
       })}
       {...rest}
     >

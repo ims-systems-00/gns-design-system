@@ -61,6 +61,24 @@ const TabsVariants = ({}) => {
         </NavItem>
       </Nav>
       <br /> <br />
+      <h1>Variant - block</h1>
+      <Nav tabs variant="block">
+        <NavItem>
+          <NavLink active onClick={(e) => e.preventDefault()}>
+            Home
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink onClick={(e) => e.preventDefault()}>Profile</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink onClick={(e) => e.preventDefault()}>Messages</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink onClick={(e) => e.preventDefault()}>Settings</NavLink>
+        </NavItem>
+      </Nav>
+      <br /> <br />
       <h1>Variant - Outline</h1>
       <Nav tabs variant="outline">
         <NavItem>

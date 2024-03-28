@@ -4,7 +4,8 @@
 
 .nav.nav-tabs.nav-tabs-primary,
 .nav.nav-tabs.nav-tabs-secondary,
-.nav.nav-tabs.nav-tabs-outline {
+.nav.nav-tabs.nav-tabs-outline,
+.nav.nav-tabs.nav-tabs-block {
   width: 100%;
   border: none;
   // overflow-x: auto;
@@ -24,11 +25,11 @@
     }
     .nav-link:hover {
       border: 1px solid transparent;
-      color: $primary;
+      color: $type-dark;
     }
     .nav-link.active {
       border: 1px solid transparent;
-      color: $primary;
+      color: $type-dark;
     }
   }
 }
@@ -40,10 +41,10 @@
       padding: 1px 5px;
     }
     .nav-link:hover {
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid $type-dark;
     }
     .nav-link.active {
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid $type-dark;
     }
   }
   .nav-item:not(:first-child),
@@ -59,13 +60,14 @@
   }
 }
 .nav.nav-tabs.nav-tabs-primary,
-.nav.nav-tabs.nav-tabs-secondary {
-  background-color: $gray-300;
-  padding: 4px;
+.nav.nav-tabs.nav-tabs-secondary,
+.nav.nav-tabs.nav-tabs-block {
+  background-color: $gray-100;
+  padding: 2px;
   // height: 53px;
   width: fit-content;
   width: 100%;
-  border: 1px solid $stroke-regular;
+  // border: 1px solid $stroke-regular;
   border-radius: 4px;
   .nav-item {
     flex-grow: 1;
@@ -105,3 +107,4 @@
     }
   }
 }
+
