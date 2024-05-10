@@ -94,16 +94,16 @@
 .card-gradient.card-gradient-primary {
   background: conic-gradient(
     from 90deg at 50% 50%,
-    rgba(67, 158, 237, 0.2) 0deg,
-    rgba(67, 158, 237, 0.1) 360deg
+    rgba(76, 76, 237, 0.2) 0deg,
+    $primary-extra-light 360deg
   ) !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
 }
 .card-gradient.card-gradient-danger {
   background: conic-gradient(
     from 90deg at 50% 50%,
-    rgba(214, 51, 132, 0.2) 0deg,
-    rgba(214, 51, 132, 0.1) 360deg
+    rgba(211, 237, 93, 0.2) 0deg,
+    $secondary-extra-light 360deg
   ) !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
 }
