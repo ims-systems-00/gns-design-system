@@ -10,6 +10,8 @@ const ImsInputDate = ({
   mandatory = false,
   disabled,
   helperText,
+  viewMode="days",
+  dateFormat="D/M/YYYY"
 }) => {
   return (
     <FormGroup row>
@@ -38,13 +40,14 @@ const ImsInputDate = ({
           // this onchange is for calender ...
           onChange={(e) => {
             if (typeof e === "object") {
-              let currentTarget = { name, value: e.format("D/M/YYYY") };
+              let currentTarget = { name, value: e.format(dateFormat) };
               onChange({ currentTarget });
             }
           }}
           timeFormat={false}
-          dateFormat={"D/M/YYYY"}
+          dateFormat={dateFormat}
           closeOnSelect
+          viewMode={viewMode}
         />
 
         {error && (
