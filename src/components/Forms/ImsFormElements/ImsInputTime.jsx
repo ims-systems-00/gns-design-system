@@ -5,6 +5,7 @@ const ImsInputTime = ({
   label,
   name,
   value,
+  mandatory = false,
   onChange,
   error,
   disabled,
@@ -13,16 +14,16 @@ const ImsInputTime = ({
   return (
     <>
       <FormGroup row>
-        <Col sm="12">
-          <Label
-            style={{
-              fontSize: "16px",
-            }}
-            className="text-dark"
-          >
-            {label}
-          </Label>
-        </Col>
+      <Col sm="12">
+        <Label
+          style={{
+            fontSize: "16px",
+          }}
+          className="text-dark"
+        >
+          {label} {mandatory ? <span className="text-danger">*</span> : ""}
+        </Label>
+      </Col>
         <Col sm="12">
           <ReactDatetime
             dateFormat={false}
