@@ -68,7 +68,7 @@ const FilterAndSearch = ({
             </div>
             {isSearchable && (
               <div className="me-md-3 mr-md-3  table-search-container shadow-sm--hover">
-                <i className="fa-solid fa-search my-auto ms-3 ml-3 p-0" />
+                <i className="gns-icons-16 icon-icon-magnifyingglass-24 my-auto ms-3 ml-3 p-0" />
                 <Input
                   size={"sm"}
                   onChange={(e) =>
