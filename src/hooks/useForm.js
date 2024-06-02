@@ -42,17 +42,20 @@ const useForm = (initdataModel, schema) => {
       setValidationErrors(errors);
     }
   };
-  const handleSubmit = async (e, doSubmit = () => { }, reset = true, options = {}) => {
+  const handleSubmit = async (e, doSubmit, reset = true, options = {}) => {
     e.preventDefault();
     const errors = await validate();
     if (errors) return setValidationErrors(errors);
     // Form submission logic here ....
     function submission() {
       return new Promise(async (resolve, reject) => {
-        let [error] = await asynchronously(doSubmit(e, dataModel));
-        if (reset) resetForm();
-        if (error) return reject();
-        return resolve();
+        try {
+          await doSubmit(dataModel, e);
+          if (reset) resetForm();
+          return resolve();
+        } catch (err) {
+          return reject(err);
+        }
       });
     }
     try {
