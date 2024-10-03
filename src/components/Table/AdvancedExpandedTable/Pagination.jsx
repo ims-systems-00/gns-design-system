@@ -7,14 +7,14 @@ const Pagination = (props) => {
     totalCount = 0,
     siblingCount = 1,
     currentPage = 1,
-    pageSize = 10,
+    pageSize,
   } = props;
 
   const paginationRange = usePagination({
     currentPage,
     totalCount,
     siblingCount,
-    pageSize,
+    pageSize: pageSize || 10,
   });
 
   if (currentPage === 0 || paginationRange.length < 2) {
